@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Javascript Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="calculator.js"></script>
+</head>
+
+<body>
+    <h1>Javascript Calculator</h1>
+    <div id="calculator">
+        <label for="firstNumber">Enter first number here</label>
+        <input type="number" id="firstNumber">
+        <label for="operation">Choose operator</label>
+        <select id="operation">
+            <option value="+">Addition</option>
+            <option value="-">Subtraction</option>
+            <option value="*">Multiplication</option>
+            <option value="%">Modulo</option>
+            <option value="/">Division</option>
+
+        </select>
+        <label for="secondNumber">Enter second number here</label>
+        <input type="number" id="secondNumber">
+        <button type="button" onclick="calculate()">Calculate</button>
+        <h2>Results:</h2>
+        <div id="result"></div>
+    </div>
+</body>
+
+</html>

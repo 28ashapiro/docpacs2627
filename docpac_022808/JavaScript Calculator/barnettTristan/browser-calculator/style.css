@@ -1,0 +1,32 @@
+.calculatorBox {
+    width: fit-content;
+    height: fit-content;
+    background-color: rgb(210, 255, 138);
+    border-style: solid;
+    border-width: 5px;
+    border-color: rgb(70, 70, 70);
+}
+.boxbox {
+    width: 180px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgb(70, 70, 70);
+}
+input[type="number"] {
+    background-color: blanchedalmond;
+    color: rgb(59, 59, 59);
+}
+select {
+    background-color: blanchedalmond;
+    color: rgb(59, 59, 59);
+}
+.answerbox {
+    width: 180px;
+    background-color: burlywood;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgb(70, 70, 70);
+}
+button {
+    margin-left: 60px;
+}

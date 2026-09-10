@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calc</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body style="background-color: blanchedalmond;">
+        <script src="calculator.js">
+        </script>
+        <H1>Calculator</H1>
+        <div class="calculatorBox">
+            <div class="boxbox">
+                <label>first number:</label>
+                <div class="number1">
+                    <input type="number" id="firstnumber">
+                </div>
+            </div>
+            <div class="boxbox">
+                <label>what kind of equation</label>
+                <select id="operation">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="*">*</option>
+                    <option value="/">/</option>
+                    <option value="%">%</option>
+                </select>
+            </div>
+            <div class="boxbox">
+                <label>second number:</label>
+                <input type="number" id="secondnumber">
+            </div>
+            <div id = "result" class="answerbox">
+                <label>equals</label>
+            </div>
+            <button type="button" onclick="calculate()">Calculate</button>
+        </div>
+    </body>
+</html>

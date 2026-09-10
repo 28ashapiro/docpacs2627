@@ -1,0 +1,37 @@
+body {
+    font-family: 'Comic Sans MS';
+    background: #4A412A;
+}
+
+h1 {
+    text-align: center;
+    background: purple;
+    color: white;
+}
+h4 {
+    margin: 0;
+}
+
+.label-pair {
+    display: flex;
+    flex-direction: column;
+}
+
+#input-container {
+    display: flex;
+    background: yellowgreen;
+}
+#input-container > * {
+    margin: 0 1%;
+    width: 100vw;
+}
+
+#calculate-button {
+    margin: 0 1%;
+    width: 69.4vw;
+    background: yellow;
+}
+
+#result {
+    background: white;
+}

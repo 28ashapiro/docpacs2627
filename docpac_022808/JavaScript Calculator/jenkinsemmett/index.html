@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<script src="calculation.js"></script>
+<head>
+    <link rel="stylesheet" href="design.css">
+</head>
+<body>
+<h1>Javascript Calculator</h1><br>
+<div id="calc">
+<label for="num1">First Number:</label><input type="number" id="num1" name="num1">
+<label for signs>Sign:</label><select name="sign" id="sign">
+    <option value="+">+</option>
+    <option value="-">-</option>
+    <option value="*">*</option>
+    <option value="/">/</option>
+    <option value="%">%</option>
+</select>
+<label for="num1">Second Number:</label><input type="number" id="num2" name="num2"><br>
+<button type="button" onclick="calculate()">Calculate</button><br>
+<p>Answer:</p><div id="result">Answer Goes Here</div><br>
+</div>
+</body>
+</html>

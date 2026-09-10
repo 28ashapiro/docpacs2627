@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calc</title>
+    <script src="calculate.js"></script>
+</head>
+<body>
+<fieldset style="width: fit-content; margin: 0 auto;">
+ <legend>Java Calc</legend>
+ <label for="firstNumber">First Number:</label>
+ <input type="number" id="firstNumber" name="firstNumber">
+ <br><br>
+ <label for="operation">Operation:</label>
+ <select id="operation">
+    <option value="+">Addition</option>
+    <option value="-">Subtraction</option>
+    <option value="*">Multiplication</option>
+    <option value="/">Division</option>
+    <option value="%">Modulo</option>
+ </select>
+ <br><br>
+ <label for="secondNumber">Second Number:</label>
+ <input type="number" id="secondNumber" name="secondNumber">
+ <br><br>
+ <div>Result: <input readonly type="text" id="result"></div>
+ <br>
+ <button type="button" onclick="calculate()">Calculate</button>
+</fieldset>
+</body>
+</html>

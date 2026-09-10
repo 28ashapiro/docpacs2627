@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="calculator.js">calculator</script>
+    <title>Calculator</title>
+</head>
+<body>
+    <fieldset style="width: fit-content;">
+        <legend><h1 style="font-size: 16px;">Calculator</h1></legend>
+        <label for="firstNumber">First Number:</label>
+        <input type="number" name="firstNumber" id="firstNumber" value="0">
+        <br><br>
+        <label for="operation">Operation:</label>
+        <select id="operation">
+            <option value="+">+ | Addition</option>
+            <option value="-">- | Subtraction</option>
+            <option value="*">* | Multiplication</option>
+            <option value="/">/ | Division</option>
+            <option value="%">% | Modulo</option>
+        </select>
+        <br><br>
+        <label for="secondNumber">Second Number:</label>
+        <input type="number" name="secondNumber" id="secondNumber" value="0">
+        <br><br>
+        <div style="display: flex;">
+            <label for="result">Result:</label>
+            <input width="" type="text" name="result" id="result" value="" readonly>
+        </div>
+        <button type="button" style="width: 100%; margin-top: 10px;" onclick="calculate()">Calculate</button>
+    </fieldset>
+</body>
+</html>

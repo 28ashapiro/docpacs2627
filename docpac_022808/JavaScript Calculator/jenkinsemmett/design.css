@@ -1,0 +1,22 @@
+body {
+    background-color: skyblue;
+}
+h1 {
+    text-align: center;
+}
+#calc {
+    text-align: center;
+    background-color: lightblue;
+    font-size: 30px;
+    margin-left: 400px;
+    margin-right: 400px;
+    border: 3px solid blue;
+    border-radius: 20px;
+}
+#result {
+    background-color: aquamarine;
+    margin-right: 300px;
+    margin-left: 300px;
+    border-radius: 20px;
+    color: purple;
+}

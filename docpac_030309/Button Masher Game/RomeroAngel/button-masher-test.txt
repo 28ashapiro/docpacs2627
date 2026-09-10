@@ -1,0 +1,68 @@
+Test Uno
+Need Direction: Up!
+Joystick's Input Direction: Up
+Controller Input: A Once
+What we expected: A point while holding up.
+What we got: A point while holding up.
+Result: IT PASSED!!!
+
+Test Dos
+Need Direction: Down
+Joystick's Input Direction: Down
+Controller Input: A Once
+What we expected: A point while holding down.
+What we got: A point while holding down.
+Result: PASS!
+
+Test Tres
+Need Direction: Left
+Joystick's Input Direction: Left
+Controller Input: A Once
+What we expected: A point while holding left.
+What we got: A point while holding left.
+Result: IT PASSED!!
+
+Test Quatro
+Need Direction: Right
+Joystick's Input Direction: Right
+Controller Input: A Once
+What we expected: A point while holding right.
+What we got: A point while holding right.
+Result: PASSED!
+
+If A is held down
+Results: Nothing Happens SO MASH THAT BUTTON!!!!!!!
+
+If A is pressed repeatedly
+Result: As long as your holding the right direction and mash A you'll score one point per button press.
+
+What Happens if you Continue After Zero???: Nothing the game already ended!!!!!
+
+Start Button Press Test
+What needs to happen: The game resets.
+What actually happened?: The game had been reset!!!
+
+What happens if you disconnect mid-round?:
+What needs to happen: Text telling you the controller disconnected.
+What actually happens: You do get text saying you disconnected!
+
+
+What happens if you re-connected?:
+What need to happen: The text says you connected.
+What actually happens: You have now re-connected!!!!
+
+Timer stopping at zero
+What needs to happen: No actions are allowed only Start is allowed, and the time must stay at 0.
+What we expected: The timer stops directly at 0(in this case a time over message) and only start is allowed to restart the game.
+What actually happened: Everything said is correct and works as expected.
+
+Direction Values:
+0 = A
+9 = Start
+1 < -0.5 = Up
+1 > 0.5 = Down
+0 < -0.5 = Left
+0 > 0.5 = Right
+
+
+

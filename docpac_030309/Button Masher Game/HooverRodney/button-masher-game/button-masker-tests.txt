@@ -1,0 +1,111 @@
+Test 1
+Required Direction: Up
+Joystick Input: Up
+Action: A Once
+Expected Result: Score increases by 1
+Actual Result: Score increases by 1
+Result: Pass
+
+Test 2
+Required Direction: Left
+Joystick Input: Left
+Action: A Once
+Expected Result: Score increases by 1
+Actual Result: Score increases by 1
+Result: Pass
+
+Test 3
+Required Direction: Down
+Joystick Input: Down
+Action: A Once
+Expected Result: Score increases by 1
+Actual Result: Score increases by 1
+Result: Pass
+
+Test 4
+Required Direction: Right
+Joystick Input: Right
+Action: A Once
+Expected Result: Score increases by 1
+Actual Result: Score increases by 1
+Result: Pass
+
+Test 5
+Required Direction: Up
+Joystick Input: Left
+Action: A Once
+Expected Result: Score remains unchanged
+Actual Result: Score remains unchanged
+Result: Pass
+
+Test 6
+Required Direction: Left
+Joystick Input: Down
+Action: A Once
+Expected Result: Score remains unchanged
+Actual Result: Score remains unchanged
+Result: Pass
+
+Test 7
+Required Direction: Down
+Joystick Input: Right
+Action: A Once
+Expected Result: Score remains unchanged
+Actual Result: Score remains unchanged
+Result: Pass
+
+Test 8
+Required Direction: Right
+Joystick Input: Up
+Action: A Once
+Expected Result: Score remains unchanged
+Actual Result: Score remains unchanged
+Result: Pass
+
+Test 9
+Action: A Button Held Down
+Expected Result: The javascript only processes the first pressing of the button
+Actual Result: The javascript only processes the first pressing of the button
+Result: Pass
+
+Test 10
+Action: A button pressed repearedly
+Expected Result: The javascript processes all of the A button processes
+Actual Result: The javascript processes all of the A button processes
+Result: Pass
+
+Test 11
+Action: A pressed after timer reaches zero
+Expected Result: Score does not increase
+Actual Result: Score does not increase
+Result: Pass
+
+Test 12
+Action: Start-button restart
+Expected Result: The page refreshes, assuming the game is over
+Actual Result: The page refreshed, starting over the game
+Result: Pass
+
+Test 13
+Action: Controller disconnected
+Expected Result: The controller status box updates to read as "Controller disconnected"
+Actual Result: The controller status box updates to read as "Controller disconnected"
+Result: Pass
+
+Test 14
+Action: Controller reconnected
+Expected Result: The controller status box updates to read as "Controller Connected"
+Actual Result: The controller status box updates to read as "Controller Connected"
+Result: Pass
+
+Test 15
+Action: Timer stopped at zero
+Expected Result: The game stops completely, the score cannot increase, and the message box at the bottom of the page declares the end of the game
+Actual Result: The game stops completely, the score cannot increase, and the message box at the bottom of the page declares the end of the game
+Result: Pass
+
+Test 16
+Action: Direction changes
+Expected Result: Remains a value between zero and three
+Actual Result: Remained a value between zero and three
+Result: Pass

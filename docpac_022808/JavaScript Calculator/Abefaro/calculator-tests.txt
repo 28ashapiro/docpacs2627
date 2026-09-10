@@ -1,0 +1,79 @@
+Test 1
+First value: 10
+Operation: -
+Second value: 4
+Expected: 6
+Actual: 6
+Result: Pass
+
+Test 2
+First value: 10
+Operation: +
+Second value: 4
+Expected: 14
+Actual: 14
+Result: Pass
+
+Test 3 
+First value: 10
+Operation: *
+Second value: 4
+Expected: 40
+Actual: 40
+Result: Pass
+
+Test 4 
+First value: 10
+Operation: /
+Second value: 5
+Expected: 2
+Actual: 2
+Result: Pass
+
+Test 5
+First value: 10
+Operation: %
+Second value: 4
+Expected: 2
+Actual: 2
+Result: Pass
+
+Test 6 
+First value: 10
+Operation: /
+Second value: 4
+Expected: 2.5
+Actual: 2.5
+Result: Pass
+
+Test 7
+First value: 10
+Operation: /
+Second value: 0
+Expected: Error!
+Actual: Error!
+Result: Pass
+
+Test 8
+First value: 10
+Operation: %
+Second value: 0
+Expected: Error!
+Actual: Error!
+Result: Pass
+
+Test 9
+First value: 
+Operation: %
+Second value: 
+Expected: Please enter two numbers
+Actual: Please enter two numbers
+Result: Pass
+
+Test 10
+First value: 10
+Operation: *
+Second value: -10
+Expected: -100
+Actual: -100
+Result: Pass

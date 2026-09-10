@@ -1,0 +1,16 @@
+{
+  "name": "unit1lesson3",
+  "version": "1.0.0",
+  "description": "Development and Production Run Scripts",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "author": "Logan Potter",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}

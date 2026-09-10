@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Butcherman&display=swap');
+
+body {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: rgb(66, 49, 82);
+    color: azure;
+}
+h1 {
+    text-align: center;
+    background-color: rgb(77, 70, 180);
+    border-radius: 1000px;
+}
+
+label {
+    display: inline-block;
+    width: 100%;
+    padding: 0px ;
+    text-align: center;
+}
+.set1{
+    padding: 10px 25px;
+    
+}
+
+.set2 {
+    padding: 10px;
+
+}
+
+.set3 {
+    padding: 10px 25px;
+    
+}
+
+#input2 {
+    margin-bottom: 20px;
+}
+
+#calc {
+   padding: 10px 350px;
+    margin: auto;
+    font-size: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+#divydivdiv {
+    margin: auto;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#result {
+    font-size: 120px;
+    font-family: "butcherman";
+    font-weight: 600 ;
+    text-decoration: overline underline wavy red
+}

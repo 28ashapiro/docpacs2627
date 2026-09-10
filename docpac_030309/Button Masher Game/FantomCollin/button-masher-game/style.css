@@ -1,0 +1,190 @@
+
+/* Stolen from ChatGPT, I did none of this CSS, I hate CSS
+
+/* =========================
+   Button Masher - Style
+   ========================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #fff;
+
+    background:
+        radial-gradient(circle at 50% 30%, #25205c 0%, transparent 35%),
+        radial-gradient(circle at 20% 80%, #102d5c 0%, transparent 35%),
+        linear-gradient(135deg, #080914, #111329 50%, #090a16);
+
+    overflow: hidden;
+}
+
+/* Background grid */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+
+    background-image:
+        linear-gradient(rgba(0, 255, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 255, 255, 0.04) 1px, transparent 1px);
+
+    background-size: 40px 40px;
+
+    mask-image: linear-gradient(to bottom, transparent, black 30%, black 70%, transparent);
+}
+
+/* Labels */
+label {
+    margin-top: 12px;
+
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+
+    color: #8dfcff;
+    text-shadow: 0 0 10px #00eaff;
+}
+
+/* Score and Timer */
+#scoreBox,
+#timerBox {
+    width: 260px;
+    padding: 12px 25px;
+
+    text-align: center;
+
+    font-size: 2.5rem;
+    font-weight: 900;
+    letter-spacing: 5px;
+
+    color: #fff;
+
+    background: rgba(10, 15, 35, 0.8);
+    border: 2px solid #00eaff;
+    border-radius: 14px;
+
+    box-shadow:
+        0 0 8px #00eaff,
+        inset 0 0 15px rgba(0, 234, 255, 0.15);
+
+    backdrop-filter: blur(8px);
+
+    transition: 0.2s ease;
+}
+
+/* Make score feel energetic */
+#scoreBox {
+    color: #61ff9a;
+    border-color: #61ff9a;
+
+    box-shadow:
+        0 0 8px #61ff9a,
+        0 0 25px rgba(97, 255, 154, 0.2),
+        inset 0 0 15px rgba(97, 255, 154, 0.1);
+}
+
+/* Timer */
+#timerBox {
+    color: #ffe45e;
+    border-color: #ffe45e;
+
+    box-shadow:
+        0 0 8px #ffe45e,
+        0 0 25px rgba(255, 228, 94, 0.2),
+        inset 0 0 15px rgba(255, 228, 94, 0.1);
+}
+
+/* Direction display */
+#directionBox {
+    width: min(90vw, 500px);
+    min-height: 150px;
+
+    margin: 30px 0 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: clamp(3rem, 10vw, 6rem);
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+
+    color: #fff;
+
+    background: rgba(18, 20, 50, 0.85);
+
+    border: 3px solid #b45cff;
+    border-radius: 25px;
+
+    box-shadow:
+        0 0 10px #b45cff,
+        0 0 40px rgba(180, 92, 255, 0.35),
+        inset 0 0 30px rgba(180, 92, 255, 0.15);
+
+    text-shadow:
+        0 0 10px #b45cff,
+        0 0 30px #b45cff;
+
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+/* Controller status */
+#controllerStatus {
+    min-height: 30px;
+
+    padding: 8px 18px;
+
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+
+    color: #aaa;
+
+    background: rgba(0, 0, 0, 0.35);
+
+    border: 1px solid #333856;
+    border-radius: 20px;
+}
+
+/* Hover effect */
+#directionBox:hover {
+    transform: scale(1.02);
+
+    box-shadow:
+        0 0 15px #b45cff,
+        0 0 60px rgba(180, 92, 255, 0.5),
+        inset 0 0 35px rgba(180, 92, 255, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+    #scoreBox,
+    #timerBox {
+        width: 80%;
+        font-size: 2rem;
+    }
+
+    #directionBox {
+        width: 90%;
+        min-height: 120px;
+    }
+
+    label {
+        font-size: 0.75rem;
+    }
+}

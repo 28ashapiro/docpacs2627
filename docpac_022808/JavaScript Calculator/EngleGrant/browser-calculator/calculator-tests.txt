@@ -1,0 +1,35 @@
+Test 1
+First value: 5
+Operation: +
+Second value: 3
+Expected: 8
+Actual: 8
+Result: Pass
+Test 2
+First value: 5
+Operation: -
+Second value: 3
+Expected: 2
+Actual: 2
+Result: Pass
+Test 3
+First value: 5
+Operation: /
+Second value: 0
+Expected: Cannot divide by zero.
+Actual: Cannot divide by zero.
+Result: Pass
+Test 4
+First value: 5
+Operation: *
+Second value: 3
+Expected: 15
+Actual: 15
+Result: Pass
+Test 5
+First value: 5
+Operation: %
+Second value: -3
+Expected: 8
+Actual: 8
+Result: Pass

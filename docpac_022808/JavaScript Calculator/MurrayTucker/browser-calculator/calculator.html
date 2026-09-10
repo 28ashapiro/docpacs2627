@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browser Calculator</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <h1>JavaScript Browser Calculator</h1>
+    <div id="input-container">
+        <div class="label-pair">
+            <label for="number1">First number:</label>
+            <input type="number" id="number1">
+        </div>
+        <div class="label-pair">
+            <label for="operation">Operator:</label>
+            <select id="operation">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+                <option value="%">%</option>
+            </select>
+        </div>
+        <div class="label-pair">
+            <label for="number2">Second number:</label>
+            <input type="number" id="number2">
+        </div>
+        <div class="label-pair" style="flex: 0 1;">
+            <div></div>
+            <p>=</p>
+        </div>
+        <div class="label-pair">
+            <h4>Result</h4>
+            <div id="result"></div>
+        </div>
+    </div>
+    <div>
+        <button type="button" onclick="calculate()" id="calculate-button">Calculate</button>
+    </div>
+</body>
+<script src="calculator.js"></script>
+</html>

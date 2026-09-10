@@ -1,0 +1,103 @@
+Test 1
+Required direction: Up
+Joystick input: Up
+Action: Press A once
+Expected result: score increased by one
+Actual result: score increased by one
+Result: pass
+
+Test 2
+Required direction: Right
+Joystick input: Right
+Action: Press A once
+Expected result: score increased by one
+Actual result: score increased by one
+Result: pass
+
+Test 3
+Required direction: Down
+Joystick input: Down
+Action: Press A once
+Expected result: score increased by one
+Actual result: score increased by one
+Result: pass
+
+Test 4
+Required direction: Left
+Joystick input: Left
+Action: Press A once
+Expected result: score increased by one
+Actual result: score increased by one
+Result: pass
+
+Test 5
+Required direction: Up
+Joystick input: Down
+Action: Press A once
+Expected result: score does not change
+Actual result: score did not change
+Result: pass
+
+Test 6
+Required direction: Left
+Joystick input: Left
+Action: Hold A down
+Expected result: score increased by one
+Actual result: score increased by one
+Result: pass
+
+Test 7
+Required direction: Down
+Joystick input: Down
+Action: Press A five times
+Expected result: score increased by five
+Actual result: score increased by five
+Result: pass
+
+Test 8
+Required direction: Up
+Joystick input: Up
+Action: Press A once after the timer reaches 0
+Expected result: score does not change
+Actual result: score did not change
+Result: pass
+
+Test 9
+Required direction: Up
+Joystick input: Neutral
+Action: Press start button
+Expected result: page reloads and resets the game
+Actual result: page reloaded and the game restarted
+Result: pass
+
+Test 10
+Required direction: n/a
+Joystick input: n/a
+Action: disconnect controller
+Expected result: the status text displays that the controller disconnected
+Actual result: the status text displayed that the controller disconnected
+Result: pass
+
+Test 11
+Required direction: Left
+Joystick input: Left
+Action: Press A once after reconnecting the controller
+Expected result: score increased by one and the status says controller connected
+Actual result: score increased by oneand the status said controller connected
+Result: pass
+
+Test 12
+Required direction: n/a
+Joystick input: n/a
+Action: Wait until the timer reaches zero
+Expected result: timer stays at zero and does not become negative
+Actual result: timer stayed at zero and did not become negative
+Result: pass
+
+Test 13
+Required direction: n/a
+Joystick input: n/a
+Action: Watch direction values and make sure it is only zero through three (up, left, down, or right)
+Expected result: direction never goes out of the range and a weird value is never displayed in direction box
+Actual result: direction box never went out of range and only expected values were shown
+Result: pass

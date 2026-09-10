@@ -1,0 +1,14 @@
+{
+  "name": "unit1-lesson2",
+  "version": "1.0.0",
+  "description": "Configure a project with a .env file",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tucker Murray",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^17.4.2"
+  }
+}

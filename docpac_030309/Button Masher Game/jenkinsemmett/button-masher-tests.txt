@@ -1,0 +1,82 @@
+Test 1
+Required Direction: Up
+Joystick Input: Up
+Action: Press A Once
+Expected Result: Gain One Point
+Actual Result: Gain One Point
+Test Result: Pass
+Test 2
+Required Direction: Left
+Joystick Input: Left
+Action: Press A Once
+Expected Result: Gain One Point
+Actual Result: Gain One Point
+Test Result: Pass
+Test 3
+Required Direction: Right
+Joystick Input: Right
+Action: Press A Once
+Expected Result: Gain One Point
+Actual Result: Gain One Point
+Test Result: Pass
+Test 4
+Required Direction: Down
+Joystick Input: Down
+Action: Press A Once
+Expected Result: Gain One Point
+Actual Result: Gain One Point
+Test Result: Pass
+Test 5
+Required Direction: Up
+Joystick Input: Down
+Action: Press A Once
+Expected Result: Gain No Points
+Actual Result: Gain No Points
+Test Result: Pass
+Test 6
+Required Direction: Up
+Joystick Input: Up
+Action: A Button Held Down
+Expected Result: Gain One Point
+Actual Result: Gain One Point
+Test Result: Pass
+Test 7
+Required Direction: Up
+Joystick Input: Up
+Action: Press A Rapidly
+Expected Result: Gain Multiple Points
+Actual Result: Gain Multiple Points
+Test Result: Pass
+Test 8
+Time Left: 0
+Required Direction: Right
+Joystick Input: Right
+Action: Press A Once
+Expected Result: Gain No Points
+Actual Result: Gain No Points
+Test Result: Pass
+Test 9
+Action: Press Start
+Expected Result: Restart Game
+Actual Result: Restart Game
+Test Result: Pass
+Test 10
+Action: Disconnect Controller
+Expected Result: Pause Game
+Actual Result: Pause Game
+Test Result: Pass
+Test 11
+Action: Reconnect Controller
+Expected Result: Allow Start To Resume Game
+Actual Result: Allow Start To Resume Game
+Test Result: Pass
+Test 12
+Time Waited Past Game End: 20 Seconds
+Expect Timer Value: 0
+Timer Value: 0
+Test Result: Pass
+Test 13
+Rounds Played: 3
+Expected Values Seen: Up, Down, Left, Right
+Values Seen: Up, Down, Left, Right
+Test Result: Pass

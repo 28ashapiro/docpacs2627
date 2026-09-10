@@ -1,0 +1,121 @@
+Test 1
+value 1: 1
+operator: +
+value 2: 1
+expected: 2
+Actual: 2
+result: pass
+
+Test 2
+value 1: 5
+operator: -
+value 2: 2
+expected: 3
+Actual: 3
+result: pass
+
+Test 3
+value 1: 5
+operator: *
+value 2: 5
+expected: 25
+Actual: 25
+result: pass
+
+Test 4
+value 1: 8
+operator: /
+value 2: 4
+expected: 2
+Actual: 2
+result: pass
+
+Test 5
+value 1: 10
+operator: %
+value 2: 9
+expected: 1
+Actual: 1
+result: pass
+
+Test 6
+value 1: 10
+operator: *
+value 2: -2
+expected: -20
+Actual: -20
+result: pass
+
+Test 7
+value 1: 10
+operator: /
+value 2: -2
+expected: -5
+Actual: -5
+result: pass
+
+Test 8
+value 1: 10
+operator: -
+value 2: -2
+expected: 12
+Actual: 12
+result: pass
+
+Test 9
+value 1: 2.5
+operator: +
+value 2: 7
+expected: 9.5
+Actual: 9.5
+result: pass
+
+Test 10
+value 1: 
+operator: -
+value 2: 3
+expected: please enter valid numbers 
+Actual: please enter valid numbers 
+result: pass
+
+Test 11
+value 1: 
+operator: -
+value 2: 
+expected: please enter valid numbers 
+Actual: please enter valid numbers 
+result: pass
+
+Test 12
+value 1: 8
+operator: -
+value 2: 
+expected: please enter valid numbers 
+Actual: please enter valid numbers 
+result: pass
+
+Test 13
+value 1: 8
+operator: /
+value 2: 0
+expected: Error!
+Actual: Error!
+result: pass
+
+Test 14
+value 1: 9
+operator: %
+value 2: 0
+expected: Error!
+Actual: Error!
+result: pass
+
+Test 15
+value 1: 10.5
+operator: /
+value 2: -3.5
+expected: -3
+Actual: -3
+result: pass
+
+total refresh count: 0

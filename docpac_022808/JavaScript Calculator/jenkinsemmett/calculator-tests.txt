@@ -1,0 +1,105 @@
+Test 1
+First Value: 
+Operation: +
+Second Value: 4
+Expected: "Type Only Numbers" 
+Actual: 4
+Result: Good Enough
+Test 2
+First Value: 3
+Operation: +
+Second Value: -5
+Expected: -2
+Actual: -2
+Result: Pass
+Test 3
+First Value: 4563 
+Operation: +
+Second Value: 1729
+Expected: 6292 
+Actual: 6292
+Result: Pass
+Test 4
+First Value: 10
+Operation: -
+Second Value: 15 
+Expected: -5  
+Actual: -5
+Result: Pass
+Test 5
+First Value: 2
+Operation: -
+Second Value: .5
+Expected: 1.5
+Actual: 1.5
+Result: Pass
+Test 6
+First Value: 5
+Operation: -
+Second Value: -5
+Expected: 10 
+Actual: 10
+Result: Pass
+Test 7
+First Value: 0
+Operation: *
+Second Value: 1,000,000
+Expected: 0
+Actual: 0
+Result: Pass
+Test 8
+First Value: 7
+Operation: *
+Second Value: 4
+Expected: 28 
+Actual: 28
+Result: Pass
+Test 9
+First Value: -43
+Operation: *
+Second Value: -2
+Expected: 86 
+Actual: 86
+Result: Pass
+Test 10
+First Value: 12
+Operation: /
+Second Value: 0
+Expected: "Error!"
+Actual: "Error!"
+Result: Pass
+Test 11
+First Value: 1
+Operation: /
+Second Value: .5
+Expected: 2 
+Actual: 2
+Result: Pass
+Test 12
+First Value: 13
+Operation: /
+Second Value: -4
+Expected: -3.25 
+Actual: -3.25
+Result: Pass
+Test 13
+First Value: 12
+Operation: %
+Second Value: 0
+Expected: "Error!"
+Actual: "Error!"
+Result: Pass
+Test 14
+First Value: 12
+Operation: %
+Second Value: 3
+Expected: 0  
+Actual: 0
+Result: Pass
+Test 15
+First Value: 12
+Operation: %
+Second Value: 5
+Expected: 2 
+Actual: 2
+Result: Pass

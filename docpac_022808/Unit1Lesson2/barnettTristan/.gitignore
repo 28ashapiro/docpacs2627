@@ -1,0 +1,4 @@
+#if it wotrks should ignore these two files
+.env
+
+node_modules/

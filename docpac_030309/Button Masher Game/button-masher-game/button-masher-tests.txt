@@ -1,0 +1,118 @@
+Test 1
+
+Required direction: Up
+Joystick input: Up
+Action: Press A once
+Expected result: Score increases by 1
+Actual result: Score increases by 1
+Result: Pass
+
+Test 2
+
+Required direction: Right
+Joystick input: Right
+Action: Press A once
+Expected result: Score increases by 1
+Actual result: Score increases by 1
+Result: Pass
+
+Test 3
+
+Required direction: Down
+Joystick input: Down
+Action: Press A once
+Expected result: Score increases by 1
+Actual result: Score increases by 1
+Result: Pass
+
+Test 4
+
+Required direction: Left
+Joystick input: Left
+Action: Press A once
+Expected result: Score increases by 1
+Actual result: Score increases by 1
+Result: Pass
+
+Test 5
+
+Required direction: Up
+Joystick input: Right
+Action: Press A once
+Expected result: Score does not increase
+Actual result: Score does not increase
+Result: Pass
+
+Test 6
+
+Required direction: Up
+Joystick input: Up
+Action: Hold A button down
+Expected result: Only a single input is registered 
+Actual result: Only a single input is registered 
+Result: Pass
+
+Test 7
+
+Required direction: Up
+Joystick input: Up
+Action: Press A repeatedly
+Expected result: Each valid A press increases the score by 1
+Actual result: Each valid A press increases the score by 1
+Result: Pass
+
+Test 8
+
+Required direction: Up
+Joystick input: Up
+Action: Allow the timer to reach zero, then press A
+Expected result: The A button press is ignored and the score does not increase
+Actual result: The A button press is ignored and the score does not increase
+Result: Pass
+
+Test 9
+
+Required direction: Up
+Joystick input: Up
+Action: Allow the timer to reach zero, then press the Start button
+Expected result: The game restarts with the timer resetting, and the player can enter inputs again
+Actual result: The game restarts with the timer resetting, and the player can enter inputs again
+
+Result: Pass
+
+Test 10
+
+Required direction: Up
+Joystick input: Up
+Action: Disconnect the controller while the game is running
+Expected result: The code detects that the controller has been disconnected.
+Actual result: The code detects that the controller has been disconnected.
+Result: Pass
+
+Test 11
+
+Required direction: Up
+Joystick input: Up
+Action: Reconnect the controller
+Expected result: The code detects the controller 
+Actual result: The code detects the controller 
+Result: Pass
+
+Test 12
+
+Required direction: Up
+Joystick input: Up
+Action: Allow the timer to count down from its starting value to zero
+Expected result: The timer stops at 0 and does not continue into negative values
+Actual result: The timer stops at 0 and does not continue into negative values
+Result: Pass
+
+Test 13
+
+Required direction: Up
+Joystick input: Up
+Action: Move the joystick through all four directions and record the direction values
+Expected result: Direction values remain within the range 0 through 3
+Actual result: Direction values remain within the range 0 through 3
+Result: Pass
+

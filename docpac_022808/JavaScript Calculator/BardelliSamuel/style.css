@@ -1,0 +1,22 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+#calculator{
+    border: 5px solid salmon;
+    padding: 50px;
+}
+#result{
+    background-color: grey;
+    width: 100px;
+    height: 50px;
+    border: 10px solid salmon;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+input{
+    margin: 15px;
+}

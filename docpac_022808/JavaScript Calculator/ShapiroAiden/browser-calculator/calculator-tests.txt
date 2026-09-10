@@ -1,0 +1,65 @@
+First Value: 5
+Operation: +
+Second Value: 3
+Expected Result: 8
+Result: 8
+
+First Value:5
+Operation: -
+Second Value: 3
+Expected Result: 2
+Result: 2
+
+First Value: 5
+Operation: *
+Second Value: 3
+Expected Result: 15
+Result: 15
+
+First Value: 5
+Operation: +
+Second Value: 3
+Expected Result: 8
+Result: 8
+
+First Value: 6
+Operation: /
+Second Value: 3
+Expected Result: 2
+Result: 2
+
+First Value: 7
+Operation: %
+Second Value: 3
+Expected Result: 1
+Result: 1
+
+First Value: 5
+Operation: /
+Second Value: 0
+Expected Result: Error!
+Result: Error!
+
+First Value: 5
+Operation: %
+Second Value: 0
+Expected Result: Error!
+Result: Error!
+
+First Value: -4
+Operation: +
+Second Value: 2
+Expected Result: -2
+Result: -2
+
+First Value: 2.5
+Operation: *
+Second Value: 4
+Expected Result: 10
+Result: 10
+
+First Value:  
+Operation(s): + - * / %
+Second Value:  
+Expected Result: "Please enter two numbers!"
+Result: "Please enter two numbers!"

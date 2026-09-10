@@ -1,0 +1,26 @@
+body {
+background-color: blueviolet;
+text-align: center;
+}
+
+button {
+    border-color: gold;
+    text-align: center;
+    font-size: x-large;
+}
+
+input {
+text-align: center;
+border-radius: 5px;
+border-color: rgb(255, 41, 219);
+}
+
+h2 {
+    text-align: center;
+    font-size: x-large;
+}
+
+select {
+    text-align: center;
+    font-size: x-large;
+}

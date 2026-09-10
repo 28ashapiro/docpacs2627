@@ -1,0 +1,59 @@
+Addition Test
+First Number:383
+Second Number:432
+Operation: +
+What We Expected:815
+Result:815
+Did it Pass??: YES!
+
+Decimal Multiplication
+First Number: 0.5
+Second Number:45
+Operation:*
+What We Expected: 22.5
+Result: 22.5
+Did it Pass??: YES!
+
+Zero Division
+First Number: 34
+Second Number: 0
+Operation: /
+What We Expected: Error
+Result: Error
+Did it Pass??: YES!
+
+Negative Number!!!
+First Number: -48
+Second Number:-3
+Operation:+
+What We Expected: -51
+Result: -51
+Did it Pass??: YES!
+
+Subtraction
+First Number:32
+Second Number: 5
+Operation: -
+What We Expected:27
+Result: 27
+Did it Pass??: YES
+
+the % test
+First Number:7
+Second Number:1
+Operation: %
+What We Expected:0
+Result:0
+Did it Pass??: YES!
+
+First Number: Blank
+Second Number: 15
+Operation: + 
+What We Expected: Nothing
+Result: Nothing
+Did it Pass??: YES!?
+
+
+
+
+

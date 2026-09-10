@@ -1,0 +1,132 @@
+Test 1
+Required direction: Up
+Joystick input: Up
+Action: Press A once
+Expected result: Score increases by 1
+Result: Score increases by 1
+PASS
+
+Test 2
+Required direction: Right
+Joystick input: Right
+Action: Press A once
+Expected result: Score increases by 1
+Result: Score increases by 1
+PASS
+
+Test 3
+Required direction: Down
+Joystick input: Down
+Action: Press A once
+Expected result: Score increases by 1
+Result: Score increases by 1
+PASS
+
+Test 4
+Required direction: Left
+Joystick input: Left
+Action: Press A once
+Expected result: Score increases by 1
+Result: Score increases by 1
+PASS
+
+Test 5
+Required direction: Up
+Joystick input: Right
+Action: Press A once
+Expected result: Score increases by 1
+Result: Score doesn't increase
+PASS
+
+Test 6
+Required direction: Down
+Joystick input: Up
+Action: Press A once
+Expected result: Score increases by 1
+Result: Score doesn't increase
+PASS
+
+Test 7
+Required direction: Up
+Joystick input: Up
+Action: Hold A
+Expected result: Score increases by 1 and remains as such
+Result: Score increases by 1 and remains as such
+PASS
+
+Test 8
+Required direction: Up
+Joystick input: Up
+Action: Press A 5 times when up
+Expected result: Score increases by 5, 1 at a time
+Result: Score increases by 5, 1 at a time
+PASS
+
+Test 9
+Required direction: Up
+Joystick input: Up
+Action: Disconnect controller
+Expected result: No errors, game continues
+Result: No errors, game continues
+PASS
+
+Test 10
+Required direction: Up
+Joystick input: Up
+Action: Reconnect controller after disconnecting controller
+Expected result: Game allows inputs to the same game it was disconnected from
+Result: Game allows inputs to the same game it was disconnected from
+PASS
+
+Test 11
+Required direction: Up
+Joystick input: Up
+Action: Wait until the timer runs out
+Expected result: Timer doesn't go past zero
+Result: Timer doesn't go past zero
+PASS
+
+Test 12
+Required direction: Up
+Joystick input: Up
+Action: N/A
+Expected result: Direction values stay within 3 throughout the duration of the game
+Result: Direction values stay within 3 throughout the duration of the game
+PASS
+
+
+CORE CHECKS -----
+Timer begins at 20 seconds: ✅
+Decreases once per ~second: ✅
+Stops at zero: ✅
+Never becomes a negative: ✅
+Direction changes about every 2 seconds: ✅
+Only UP, DOWN, LEFT, RIGHT appear: ✅
+Direction changing stops when the game ends: ✅
+Restarting restores timer and game state: ✅
+
+SYSTEM CHECKS -----
+Left scoring direction awards a point for pressing A and angled to the left: ✅
+Right scoring direction awards a point for pressing A and angled to the right: ✅
+Down scoring direction awards a point for pressing A and angled up: ✅
+Up scoring direction awards a point for pressing A and angled down: ✅
+All scoring directions do not award points for facing any direction but the scoring direction: ✅
+Multiple points can be earned by fulfilling the same conditions and pressing A multiple times: ✅
+Strong diagonals DO NOT count: ✅
+Generally fails safely: ✅
+
+FAULT TOLERANCE -----
+✅ means handled
+❌ means not handled
+---------------------
+No controller connected: ✅
+Controller connects after page loads: ✅
+Controller disconnects during the game: ✅
+Controller reconnects: ✅
+Multiple controllers connected: ✅
+Holding A during direction change: ✅
+A pressed at the exact moment as timer reaches 0: ❓
+Browser tab loses focus: ✅
+Page is refreshed: ✅
+Joystick drifts near center: ✅
+Controller uses a different mapping: Instructor requires a specific controller for the assignment. Not necessary.

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="calcu style.css">
+    <title>Redone Calculator</title>
+</head>
+
+<body>
+    <h1>Hi!!! I redid the work I struggled to do!!!! :D</h1>
+    <p>I TOOK ME 3 FULL DAYS BUT I DID IT THANKS MAGICSCHOOL, MR.SMITH AND MY DETERMINATION</p>
+    <label for="quantity"></label>
+    <input type="number" id="ONE" name="number1">
+    <br>
+
+    <label for="operation">Here Are Opperations!!!</label>
+    <select name="operation" id="operation">
+        <option value="Addition">+</option>
+        <option value="Subtraction">-</option>
+        <option value="Multiplaction">*</option>
+        <option value="Divison">/</option>
+        <option value="Percent">%</option>
+    </select>
+    <br>
+
+    <label for="quantity"></label>
+    <input type="number" id="TWO" name="number2">
+    <br>
+
+    <h2>Your result is:</h2>
+    <div id="result">ANSWER ME!!!!</div>
+
+    <button type="button" onclick="calculate()">Calculate</button>
+
+    <script id="calculate">
+        function calculate() {
+            console.log("Calculate function was called!");
+
+
+            const firstInput = parseFloat(document.getElementById("ONE").value);
+            const secondInput = parseFloat(document.getElementById("TWO").value);
+            const operationValue = document.getElementById("operation").value;
+
+            console.log("First number:", firstInput);
+            console.log("Second number:", secondInput);
+            console.log("Operation:", operationValue);
+
+            let result;
+
+            // const resultDiv = document.getElementById("result");
+            //resultDiv.textContent = ""
+
+            if (isNaN(firstInput) || isNaN(secondInput)) {
+                return "Error: Inputs must be numbers";
+
+            } else {
+                switch (operationValue) {
+                    case 'Addition':
+                        result = firstInput + secondInput;
+                        break;
+                    case 'Subtraction':
+                        result = firstInput - secondInput;
+                        break;
+                    case 'Multiplaction':
+                        result = firstInput * secondInput;
+                        break;
+                    case 'Percent':
+                        result = firstInput % secondInput;
+                        break;
+                    case 'Divison':
+                        if (secondInput === 0) {
+                            result = "Error: Division by zero is not allowed";
+                        } else {
+                            result = firstInput / secondInput;
+                        }
+                        break;
+                    default:
+                        result = "Error: Invalid operator. Use +, -, *, or /";
+                }
+            }
+
+            console.log("About to display result:", result);
+            document.getElementById("result").textContent = result;
+        }
+    </script>
+</body>
+
+</html>
