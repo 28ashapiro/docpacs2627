@@ -16,11 +16,14 @@ const server = http.createServer((req, res) => {
             console.log()
             res.end(data);
         });
-    } else {
+    } else if (req.url == '/') {
     res.writeHead(200, { 'Content-Type': 'text/html' });
     res.write('<h1>local server!</h1>')
-    res.write('This is a Node.js application running on the local host, and listening to a set port. (loaclhost:3000)')
+    res.write('This is a Node.js application running on the local host, and listening to a set port. (localhost:3000)')
     res.end();
+    } else {
+        res.writeHead(404, { 'Content-Type': 'text/html' });
+        res.end('Error 404: Page Not Found');
     }
 });
 dotenv.config();
