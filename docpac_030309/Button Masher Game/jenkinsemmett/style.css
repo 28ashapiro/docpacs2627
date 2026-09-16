@@ -1,0 +1,31 @@
+body {
+    background-color: lemonchiffon;
+}
+h1 {
+    text-align: center;
+}
+#activeGame {
+    background-color: rgb(236, 12, 236);
+    margin-left: 20%;
+    margin-right: 20%;
+    border: 6px solid lightskyblue;
+    border-radius: 20px;
+}
+#directionBox {
+    text-align: center;
+}
+#gamepadBox {
+    text-align: center;
+    background-color: bisque;
+    border: 3px solid lightskyblue;
+    border-radius: 20px;
+    font-size: 40px;
+}
+#timeBox {
+    color: whitesmoke;
+    font-size: 30px;
+}
+#scoreBox {
+    color: whitesmoke;
+    font-size: 30px;
+}

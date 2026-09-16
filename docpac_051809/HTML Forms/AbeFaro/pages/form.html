@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML form lesson</title>
+    <style>
+        form {
+            max-width: 600px;
+            margin: 20px;
+            border-width: 5px;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 5px;
+
+        }
+
+        input[type="text"]:not([disabled]),
+        input[type="email"],
+        input[type="number"],
+        select,
+        textarea {
+            display: block;
+            margin-bottom: 15px;
+            padding: 5px;
+            border-width: 5px;
+        }
+
+
+        fieldset {
+            margin: 20px 0;
+            padding: 15px;
+            border-width: 5px;
+        }
+
+        fieldset label {
+            display: inline;
+            margin-left: 5px;
+            margin-right: 15px;
+        }
+
+        button,
+        input[type="submit"] {
+            margin-top: 20px;
+            margin-right: 10px;
+            padding: 8px 15px;
+            border-width: 5px;
+        }
+
+        input[type="checkbox"] {
+            display: inline;
+            margin-right: 5px;
+            border-width: 5px;
+
+        }
+
+        input[type="checkbox"]+label,
+        input[disabled]+label {
+            display: inline;
+            margin-left: 5px;
+            margin-top: 0;
+            border-width: 5px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <p>This form collects data on a variety of project factors below.</p>
+    <form method="POST" action="/form">
+        <label for="studentName">Name</label>
+        <input type="text" id="studentName" name="studentName" required>
+        <label for="studentEmail">Email</label>
+        <input type="email" id="studentEmail" name="studentEmail" required>
+        <label for="studentPTS">Preferred Project Size </label>
+        <input type="number" id="studentPTS" name="studentPTS" min="1" max="4">
+        <fieldset>
+            <legend>Preferred project type</legend>
+            <input type="radio" id="projectWebsite" name="projectType" value="website" required>
+            <label for="projectWebsite">Website</label>
+            <input type="radio" id="projectGame" name="projectType" value="game">
+            <label for="projectGame">Game</label>
+            <input type="radio" id="projectDA" name="projectType" value="data">
+            <label for="projectDA">Data Application</label>
+        </fieldset>
+        <fieldset>
+            <legend>Technology Interests</legend>
+            <input type="checkbox" id="techHTML" name="technologies" value="html-css">
+            <label for="techHTML">HTML and CSS</label>
+            <input type="checkbox" id="techJS" name="technologies" value="js">
+            <label for="techJS">Javascript</label>
+            <input type="checkbox" id="techNode" name="technologies" value="Node">
+            <label for="techNode">Node.js</label>
+            <input type="checkbox" id="techData" name="technologies" value="Data">
+            <label for="techData">Databases</label>
+        </fieldset>
+        <label for="expLevel">Experience Level</label>
+        <select id="expLevel" name="experienceLevel" required>
+            <option value="">Select a level</option>
+            <option value="beginner">Beginner</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="advanced">Advanced</option>
+        </select>
+        <label for="projectDesc">Project Description:</label>
+        <textarea id="projectDesc" name="projectDescription" rows="4" cols="50" maxlength="500" required></textarea>
+        <input type="hidden" name="formType" value="projectInterest">
+        <label for="demoDisabled">Disabled Demo</label>
+        <input type="text" id="demoDisabled" name="demo" value="disabled demo" disabled>
+        <label for="contactPerm">Contact Permission?</label>
+        <input type="checkbox" id="contactPerm" name="contactPermission" value="contact">
+        <br><input type="submit" value="Submit"> <button type="reset">Reset Form</button>
+    </form>
+</body>
+
+</html>

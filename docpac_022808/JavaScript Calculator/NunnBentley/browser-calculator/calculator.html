@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript calculator</title>
+    <script src="calculator.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <header></header>
+        <h1>Javascript Calculator</h1>
+    </header>
+</head>
+<body>
+    <h2>
+    <label for="numberInput1">Enter the first number:</label>
+    <input type="number" id="numberInput1" name="numberInput1">
+    </h2>
+
+    <h2>
+    <label for="operator">Select an operator:</label>
+    <select id="operator" name="operator">
+        <option value="add">Add (+)</option>
+        <option value="subtract">Subtract (-)</option>
+        <option value="multiply">Multiply (*)</option>
+        <option value="divide">Divide (/)</option>
+        <option value="modulo">Modulo (%)</option>
+    </select>
+    </h2>
+
+    <h2>
+    <label for="numberInput2">Enter the second number:</label>
+    <input type="number" id="numberInput2" name="numberInput2">
+    </h2>
+
+        <button type="button" onclick="calculate()" id="calculateButton">Calculate</button>
+
+    </select>
+    <div>
+        <p id="result"></p>
+    </div>
+</body>
+</html>

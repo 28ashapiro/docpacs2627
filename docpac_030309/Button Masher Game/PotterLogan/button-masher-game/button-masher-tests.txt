@@ -1,0 +1,47 @@
+Test 1
+Required direction: Up
+Joystick input: Up
+Action: Press A once
+Expected result: Score increases by 1
+Actual result: Score increases by 1
+Result: Pass
+
+Test 2
+Required direction: Down
+Joystick input: Down
+Action: Press A once
+Expected result: Score increases by 1
+Actual result: Score increases by 1
+Result: Pass
+
+Test 3
+Required direction: Left
+Joystick input: Left
+Action: Press A once
+Expected result: Score increases by 1
+Actual result: Score increases by 1
+Result: Pass
+
+Test 4
+Required direction: Right
+Joystick input: Right
+Action: Press A once
+Expected result: Score increases by 1
+Actual result: Score increases by 1
+Result: Pass
+
+Test 5
+Required direction: Up
+Joystick input: Down
+Action: Press A once
+Expected result: Score does not increase
+Actual result: Score does not increase
+Result: Pass
+
+Test 6
+Required direction: Up
+Joystick input: Up
+Action: Holding A
+Expected result: Score increases once
+Actual result: Score increases once
+Result: Pass

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controller Game</title>
+    <script defer src="game.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        p {
+            display: inline;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div id="controllerStatus">
+            <p>Controller: </p>
+            <p style="display: inline;" id="controller">Not Detected</p>
+            <p style="display: block; margin-top: 3px;">Press Start to play a round</p>
+        </div>
+        <div id="scoreLabel">
+            <p>Score: </p>
+            <p id="score">0</p>
+        </div>
+        <div id="timeLabel">
+            <p>Time: </p>
+            <p id="time">0</p>
+        </div>
+        <button id="start" onclick="startGame()">Start Game</button>
+        <div id="directionLabel">
+            <p>Scoring Direction: </p>
+            <p style="font-size: 35px;" id="directionText">???</p>
+        </div>
+        <div id="directionLabel">
+            <p>Current Direction: </p>
+            <p style="font-size: 25px;" id="controllerDirectionText">???</p>
+        </div>
+        <fieldset id="statusLabel" hidden>
+            <legend>STATUS</legend>
+            <div>
+                <p style="display: block; font-size: 35px; background-color: red; margin-top: 0px;" id="statusText">GAME
+                    OVER</p>
+                <p>High score:</p>
+                <p id="highScoreText">N/A</p>
+            </div>
+        </fieldset>
+    </div>
+</body>
+
+</html>

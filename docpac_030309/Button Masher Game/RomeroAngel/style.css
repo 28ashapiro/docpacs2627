@@ -1,0 +1,44 @@
+h1 {
+    text-align: center;
+    border-radius: 5px;
+    background-color: #2643e8;
+    color: rgb(196, 54, 221);
+    font-size: xx-large
+}
+
+h1 {
+    border: 5px solid black;
+    background-color: #2643e8;
+    padding: 10px;
+}
+
+h2 {
+    border: 3.5px solid rgb(5, 21, 47);
+    background-color: rgb(80, 133, 213);
+    padding: 10px;
+    font-size: x-large;
+}
+
+label {
+    text-align: center;
+    font-size: larger;
+}
+
+body {
+    text-align: center;
+    font-size: xx-large;
+    background-color: rgb(32, 112, 224);
+}
+
+div.directionBox {
+    font-size: xx-large;
+}
+
+div.timeBox {
+    color: red;
+}
+
+div.scoreBox {
+    display: flex;
+    font-size: xx-large;
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML/JS Canvas-Based Mover</title>
+    <script defer src="game.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <img src="sprite.png" id="playerSprite" hidden>
+    <h1>Canvas Mover</h1>
+    <p>WASD or arrow keys to move</p>
+    <canvas id="gameCanvas" width="800" height="600"></canvas>
+    <br>
+    <button id="tickIncreaseButton" onclick="drawLoop()">INCREASE TICKRATE</button>
+    <label style="color: white;" for="tickIncreaseButton">Every press runs drawLoop() seperately, prompting another requestAnimationFrame() to run twice, thrice, etc as fast.</label>
+    <br>
+    <button id="updateJumpPower" onclick="updateJumpPower()">UPDATE JUMPPOWER</button> <input  style="width: 30px;" type="number" name="jumpPowerInput" id="jumpPowerInput" value="10">
+    <label style="color: white;" for="updateJumpPower">Changes the upward acceleration value when the user jumps. Meant for testing the ceilings collision.</label>
+    <br>
+    <button id="updateSpeed" onclick="updateSpeed()">UPDATE SPEED</button> <input  style="width: 30px;" type="number" name="speedInput" id="speedInput" value="5">
+    <label style="color: white;" for="updateSpeed">Changes the players "walking" speed.</label>
+</body>
+</html>

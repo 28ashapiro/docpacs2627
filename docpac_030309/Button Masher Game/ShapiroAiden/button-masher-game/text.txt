@@ -1,0 +1,96 @@
+Test 1
+Required direction: Up
+Joystick input: Up
+Action: Press A once
+Expected result: Score increases by 1
+Actual result: Score increases by 1
+Result: Pass
+
+Test 2
+Required direction: Right
+Joystick input: Right
+Action: Press A once
+Expected result: Score increases by 1
+Actual result: Score increases by 1
+Result: Pass
+
+Test 3
+Required direction: Down
+Joystick input: Down
+Action: Press A once
+Expected result: Score increases by 1
+Actual result: Score increases by 1
+Result: Pass
+
+Test 4
+Required direction: Left
+Joystick input: Left
+Action: Press A once
+Expected result: Score increases by 1
+Actual result: Score increases by 1
+Result: Pass
+
+Test 5
+Required direction: Up
+Joystick input: Left
+Action: Press A once
+Expected result: Score stays the same.
+Actual result: Score stays the same.
+Result: Pass
+
+Test 6
+Required action: Press and hold A
+Action: Press and hold A 
+Expected result: Score increases by 1
+Actual result: Score increases by 1
+Result: Pass
+
+Test 7
+Required action: A pressed repeatedly
+Action: Press A repeatedly
+Expected result: Score increases by 1 each time (only when matching direction)
+Actual result: Score increases by 1 (only when matching direction)
+Result: Pass
+
+Test 8
+Required action: A pressed after timer hits zero
+Action: A pressed after timer hits zero
+Expected result: Score doesn't change
+Actual result: Score doesn't change
+Result: Pass
+
+Test 9
+Required action: Start
+Action: Start
+Expected result: Game resets
+Actual result: Game resets
+Result: Pass
+
+Test 10
+Required condition: Controller Disconnected
+Action: Disconnected Controller
+Expected result: Display Controller Status (Disconnected)
+Actual result: Display Controller Status (Disconnected)
+Result: Pass
+
+Test 11
+Required condition: Reconnected
+Action: Reconnected Controller
+Expected result: Display Controller Status (Reconnected)
+Actual result: Display Controller Status (Reconnected)
+Result: Pass
+
+Test 12
+Required condition: Timer stops at 0
+Action: Waiting for timer to hit zero
+Expected result: Timer stops at zero
+Actual result: Timer stops at zero
+Result: Pass
+
+Test 13
+Required condition: Direction values remain between 0-3
+Action: Look at direction values
+Expected result: Direction values stay between 0-3 
+Actual result: Direction values stay between 0-3
+Result: Pass
+

@@ -1,0 +1,19 @@
+{
+  "name": "unit1-lesson3",
+  "version": "1.0.0",
+  "description": "Use run scripts",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./app.js",
+    "dev": "nodemon ./app.js"
+  },
+  "author": "Tucker Murray",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2"
+  }
+}

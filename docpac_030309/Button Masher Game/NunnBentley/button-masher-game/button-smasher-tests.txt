@@ -1,0 +1,103 @@
+Test 1
+Required Direction: Up
+Joystick Input: Up
+Action: Press A once
+Expected Result: Score increases by 1
+Actual Result: Score increases by 1
+Result: Pass
+
+Test 2
+Required Direction: Right
+Joystick Input: Right
+Action: Press A once
+Expected Result: Score increases by 1
+Actual Result: Score increases by 1
+Result: Pass
+
+Test 3
+Required Direction: Left
+Joystick Input: Left
+Action: Press A once
+Expected Result: Score increases by 1
+Actual Result: Score increases by 1
+Result: Pass
+
+Test 4
+Required Direction: Right
+Joystick Input: Right
+Action: Press A once
+Expected Result: Score increases by 1
+Actual Result: Score increases by 1
+Result: Pass
+
+Test 5
+Required Direction: Up
+Joystick Input: right
+Action: Press A once
+Expected Result: nothing happens
+Actual Result: nothing happens
+Result: Pass
+
+Test 6
+Required Direction: none
+Joystick Input: none
+Action: Held A
+Expected Result: nothing happens
+Actual Result: nothing happens
+Result: Pass
+
+Test 7
+Required Direction: Up
+Joystick Input: Up
+Action: Press A multiple times
+Expected Result: Score increases
+Actual Result: Score increases
+Result: Pass
+
+Test 8
+Required Direction: none
+Joystick Input: none
+Action: Press A once after timer
+Expected Result: nothing happens
+Actual Result: nothing happens
+Result: Pass
+
+Test 9
+Required Direction: none
+Joystick Input: none
+Action: Press start after timer
+Expected Result: game restarts
+Actual Result: game restarts
+Result: Pass
+
+Test 10
+Required Direction: none
+Joystick Input: none
+Action: do not connect controller
+Expected Result: displays no controller connected
+Actual Result: displays no controller connected
+Result: Pass
+
+Test 11
+Required Direction: none
+Joystick Input: none
+Action: connect controller
+Expected Result: displays controller connected
+Actual Result: displays controller connected
+Result: Pass
+
+Test 12
+Required Direction: none
+Joystick Input: none
+Action: let timer reach zero
+Expected Result: game stops
+Actual Result: game stops
+Result: Pass
+
+Test 13
+Required Direction: none
+Joystick Input: none
+Action: direction values remaining within zero through three
+Expected Result: reads one of the 4 inputs such as left, right, down and up
+Actual Result: reads one of the 4 inputs such as left, right, down and up
+Result: Pass

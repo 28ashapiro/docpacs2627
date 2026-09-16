@@ -1,0 +1,103 @@
+Test 1
+Required direction: Up
+Joystick input: Up
+Action: Press A once
+Expected result: Score increases by 1
+Actual result: Score increases by 1
+Result: Pass
+
+Test 2
+Required direction: Right
+Joystick input: Right
+Action: Press A once
+Expected result: Score increases by 1
+Actual result: Score increases by 1
+Result: Pass
+
+Test 3
+Required direction: Down
+Joystick input: Down
+Action: Press A once
+Expected result: Score increases by 1
+Actual result: Score increases by 1
+Result: Pass
+
+Test 4
+Required direction: Left
+Joystick input: Left
+Action: Press A once
+Expected result: Score increases by 1
+Actual result: Score increases by 1
+Result: Pass
+
+Test 5
+Required direction: Up
+Joystick input: Down
+Action: Press A once
+Expected result: Score does not increase
+Actual result: Score does not increase
+Result: Pass
+
+Test 6
+Required direction: Up
+Joystick input: Up
+Action: A button held down
+Expected result: Score increases by 1, but no more
+Actual result: Score increases by 1, but no more
+Result: Pass
+
+Test 7
+Required direction: Up
+Joystick input: Up
+Action: Press A repeatedly
+Expected result: Score increases repeatedly
+Actual result: Score increases repeatedly
+Result: Pass
+
+Test 8
+Required direction: Left
+Joystick input: Left
+Action: A pressed after timer reaches zero
+Expected result: Score does not increase
+Actual result: Score does not increase
+Result: Pass
+
+Test 9
+Required direction: Up
+Joystick input: Up
+Action: Start-button restart
+Expected result: Refreshes the page
+Actual result: Refreshes the page
+Result: Pass
+
+Test 10
+Required direction: Up
+Joystick input: Up
+Action: Controller disconnected
+Expected result: Controller status updates to show controller disconnected
+Actual result: Controller status updates to show controller disconnected
+Result: Pass
+
+Test 11
+Required direction: Up
+Joystick input: Up
+Action: Controller is reconnected
+Expected result: Controller status updates to show its connected and input polling starts again
+Actual result: Controller status updates to show its connected and input polling starts again
+Result: Pass
+
+Test 12
+Required direction: Up
+Joystick input: Up
+Action: Timer stopping at zero
+Expected result: Timer does not decrement any more
+Actual result: Timer does not decrement any more
+Result: Pass
+
+Test 13
+Required direction: Up
+Joystick input: Up
+Action: Direction values remaining within zero through tree
+Expected result: All four direction are selected with no errors from out-of-bounds indices
+Actual result: All four direction are selected with no errors from out-of-bounds indices
+Result: Pass

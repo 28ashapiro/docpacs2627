@@ -1,0 +1,27 @@
+#boxes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 99vh;
+}
+.box{
+    border: 5px solid salmon;
+    padding: 50px;
+    margin: 15px;
+    background-color: white;
+}
+
+body{
+    background-color: black;
+}
+
+#controllerStatus{
+    color: white;
+}
+
+.infos{
+    color: white;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
