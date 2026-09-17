@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML form lesson</title>
+    <style>
+        * {
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="projectInterestForm" method="POST" action="/form">
+        <label for="studentName">What's your name? (all forms are required except technologies)</label>
+        <input type="text" id="studentName" name="studentName" required>
+        <br>
+
+        <label for="email">What is your email?</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+
+        <label for="size">Preferred project size? (1-4)</label>
+        <input type="number" id="size" name="size" max="4" min="1" required>
+        <br>
+
+        <fieldset>
+            <legend>Preferred project type</legend>
+            <input type="radio" name="projectType" id="website" value="website" required>
+            <label for="website">Website</label><br>
+            <input type="radio" name="projectType" id="game" value="game">
+            <label for="game">Game</label><br>
+            <input type="radio" name="projectType" id="dataApp" value="dataApp">
+            <label for="dataApp">dataApp</label><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>What technologies are you interested in?</legend>
+            <input type="checkbox" name="tech" id="html/css" value="html/css">
+            <label for="html/css">hrml/css</label><br>
+            <input type="checkbox" name="tech" id="js" value="js">
+            <label for="js">js</label><br>
+            <input type="checkbox" name="tech" id="nodejs" value="nodejs">
+            <label for="nodejs">nodejs</label><br>
+            <input type="checkbox" name="tech" id="databases" value="databases">
+            <label for="databases">databases</label><br>
+            <br>
+        </fieldset>
+
+        <label for="experience"> What is your experience lvel?</label>
+        <select name="experience" id="experience" required>
+            <option value="">Select a level</option>
+            <option value="Beginner">Beginner</option>
+            <option value="Intermediate">Intermediate</option>
+            <option value="advanced">advanced</option>
+        </select> <br>
+
+        <label for="desc">Write a short project description</label><br>
+        <textarea name="desc" id="desc" cols="30" rows="10" maxlength="1000"></textarea> <br>
+
+        <input type="hidden" name="formType" value="projectInterest">
+
+        <label for="disabled">Disabled</label>
+        <input type="text" disabled name="disabled" id="disabled"><br>
+
+        <label for="contactPermission">May we contact you?</label>
+        <input type="checkbox" name="contactPermission" id="contactPermission" value="yes"><br>
+        <button type="submit">Submit</button><br>
+        <button type="reset">Reset</button>
+    </form>
+</body>
+
+</html>

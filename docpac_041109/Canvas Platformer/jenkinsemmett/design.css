@@ -1,0 +1,25 @@
+#window {
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-top: 1%;
+    background-color: rgb(90, 206, 245);
+}
+#controlBox {
+    text-align: center;
+    margin-left: 35%;
+    margin-right: 35%;
+    color: aquamarine;
+    background-color: rgb(122, 12, 126);
+    border-radius: 20px;
+}
+#instructBox {
+    text-align: center;
+    margin-left: 35%;
+    margin-right: 35%;
+    color: aquamarine;
+    background-color: rgb(174, 41, 179);
+    border-radius: 20px;
+}
+body {
+    background-color: #357203;
+}
