@@ -1,0 +1,78 @@
+* {
+    background-color: white;
+    color: black;
+    font-family: "Papyrus", Fantasy;
+    font-size: x-large;
+}
+
+.title {
+    font-size: xx-large;
+}
+
+.title,
+#leaderboardTitle,
+#leaderboardSlot,
+#instructions,
+#instructionsTitle,
+#img, 
+#seperate{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+#scoreBox,
+#timerBox,
+#directionBox,
+#controllerStatus,
+#leaderboardStatus,
+#leaderboardSlot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+}
+
+/* #leaderboardTitle {
+    margin-top: 15%;
+}
+
+#leaderboardSlot {
+    font-size: xx-large;
+    margin-top: 2%;
+}
+
+#leaderboardPoints {
+    margin-left: 1%;
+    font-size: 85%;
+} */
+
+#instructionsTitle , .title {
+    margin-bottom: 0%;
+    font-weight: bold;
+    font-style: italic;
+}
+
+#instructionsTitle, #instructions {
+    margin: 0%;
+}
+
+@keyframes wave {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.title{
+    animation: wave 1.2s ease-in-out infinite;
+    animation-delay: calc(0.1s * var(--i));
+}
+
+#seperate {
+    margin: 0%;
+    font-weight: bolder;
+}

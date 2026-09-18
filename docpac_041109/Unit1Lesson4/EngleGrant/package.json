@@ -1,0 +1,16 @@
+{
+  "name": "englegrant",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "fs": "^0.0.1-security",
+    "http": "^0.0.1-security"
+  }
+}
