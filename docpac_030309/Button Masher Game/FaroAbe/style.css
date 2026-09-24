@@ -1,0 +1,47 @@
+#directionBox {
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+    border: 2px solid black;
+    width: 200px;
+}
+
+#timerBox,
+#scoreBox {
+    font-size: 24px;
+    /* Bigger than 12px */
+    font-weight: bold;
+    text-align: center;
+    padding: 15px;
+    border: 2px solid black;
+    width: 150px;
+    display: inline-block;
+    /* Put them side by side */
+    margin: 10px;
+}
+
+#controllerStatus {
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+    width: 200px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+#instructions {
+    text-align: center;
+    font-size: 16px;
+    margin: 20px;
+    max-width: 400px;
+}
