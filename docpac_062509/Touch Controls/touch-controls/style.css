@@ -1,0 +1,57 @@
+* {
+    box-sizing: border-box;
+    font-family: "Orbitron", cursive, "Comic Sans MS";
+}
+
+body {
+    background-color: limegreen;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    margin-bottom: 10px;
+}
+
+#do-this {
+    margin-bottom: 15px;
+}
+
+#touchArea {
+    position: relative;
+    width: 600px;
+    height: 400px;
+    margin: 0 auto;
+    border: 2px solid black;
+    border-bottom: 6px solid black;
+    overflow: hidden;
+    touch-action: none;
+    user-select: none;
+    background-color: white;
+}
+
+#player {
+    position: absolute;
+    top: 150px;
+    left: 250px;
+    width: 100px;
+    height: 100px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlDc2yMoK1KV_yqvngvYiG1CKWgxOPzcIWPQrMrFvpQw&s");
+}
+
+#touchStatus {
+    margin-top: 15px;
+    margin: 15px auto 0;
+    padding: 15px;
+    background-color: white;
+    border: 2px solid black;
+    border-bottom: 4px solid black;
+    width: max-content;
+    height: max-content;
+    min-height: 50px;
+    text-align: center;
+}
