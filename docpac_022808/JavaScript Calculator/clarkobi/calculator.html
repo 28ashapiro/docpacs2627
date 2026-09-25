@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html></html>
+<head>
+    <title>Calculator</title>
+</head>
+<body>
+    <h1>This is suposed to be Calculator its suposed to calculate</h1>
+    <label for="firstnumber"> First number></label>
+    <input type="number" id="firstnumber">
+    <label for="Operation">Select Operation</label>
+    <select id="operation" name="Operation">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+        <option value="%">%</option>
+    </select>
+
+    <label for="secondnumber">Second number></label>
+    <input type="number" id="secondnumber">
+
+    <label for="result">Result></label>
+    <div id="result"></div>
+    <button type="button" onclick="calculate()">Calculate</button>
+
+    <script>
+        function calculate(){
+            let firstnumber = document.getElementById("firstnumber").value;
+            let secondnumber = document.getElementById("secondnumber").value;
+            let operation = document.getElementById("operation").value;
+            let result = document.getElementById("result").value;
+            parseFloat(firstnumber)
+            parseFloat(secondnumber)
+        }
+    </script>
+</body>

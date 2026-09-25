@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Form</title>
+</head>
+
+<body>
+
+
+
+    <form id=form1 action="/form" method="post">
+        <p>Please enter information below</p>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+        <label for="groupsize">Group Size:</label>
+        <input type="number" id="groupsize" name="groupsize" required min="1" max="4">
+        <br>
+        <fieldset>
+            <legend>Preferred project type</legend>
+            <label for="projecttype1">website</label>
+            <input type="radio" name="projecttype" id="projecttype1" value="website">
+            <br>
+            <label for="projecttype2">game</label>
+            <input type="radio" name="projecttype" id="projecttype2" value="game">
+            <br>
+            <label for="projecttype3">data</label>
+            <input type="radio" name="projecttype" id="projecttype3" value="data">
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>technologies interested in</legend>
+            <label for="tech1">HTML / CSS</label>
+            <input type="checkbox" name="technology" id="tech1" value="html_css">
+            <br>
+            <label for="tech2">JavaScript</label>
+            <input type="checkbox" name="technology" id="tech2" value="javascript">
+            <br>
+            <label for="tech3">Node.js</label>
+            <input type="checkbox" name="technology" id="tech3" value="nodejs">
+            <br>
+            <label for="tech4">Databases</label>
+            <input type="checkbox" name="technology" id="tech4" value="databases">
+        </fieldset>
+        <br>
+        <label for="contactPermission">Permission to contact via Email?</label>
+        <input type="checkbox" name="contactPermission" id="contactPermission" value="yes">
+        <br>
+        <br>
+        <label for="experiencelevel">Level of experience:</label>
+        <select name="experiencelevel" id="experiencelevel" required>
+            <option value="beginner">Beginner</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="advanced">Advanced</option>
+        </select>
+        <br>
+        <br>
+        <label for="projectidea">Idea for project:</label>
+        <textarea name="projectidea" id="projectidea" rows="5" cols="50"></textarea>
+        <br>
+        <input type="hidden" name="formType" value="projectInterest">
+
+        <br>
+        <button type="submit">Submit</button>
+        <button type="reset">Reset Form</button>
+    </form>
+</body>
+
+</html>

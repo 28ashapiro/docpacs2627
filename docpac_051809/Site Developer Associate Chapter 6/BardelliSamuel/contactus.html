@@ -1,0 +1,118 @@
+<html>
+
+<head>
+    <meta name="Keywords" content="CIW, HTML5, uCorp" />
+    <meta name="Description" content="Simple XHTML page for uCorp site" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="contactus/contactus.css" />
+    <title>Welcome to uCorp</title>
+</head>
+
+<body>
+
+
+
+    <!-- HEADER -->
+    <header>
+
+        <div id="head"><a href="index.html"><img height="65" width="250" src="contactus/uCorp_logo.png" /></a></div>
+
+        <div id="navbar"><a href="aboutus.html"><img height="52" width="89" src="contactus/header_button_about-us.jpg"
+                    alt="Link goes back to current page." id="aboutus" /></a><a href="contactus.html"><img height="52"
+                    width="104" src="contactus/header_button_contact-us.jpg"
+                    alt="Click here to contact us and let us know what you think." id="contactus" /></a><img height="52"
+                width="91" src="contactus/header_button_products.jpg"
+                alt="Click here to explore the catalog of products we offer." id="products" /><a
+                href="manufacturing.html"><img height="52" width="204"
+                    src="contactus/header_button_manufacturing-process.jpg"
+                    alt="Click here to learn about the high-quality manufacturing process that uCorp employs."
+                    id="manufacturingprocess" /></a><a href="technology.html"><img height="52" width="112"
+                    src="contactus/header_button_technology.jpg"
+                    alt="Click here to discover the advanced technology that goes into each one of our speakers."
+                    id="technology" /></a></div>
+
+    </header>
+
+    <!-- ARTICLE -->
+
+    <article>
+
+        <h2>Contact Us</h2>
+
+        <!-- PLACE YOUR FORM HERE -->
+        <form method="POST">
+            <h3>>First name:</h3>
+            <blockquote><input type="text" name="firstName" placeholder="Your name"></blockquote>
+            <h3>>Last name:</h3>
+            <blockquote><input type="text" name="lastName" placeholder="Your last name"></blockquote>
+            <h3>>Company:</h3>
+            <blockquote><input type="text" name="company" placeholder="Your company"></blockquote>
+            <h3>>Phone Number:</h3>
+            <blockquote><input type="text" name="number" placeholder="Your telephone number"></blockquote>
+            <h3>>Email address:</h3>
+            <blockquote><input type="email" name="email" placeholder="Your email address"></blockquote>
+            <h3>>Country:</h3>
+            <blockquote><input type="text" name="country" placeholder="Your country"></blockquote>
+            <h3>Comment</h3>
+            <textarea name="comment" placeholder="what did you want to tell us?" cols="30" rows="10"></textarea>
+
+            <div id="contactTime" style="display: flex;">
+                <div>
+                <label for="days">What days should we try to contact you?</label>
+                <select name="days" id="days" multiple="multiple">
+                    <option value="Monday">Monday</option>
+                    <option value="Tuesday">Tuesday</option>
+                    <option value="Wednesday">wednesday</option>
+                    <option value="Thursday">Thursday</option>
+                    <option value="Friday">Friday</option>
+                    <option value="Saturday">Saturday</option>
+                    <option value="Sunday">Sunday</option>
+                </select>
+                </div>
+
+                <div>
+                <label for="time">When should we try to contact you?</label><br>
+                <input type="checkbox" name="time" id="morning"><label for="morning">Morning</label><br>
+                <input type="checkbox" name="time" id="afternoon"><label for="afternoon">afternoon</label><br>
+                <input type="checkbox" name="time" id="evening"><label for="evening">Evening</label><br>
+                </div>
+            </div>
+            <h3>would you like to be added to our mailing list?</h3>
+            <input type="radio" name="mail" id="yesmail" value="yes">Yes<br>
+            <input type="radio" name="mail" id="nomail" value="no">No<br><br><br>
+            <button type="submit">Submit</button>
+        </form>
+    </article>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div id="address">
+            <h4>uCorp</h4>
+            Sunshine House, Sunville. SUN12
+            <br />
+            019223 8092344
+            <br />
+            info@ucorp.com
+        </div>
+
+        <div id="follow">
+            <h4>Follow Us</h4>
+            <a href="https://twitter.com/uCorp4">Twitter</a> | <a
+                href="https://www.facebook.com/UCorp-441272686298550/">Facebook</a> | <a
+                href="https://www.linkedin.com/company/ucorporation/">LinkedIn</a> | <a
+                href="https://www.instagram.com/ucorp123/">Instagram</a>
+            <img src="aboutus/footer_newsletter.jpg" alt="Enter your email here to subscribe to our newsletter." />
+        </div>
+
+        <div id="footerlinks">
+            <br />
+            Copyright &copy All rights reserved by uCorp. <a href="terms.html">Terms</a> | <a
+                href="privacy.html">Privacy</a> | <a href="contactus.html">Contact Us<a? </div>
+
+    </footer>
+
+</body>
+
+</html>
