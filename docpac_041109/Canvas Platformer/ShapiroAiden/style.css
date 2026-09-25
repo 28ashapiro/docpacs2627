@@ -1,0 +1,16 @@
+* {
+    font-family: Comic Sans MS, cursive, Arial, Helvetica, sans-serif;
+    color: black;
+    background-color: white;
+}
+
+#gameCanvas {
+    background-color: grey;
+    border: 2px solid black;
+    border-bottom: 6px solid rgb(14, 14, 14);
+
+    width: 800px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
