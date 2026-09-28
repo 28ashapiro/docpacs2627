@@ -1,6 +1,6 @@
 require('dotenv').config()
 const PORT = Number(process.env.PORT);
-const {parse} = require('querystring');
+const bodyParser = require('body-parser');
 const express = require('express')
 const app = express();
 
