@@ -1,9 +1,9 @@
 require('dotenv').config()
 const PORT = Number(process.env.PORT);
-const bodyParser = require('body-parser');
 const express = require('express')
 const app = express();
 
+app.use(express.urlencoded({extended: true}))
 app.use(express.static('public'));
 
 app.get("/", (req, res) => {
