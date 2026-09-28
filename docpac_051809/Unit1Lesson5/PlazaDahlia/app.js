@@ -5,7 +5,7 @@ const http = require('http');
 const server = http.createServer((req, res) => {
     console.log(req.method);
     console.log(req.url);
-    const parsedUrl = new URL(req.url, `http://localhost:${PORT}`);
+    const parsedUrl = new URL(req.url, `http://localhost:${3000}`);
 
     if (req.url === '/') {
         res.writeHead(200, { 'Content-Type': 'text/plain' });
@@ -22,21 +22,34 @@ const server = http.createServer((req, res) => {
         });
     }
     else if (req.url === '/form' && req.method == 'POST') {
-        res.writeHead(200, { 'Content-Type': 'text/plain' });
         let rawBody = ''
         req.on('data', (chunk) => { rawBody += chunk; })
         req.on('end', () => {
+            console.log(rawBody)
             const params = new URLSearchParams(rawBody);
             const studentName = params.get('studentName');
-            res.end(studentName);
+            if (studentName && studentName.trim() !== '') {
+                res.writeHead(200, { 'Content-Type': 'text/plain' });
+                res.end(studentName);
+            } else {
+                res.writeHead(400, { 'Content-Type': 'text/plain' });
+                res.end('Bad Request')
+            }
         });
-    }
-    else {
+    } else if (parsedUrl.pathname == '/query' && req.method == 'GET') {
+        const message = parsedUrl.searchParams.get('message');
+        if (message != null) {
+            res.writeHead(200, { 'Content-Type': 'text/plain' });
+            res.end('Message:' + message);
+        } else {
+            res.writeHead(200, { 'Content-Type': 'text/plain' });
+            res.end('Please provide a message parameter. Example: /query?message=Hello');
+        }
+    } else {
         res.writeHead(404, { 'Content-Type': 'text/plain' });
         res.end('Page not found');
     }
 });
-
 server.listen(process.env.PORT, 'localhost', () => {
     console.log(`${process.env.APP_NAME} is running at http://localhost:${process.env.PORT}/`);
 });
