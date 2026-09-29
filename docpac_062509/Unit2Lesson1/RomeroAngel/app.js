@@ -1,4 +1,5 @@
 const express = require('express');
+const { get } = require('http');
 const app = express();
 const path = require('path');
 require('dotenv').config();
@@ -24,13 +25,28 @@ app.post('/form', (req, res) => {
     let trimmedName = userName.trim();
 
     if (trimmedName === "") {
-        res.status(400).send('There should be no blanks here please make sure you fill out the spaces with a name');
-    }
+        res.status(400).send('There should be no blanks in the name field. Please make sure you fill out the "Your Name Please!" with a name. Please add a name and submit again.');
 
-    console.log('Route was hit!');
-    console.log(req.body);
-    res.send(`<h1>Thank you, ${req.body.userName}!</h1><p>We will now process and do our stuff to get this filled or something, bye bye!</p>`);
+    }
+    else {
+        console.log('Route was hit!');
+        console.log(req.body);
+        res.send(`<h1>Thank you, ${req.body.userName}!</h1><p>We will now process and do our stuff to get this filled or something, bye bye!</p>`);
+    }
 });
+
+app.get('/query', function (req, res) {
+    let message = req.query.message;
+    let trimmedMessage = message.trim();
+
+    if (trimmedMessage === "") {
+        res.status(400).send('Please provide a message');
+    } else {
+        res.send(`Your message is: ${trimmedMessage}`);
+    }
+});
+
+
 
 app.listen(port, () => {
     console.log(`${process.env.APP_NAME} is running on http://localhost:${port}`);
