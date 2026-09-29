@@ -12,7 +12,7 @@ app.get("/", (req, res) => {
 })
 
 app.get("/form", (req, res) => {
-    res.sendFile(path.join(__dirname, '/public/form.html'));
+    res.sendFile(path.join(__dirname, '/public/form.html'));                
 })
 
 app.post("/form", (req, res) => {
@@ -23,6 +23,34 @@ app.post("/form", (req, res) => {
     })
     res.send();
 })
+
+app.get("/query", (req, res) => {
+    if (req.query.message != '') {
+        console.log(req.query.message);
+        res.send("got query")
+    }
+    if (req.query.message == '') {
+        res.status(400).send("no word after message query")
+    }
+})
+
+app.get(`/urlparams/:isgreg`, (req, res) => {
+    const isgreg = req.params.isgreg;
+    if (isgreg == '') {
+        res.status(400).send('param empty')
+    }
+
+    if (isgreg != "greg") {
+        if (isgreg != "Greg") {
+            res.send("it's a "+ isgreg +' not a greg')
+        }
+    }
+
+    if (isgreg == "greg" || "Greg") {
+        res.send("it's a "+ isgreg)
+    }
+})
+
 app.listen(PORT, 'localhost', () =>{
     console.log(`server running at http://localhost:${PORT}/`);
 });
