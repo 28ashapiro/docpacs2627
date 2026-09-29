@@ -28,3 +28,10 @@ window.addEventListener('gamepaddisconnected', (event) => {
     gamepadIndex = null
     contollerStatus.textContent = "You need a controler for this game."
 });
+function loop(){
+    let gamepads = navigator.getGamepads()
+    if (){
+        let gamepad = gamepads[gamepadIndex]
+    }
+    requestAnimationFrame(loop)
+}
