@@ -30,8 +30,12 @@ window.addEventListener('gamepaddisconnected', (event) => {
 });
 function loop(){
     let gamepads = navigator.getGamepads()
-    if (){
+    if (gamepadIndex !== null){
         let gamepad = gamepads[gamepadIndex]
+        if(gamepad) {
+            console.log(gamepad.buttons[0])
+        }
     }
     requestAnimationFrame(loop)
 }
+loop()
