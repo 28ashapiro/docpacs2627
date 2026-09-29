@@ -36,6 +36,15 @@ const server = http.createServer((req, res) => {
                 res.end('Bad Request')
             }
         });
+    } else if (req.url.startsWith('/urlparams/') && req.method == 'GET') {
+        const paramValue = req.url.substring(11);
+        if (paramValue && paramValue.trim() !== '') {
+            res.writeHead(200, { 'Content-Type': 'text/plain' });
+            res.end(paramValue);
+        } else {
+            res.writeHead(400, { 'Content-Type': 'text/plain' });
+            res.end('Please provide a parameter value.');
+        }
     } else if (parsedUrl.pathname == '/query' && req.method == 'GET') {
         const message = parsedUrl.searchParams.get('message');
         if (message != null) {
