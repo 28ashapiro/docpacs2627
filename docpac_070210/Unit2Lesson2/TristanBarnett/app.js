@@ -17,17 +17,19 @@ app.get("/form", (req, res) => {
 
 app.post("/form", (req, res) => {
     console.log(req.body);
-    res.status(400).send({
-        status: 400,
-        message: "missing answers"
-    })
+    if (req.body == '') {
+        res.status(400).send({
+            status: 400,
+            message: "missing answers"
+        })
+    }
     res.send();
 })
 
 app.get("/query", (req, res) => {
     if (req.query.message != '') {
         console.log(req.query.message);
-        res.send("got query")
+        res.send(req.query.message)
     }
     if (req.query.message == '') {
         res.status(400).send("no word after message query")
@@ -50,6 +52,13 @@ app.get(`/urlparams/:isgreg`, (req, res) => {
         res.send("it's a "+ isgreg)
     }
 })
+
+app.use((req, res, next) => {
+    res.status(404).json({
+        status: 'fail',
+        message: `can't find ${req.originalUrl} on this server!`
+    });
+});
 
 app.listen(PORT, 'localhost', () =>{
     console.log(`server running at http://localhost:${PORT}/`);
