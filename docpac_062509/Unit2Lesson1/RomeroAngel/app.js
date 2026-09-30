@@ -19,6 +19,7 @@ app.get('/form', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'form.html'));
 });
 
+///This is the req body, this object is considered as our backend all values and data you submit is seen here as a HTTP payload.
 app.post('/form', (req, res) => {
 
     let userName = req.body.userName;
@@ -35,17 +36,28 @@ app.post('/form', (req, res) => {
     }
 });
 
+//// req.body is what sends data to the request body, this is were that data stored then the route handler values are sent using th said req.body. This is for the HTTP request.
 app.get('/query', function (req, res) {
-    let message = req.query.message;
-    let trimmedMessage = message.trim();
-
-    if (trimmedMessage === "") {
+    if (!req.query.message || req.query.message.trim() === "") {
         res.status(400).send('Please provide a message');
     } else {
-        res.send(`Your message is: ${trimmedMessage}`);
+        res.send(`Your message is: ${req.query.message.trim()}`);
     }
 });
 
+///This is the object containing query parameters that the URL would use for any incoming HTTP request.
+app.get('/urlparams/:paramname', (req, res) => {
+    if (!req.params.paramname || req.params.paramname.trim() === "") {
+        res.status(400).send("You must send a valid parameter");
+    } else {
+
+        res.send(`The value of paramname is: ${req.params.paramname.trim()}`);
+    }
+});
+
+app.use((req, res) => {
+    res.status(404).send('Page not found');
+});
 
 
 app.listen(port, () => {
