@@ -26,7 +26,7 @@ app.post('/form', (req, res) => {
     let trimmedName = userName.trim();
 
     if (trimmedName === "") {
-        res.status(400).send('There should be no blanks in the name field. Please make sure you fill out the "Your Name Please!" with a name. Please add a name and submit again.');
+        res.status(400).send('Error 400! There should be no blanks in the name field. Please make sure you fill out the "Your Name Please!" with a name. Please add a name and submit again.');
 
     }
     else {
@@ -56,7 +56,7 @@ app.get('/urlparams/:paramname', (req, res) => {
 });
 
 app.use((req, res) => {
-    res.status(404).send('Page not found');
+    res.status(404).send('404 Page not found');
 });
 
 
