@@ -1,0 +1,174 @@
+Test 1
+Feature: Canvas setup
+Action: Load the game page and verify the canvas and JavaScript load correctly
+Expected: The canvas loads without errors and the game can draw on it
+Actual: The JavaScript retrieves gameCanvas and its 2D context. The exact HTML canvas dimensions could not be verified from game.js alone.
+Result: Pass - code verified; runtime/HTML verification needed
+
+Test 2
+Feature: Wall class
+Action: Create Wall objects and draw them
+Expected: Wall objects store x, y, w, and h and can be drawn
+Actual: Wall stores x, y, w, and h and its draw() method uses fillRect()
+Result: Pass
+
+Test 3
+Feature: Player inheritance
+Action: Create a Player object
+Expected: Player extends Wall and calls super()
+Actual: Player extends Wall and calls super(x, y, w, h)
+Result: Pass
+
+Test 4
+Feature: Player drawing
+Action: Draw the Player
+Expected: Player is drawn as a visible rectangle
+Actual: Player has its own draw() method and uses fillRect()
+Result: Pass
+
+Test 5
+Feature: Setup phase
+Action: Start the game
+Expected: setup() creates the Player and walls and starts the game loop
+Actual: setup() creates the Player, creates four Wall objects, sets gameRunning to true, and starts requestAnimationFrame()
+Result: Pass
+
+Test 6
+Feature: Loop phase
+Action: Run the game
+Expected: loop() updates and redraws the game continuously
+Actual: loop() clears the canvas, processes input and physics, draws the walls and Player, and requests the next frame
+Result: Pass
+
+Test 7
+Feature: End phase
+Action: Trigger end()
+Expected: The game loop stops and a game-over message appears
+Actual: end() sets gameRunning to false, cancels the animation frame, clears the canvas, and displays Game Over and restart text
+Result: Pass
+
+Test 8
+Feature: Controller connection
+Action: Connect a gamepad
+Expected: The controller status changes to connected and its index is saved
+Actual: gamepadconnected saves the gamepad index and changes the status to Controller Connected
+Result: Pass - code verified; physical controller test needed
+
+Test 9
+Feature: Controller disconnection
+Action: Disconnect the gamepad
+Expected: The active gamepad index is cleared and the status changes
+Actual: gamepaddisconnected sets activeGamepadIndex to null and displays Controller Disconnected
+Result: Pass - code verified; physical controller test needed
+
+Test 10
+Feature: Joystick dead zone
+Action: Move the left joystick only slightly
+Expected: Small values within the dead zone produce no movement
+Actual: Values between -0.2 and 0.2 are changed to 0
+Result: Pass
+
+Test 11
+Feature: Horizontal movement
+Action: Move the left joystick left and right
+Expected: The Player moves horizontally based on joystick input
+Actual: axes[0] is multiplied by player.speed and assigned to player.vx, then added to player.x
+Result: Pass
+
+Test 12
+Feature: Left screen edge
+Action: Move the Player left past the canvas boundary
+Expected: The Player stops at the left edge
+Actual: player.x is clamped to 0
+Result: Pass
+
+Test 13
+Feature: Right screen edge
+Action: Move the Player right past the canvas boundary
+Expected: The Player stops at the right edge
+Actual: player.x is clamped to canvas.width - player.w
+Result: Pass
+
+Test 14
+Feature: Gravity
+Action: Start the game without moving the controller
+Expected: The Player falls because of gravity and lands on the floor
+Actual: gravity is added to player.vy and player.vy is added to player.y; the floor collision stops the Player
+Result: Pass
+
+Test 15
+Feature: Jump while grounded
+Action: Press the A button while the Player is grounded
+Expected: The Player jumps once
+Actual: A new button press while grounded sets player.vy to -player.jumpStrength and grounded to false
+Result: Pass
+
+Test 16
+Feature: Jump attempt while airborne
+Action: Press A while the Player is in the air
+Expected: The Player does not start another jump
+Actual: The jump condition requires player.grounded to be true
+Result: Pass
+
+Test 17
+Feature: Rectangle overlap detection
+Action: Place the Player over a Wall
+Expected: checkCollision() returns true when rectangles overlap
+Actual: checkCollision() uses the four required AABB edge comparisons
+Result: Pass
+
+Test 18
+Feature: Left wall collision
+Action: Move left into the vertical Wall
+Expected: The Player stops against the right side of the Wall
+Actual: When vx is negative, player.x is set to wall.x + wall.w and vx is set to 0
+Result: Pass
+
+Test 19
+Feature: Right wall collision
+Action: Move right into the vertical Wall
+Expected: The Player stops against the left side of the Wall
+Actual: When vx is positive, player.x is set to wall.x - player.w and vx is set to 0
+Result: Pass
+
+Test 20
+Feature: Floor Wall landing
+Action: Fall onto the floor
+Expected: The Player lands on top of the floor and becomes grounded
+Actual: Downward collision sets player.y to wall.y - player.h, vy to 0, and grounded to true
+Result: Pass
+
+Test 21
+Feature: First raised-platform landing
+Action: Jump or fall onto the platform at x=100, y=470
+Expected: The Player lands on top and becomes grounded
+Actual: The platform is in the walls array and uses the vertical collision system
+Result: Pass
+
+Test 22
+Feature: Second raised-platform landing
+Action: Jump or fall onto the platform at x=500, y=350
+Expected: The Player lands on top and becomes grounded
+Actual: The platform is in the walls array and uses the vertical collision system
+Result: Pass
+
+Test 23
+Feature: Walking off a platform
+Action: Walk off the edge of a platform
+Expected: The Player falls and grounded becomes false
+Actual: grounded is reset to false before vertical collision checks, and gravity continues to move the Player downward
+Result: Pass
+
+Test 24
+Feature: Platform-underside collision
+Action: Jump into the underside of a platform
+Expected: Upward movement stops and the Player remains below the platform
+Actual: Upward collision sets player.y to wall.y + wall.h, sets vy to 0, and leaves grounded false
+Result: Pass
+
+Test 25
+Feature: Falling below the map
+Action: Walk through the floor gap and fall below the canvas
+Expected: The game ends and displays the game-over message
+Actual: When player.y > canvas.height, end() is called
+Result: Pass

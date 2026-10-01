@@ -1,0 +1,41 @@
+Test 1
+Feature: Event listeners for touch
+Action: Each of them fires when required; tapping to start, end, and drag to move.
+Expected: Each of them fires when required
+Actual: Each of them fires when required
+Result: Pass
+
+Test 2
+Feature: Swiping successfully changes direction depending on finger location when released.
+Action: Swiping left, right, up and down seperately
+Expected: Different directions for left, right, up and down
+Actual: Different directions for left, right, up and down
+Result: Pass
+
+Test 3
+Feature: Distance calculates correctly 
+Action: Move about 30 pixels
+Expected: Display about 30 pixels of distance when dragged
+Actual: Display about 30 pixels of distance when dragged
+Result: Pass
+
+Test 4
+Feature: Wall collision 
+Action: Thrust movable cube into the wall
+Expected: Movable object never goes outside of the borders
+Actual: Movable object never goes outside the borders
+Result: Pass
+
+Test 5
+Feature: Two Finger Testing 
+Action: Both fingers move on the screen at the same time
+Expected: Only follows one finger
+Actual: Only follows one finger
+Result: Pass
+
+Test 6
+Feature: Negative vertical and horizontal movement/delta translates properly
+Action: Move the cube towards the origin
+Expected: Negative movements move towards the origin
+Actual: Negative movements move towards the origin
+Result: Pass

@@ -1,0 +1,9 @@
+#touchArea {
+    position: relative;
+    width: 600px;
+    height: 400px;
+    border: 2px solid black;
+    overflow: hidden;
+    touch-action: none;
+    user-select: none;
+}

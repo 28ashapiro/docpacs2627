@@ -1,0 +1,376 @@
+Test
+1
+Feature:
+Page and control-area setup
+Action:
+Open the web page in a browser and verify that the HTML layout, canvas/control area, and styling load correctly without errors.
+Expected:
+The page displays fully with the interactive control area clearly visible and centered or properly positioned.
+Actual:
+The page loaded successfully with all UI elements and the control area rendering as expected.
+Result:
+Pass
+
+Test
+2
+Feature:
+Developer Tools Device Mode
+Action:
+Open browser Developer Tools, toggle Device Toolbar (mobile simulation), and select a touch-enabled device profile.
+Expected:
+The viewport emulates a mobile touch device and cursor interactions mimic touch inputs.
+Actual:
+Device mode activated cleanly and touch emulation cursor functioned properly.
+Result:
+Pass
+
+Test
+3
+Feature:
+Force Touch when required
+Action:
+Perform a high-pressure touch gesture (force touch/3D touch) on a supported device/emulator control element.
+Expected:
+The application accurately detects the increased pressure value (`force` property > threshold) and triggers the secondary action.
+Actual:
+Pressure change was successfully read and registered by the event listener.
+Result:
+Pass
+
+Test
+4
+Feature:
+touchstart
+Action:
+Place a single finger or touch point down onto the control area.
+Expected:
+A `touchstart` event fires immediately, recording the initial coordinates and touch identifier.
+Actual:
+Event triggered instantly on contact with correct initial properties.
+Result:
+Pass
+
+Test
+5
+Feature:
+Local coordinate conversion
+Action:
+Touch near the upper-left corner of the control area
+Expected:
+Local x and y are both close to zero
+Actual:
+Local x and y are both close to zero
+Result:
+Pass
+
+Test
+6
+Feature:
+touchmove
+Action:
+Drag the touch point across the control area without lifting the finger.
+Expected:
+Continuous `touchmove` events fire, updating the current tracking coordinates.
+Actual:
+Events fired smoothly tracking the movement path across the area.
+Result:
+Pass
+
+Test
+7
+Feature:
+Negative horizontal movement
+Action:
+Move the active touch point from right to left horizontally.
+Expected:
+The horizontal displacement delta calculates as a negative value.
+Actual:
+Delta X correctly computed as negative during leftward drag.
+Result:
+Pass
+
+Test
+8
+Feature:
+Positive horizontal movement
+Action:
+Move the active touch point from left to right horizontally.
+Expected:
+The horizontal displacement delta calculates as a positive value.
+Actual:
+Delta X correctly computed as positive during rightward drag.
+Result:
+Pass
+
+Test
+9
+Feature:
+Negative vertical movement
+Action:
+Move the active touch point from bottom to top vertically.
+Expected:
+The vertical displacement delta calculates as a negative value (following standard screen coordinate system).
+Actual:
+Delta Y correctly computed as negative during upward drag.
+Result:
+Pass
+
+Test
+10
+Feature:
+Positive vertical movement
+Action:
+Move the active touch point from top to bottom vertically.
+Expected:
+The vertical displacement delta calculates as a positive value.
+Actual:
+Delta Y correctly computed as positive during downward drag.
+Result:
+Pass
+
+Test
+11
+Feature:
+Distance calculation
+Action:
+Perform a drag movement between two known coordinate points within the control area.
+Expected:
+The Pythagorean theorem calculation accurately determines the total distance vector magnitude.
+Actual:
+Calculated distance matched the expected pixel Euclidean distance.
+Result:
+Pass
+
+Test
+12
+Feature:
+Up direction
+Action:
+Execute a drag gesture predominantly moving upward.
+Expected:
+Directional vector analysis classifies the primary movement axis as Up.
+Actual:
+Movement correctly identified and classified as Up direction.
+Result:
+Pass
+
+Test
+13
+Feature:
+Down direction
+Action:
+Execute a drag gesture predominantly moving downward.
+Expected:
+Directional vector analysis classifies the primary movement axis as Down.
+Actual:
+Movement correctly identified and classified as Down direction.
+Result:
+Pass
+
+Test
+14
+Feature:
+Left direction
+Action:
+Execute a drag gesture predominantly moving left.
+Expected:
+Directional vector analysis classifies the primary movement axis as Left.
+Actual:
+Movement correctly identified and classified as Left direction.
+Result:
+Pass
+
+Test
+15
+Feature:
+Right direction
+Action:
+Execute a drag gesture predominantly moving right.
+Expected:
+Directional vector analysis classifies the primary movement axis as Right.
+Actual:
+Movement correctly identified and classified as Right direction.
+Result:
+Pass
+
+Test
+16
+Feature:
+Object movement
+Action:
+Drag an interactive on-screen object or marker using touch inputs.
+Expected:
+The object tracks the touch coordinates in real-time as movement occurs.
+Actual:
+Object moved fluidly along with the touch point coordinates.
+Result:
+Pass
+
+Test
+17
+Feature:
+Left boundary
+Action:
+Drag the interactive object past the left edge boundary of the control area.
+Expected:
+The object's position clamps to the minimum allowed X coordinate, preventing it from leaving the area.
+Actual:
+Position successfully restricted at the left border.
+Result:
+Pass
+
+Test
+18
+Feature:
+Right boundary
+Action:
+Drag the interactive object past the right edge boundary of the control area.
+Expected:
+The object's position clamps to the maximum allowed X coordinate.
+Actual:
+Position successfully restricted at the right border.
+Result:
+Pass
+
+Test
+19
+Feature:
+Top boundary
+Action:
+Drag the interactive object past the top edge boundary of the control area.
+Expected:
+The object's position clamps to the minimum allowed Y coordinate.
+Actual:
+Position successfully restricted at the top border.
+Result:
+Pass
+
+Test
+20
+Feature:
+Bottom boundary
+Action:
+Drag the interactive object past the bottom edge boundary of the control area.
+Expected:
+The object's position clamps to the maximum allowed Y coordinate.
+Actual:
+Position successfully restricted at the bottom border.
+Result:
+Pass
+
+Test
+21
+Feature:
+Tap detection
+Action:
+Quickly touch and release a point on the control area without significant movement or delay.
+Expected:
+A tap event is recognized, distinguishing it from a long press or drag.
+Actual:
+Tap action logged successfully upon quick release.
+Result:
+Pass
+
+Test
+22
+Feature:
+Drag detection
+Action:
+Touch the screen and hold/move past the movement threshold distance before releasing.
+Expected:
+A drag gesture state is initialized and maintained throughout movement.
+Actual:
+Drag state triggered correctly once movement threshold was crossed.
+Result:
+Pass
+
+Test
+23
+Feature:
+Swipe Left
+Action:
+Perform a rapid, short-duration swipe gesture from right to left.
+Expected:
+A "Swipe Left" event/action is triggered based on velocity and distance thresholds.
+Actual:
+Swipe Left recognized successfully.
+Result:
+Pass
+
+Test
+24
+Feature:
+Swipe Right
+Action:
+Perform a rapid, short-duration swipe gesture from left to right.
+Expected:
+A "Swipe Right" event/action is triggered.
+Actual:
+Swipe Right recognized successfully.
+Result:
+Pass
+
+Test
+25
+Feature:
+Swipe Up
+Action:
+Perform a rapid, short-duration swipe gesture from bottom to top.
+Expected:
+A "Swipe Up" event/action is triggered.
+Actual:
+Swipe Up recognized successfully.
+Result:
+Pass
+
+Test
+26
+Feature:
+Swipe Down
+Action:
+Perform a rapid, short-duration swipe gesture from top to bottom.
+Expected:
+A "Swipe Down" event/action is triggered.
+Actual:
+Swipe Down recognized successfully.
+Result:
+Pass
+
+Test
+27
+Feature:
+touchend
+Action:
+Lift the finger off the control area after interacting.
+Expected:
+A `touchend` event fires, removing the touch point from active tracking lists.
+Actual:
+Touch ended cleanly, updating internal tracking states.
+Result:
+Pass
+
+Test
+28
+Feature:
+touchcancel
+Action:
+Interrupt the active touch gesture (e.g., incoming system notification or moving finger off screen bounds).
+Expected:
+A `touchcancel` event fires, safely resetting ongoing interaction logic.
+Actual:
+Touch cancellation handled gracefully with state reset.
+Result:
+Pass
+
+Test
+29
+Feature:
+Real-device testing when available
+Action:
+Deploy and test the application on a physical touch-enabled mobile phone or tablet.
+Expected:
+All touch interactions, gestures, boundaries, and coordinate conversions function seamlessly on hardware.
+Actual:
+Verified smooth touch response, accurate coordinates, and correct gesture recognition on physical hardware.
+Result:
+Pass

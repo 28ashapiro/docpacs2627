@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        form * {
+            margin: 0.5em 0em 0.5em 0;
+        }
+
+        #container {
+            display: flex;
+            max-width: 60em;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <form id="projectInterestForm" action="/form" method="POST">
+            <label for="studentName">Name</label>
+            <input type="text" name="studentName" id="studentName" placeholder="Enter name here...">
+            <label for="studentEmail">Email</label>
+            <input type="email" name="studentEmail" id="studentEmail" placeholder="Enter e-mail address here..." required>
+            <label for="projectSize">Preferred Project-Team size</label>
+            <input type="number" name="projectSize" id="projectSize" min="1" max="6"
+                placeholder="Enter preferred project size here...">
+            <fieldset>
+                <legend>Preferred Project Type</legend>
+                <label for="websiteType">Website</label>
+                <input type="radio" name="projectType" id="websiteType" value="Website">
+                <label for="gameType">Game</label>
+                <input type="radio" name="projectType" id="gameType" value="Game">
+                <label for="dataType">Data</label>
+                <input type="radio" name="projectType" id="dataType" value="Data Application">
+            </fieldset>
+            <fieldset id="interestedTech">
+                <legend>Technologies Interested In</legend>
+                <label for="techHTML">HTML:</label>
+                <input type="checkbox" name="technologies" id="techHTML" value="HTML">
+                <label for="techCSS">CSS:</label>
+                <input type="checkbox" name="technologies" id="techCSS" value="CSS">
+                <label for="techJS">Javascript:</label>
+                <input type="checkbox" name="technologies" id="techJS" value="Javascript">
+                <label for="techNJS">Node.JS:</label>
+                <input type="checkbox" name="technologies" id="techNJS" value="Node.JS">
+                <label for="techDB">Databases:</label>
+                <input type="checkbox" name="technologies" id="techDB" value="Databases">
+            </fieldset>
+            <label for="contactPermission">Contact Permission?</label>
+            <input type="checkbox" name="contactPermission" id="contactPermission" value="yes">
+            <label for="xpLevel">Experience Level</label>
+            <select name="xpLevel" id="xpLevel" required>
+                <option value="">Select a Value</option>
+                <option value="beginner">Beginner</option>
+                <option value="intermediate">Intermediate</option>
+                <option value="advanced">Advanced</option>
+            </select>
+            <label for="projectDesc">Project Description</label>
+            <textarea name="projectDesc" id="projectDesc" maxlength="1000" rows="10" cols="50"
+                placeholder="Enter project description here..."></textarea>
+            <input type="hidden" name="formType" value="projectInterest">
+            <input type="text" name="disabledInput" id="disabledInput" value="fhweu" disabled>
+            <button type="submit">Submit Interest Form</button>
+            <button type="reset">Reset Form</button>
+        </form>
+    </div>
+</body>
+
+</html>

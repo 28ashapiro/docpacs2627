@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="Keywords" content="CIW, Web Foundations Associate, Example">
+  <meta name="Description" content="For the CIW Web Foundations Associate courses">
+  <meta charset="utf-8">
+  <!-- <link rel="stylesheet" type="text/css" href="myform.css"> -->
+  <title>Basic Form</title>
+</head>
+
+<body>
+  <h1>Basic Form</h1>
+  <form method="post" action="http://ss1.ciwcertified.com/cgi-bin/process.php">
+    Enter Your Name: <input type="text" name="Name" size="40" />
+    <br>
+    <br>
+    Enter Your Email: <input type="text" name="Email" size="40" />
+    <br>
+    <br> Should we add you to our mailing list?
+    <input type="radio" name="AddtoList" value="yes" checked="checked">Yes
+    <input type="radio" name="AddtoList" value="no">No
+    How did you hear about uCorp? (check all that apply):<br>
+    <input type="checkbox" name="referred"> Online Advertisement<br>
+    <input type="checkbox" name="referred"> From a Friend<br>
+    <input type="checkbox" name="referred"> Trade Convention<br>
+    <br>
+    <br>
+    <br>
+    How often would you like to receive an email from uCorp?
+    <br>
+    <select name="EmailFreq">
+      <option>Once a week</option>
+      <option>Once or twice a month</option>
+      <option>Once a month</option>
+      <option value="Remove">Never</option>
+    </select>
+    <br>
+    <br>
+    Your age:
+    <input type="number" name="age" min="15" max="65" />
+    <br />
+    <br />
+    We are serving you since:
+    <input type="date" name="date" />
+    <br />
+    <br />
+    Do you like us?
+    <input type="range" name="rating" min="1" max="10" value="5" />
+    <br />
+    <br />
+    Comments:<br />
+    <textarea name="comments" cols="30" rows="3">
+</textarea>
+
+    <input type="submit">
+    <input type="reset">
+  </form>
+</body>
+
+</html>

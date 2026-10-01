@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<head>
+    <title>
+        form
+    </title>
+</head>
+<body>
+    <form id="projectInterestForm" action="/form" method="post">
+        <label for="studentName">
+            Name:
+            <input
+                type="text"
+                id="studentName"
+                name="studentName" 
+                required
+            >
+        </label>
+        <label for="email">
+            email:
+            <input
+                type="email"
+                id="email"
+                name="Email"
+                required
+            >
+        </label>
+        <label for="teamSize">
+            Team size:
+            <input
+                type="number"
+                max="4"
+                min="1"
+            >    
+        </label>
+        <fieldset>
+            <legend>Preferred project type</legend>
+            <input 
+                type="radio"
+                name="projectType"
+                value="website"
+                id="website"
+            >
+            <label for="website">website</label>
+            <input 
+                type="radio"
+                name="projectType"
+                value="game"
+                id="game"
+            >
+            <label for="game">game</label>
+            <input 
+                type="radio"
+                name="projectType"
+                value="data"
+                id="data"
+            >
+            <label for="data">data</label>
+        </fieldset>
+        <fieldset>
+            <legend>what's your perfered technologies</legend>
+            <input 
+                type="checkbox"
+                id="html"
+                name="technologies"
+                value="html"
+            >
+            <label for="html">html</label>
+            <input 
+                type="checkbox"
+                id="JavaScript"
+                name="technologies"
+                value="JavaScript"
+            >
+            <label for="JavaScript">JavaScript</label>
+            <br>
+            <input 
+                type="checkbox"
+                id="crode"
+                name="technologies"
+                value="Node.js"
+            >
+            <label for="Crode">Node.js</label>
+            <input 
+                type="checkbox"
+                id="Databases"
+                name="technologies"
+                value="Databases"
+            >
+            <label for="Databases">Databases</label>
+        </fieldset><br>
+        <textarea id="description" name="projectDescription" maxlength="125" required>Describe the project</textarea>
+        <br><br>
+        <select id="experienceLevel" name="experience">
+            <option value="">select an experience level</option>
+            <option value="beginner">beginner</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="advanced">Advanced</option>
+        </select>
+        <br><br>
+        <input
+            type="checkbox"
+            id="contactPerms"
+            name="contactPermission"
+            value="yes"
+        >
+        <label for="contactPerms">Can we contact you?</label>
+        <br><br>
+        <button type="submit"> Submit Intrest Form</button>
+        <button type="reset">Reset Form</button>
+        <input
+            type="hidden"
+            name="formType"
+            value="projectInterest"
+        >
+        <input
+            type="hidden"
+            name="disabledValue"
+            value="disabled"
+            disabled
+        >
+
+    </form>
+</body>
+</html>

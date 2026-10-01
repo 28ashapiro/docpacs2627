@@ -1,0 +1,132 @@
+<html>
+
+<head>
+    <meta name="Keywords" content="CIW, HTML5, uCorp" />
+    <meta name="Description" content="Simple XHTML page for uCorp site" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="contactus/contactus.css" />
+    <title>Welcome to uCorp</title>
+</head>
+
+<body>
+
+    <header>
+
+        <div id="head"><a href="index.html">
+            <img height="65" width="600" src="contactus/uCorp_logo.png" />
+        </div>
+
+        <div id="navbar"><a href="aboutus.html">
+            <img height="52" width="89" src="contactus/header_button_about-us.jpg" alt="Link goes back to current page." id="aboutus" />
+            <a href="contactus.html"></a>
+            <img height="52" width="104" src="contactus/header_button_contact-us.jpg" alt="Click here to contact us and let us know what you think." id="contactus" />
+            <img height="52" width="91" src="contactus/header_button_products.jpg" alt="Click here to explore the catalog of products we offer." id="products" />
+            <a href="manufacturing.html"></a>
+            <img height="52" width="175" src="contactus/header_button_manufacturing-process.jpg" alt="Click here to learn about the high-quality manufacturing process that uCorp employs, but not our front-end developers. They aren't the best." id="manufacturingprocess" />
+            <a href="technology.html"><img height="52" width="112" src="contactus/header_button_technology.jpg" alt="Click here to discover the advanced technology that goes into each one of our speakers." id="technology" /></a>
+        </div>
+
+    </header>
+
+    <article>
+
+        <h2>Contact Us</h2>
+        <p>This is a poorly designed lab template with insufficient starting resources to use. Please submit this form
+            to us so we can harvest your data and sell it to china.</p>
+
+        <form action="http://ss1.ciwcertified.com/cgi-bin/process.php" method="post">
+            <input type="text" name="firstname" id="firstname" placeholder="First Name" required>
+            <label for="firstname">First Name</label>
+            <br>
+            <br>
+            <input type="text" name="lastname" id="lastname" placeholder="Last Name">
+            <label for="lastname">Last Name</label>
+            <br>
+            <br>
+            <input type="text" name="company" id="company" placeholder="Company" required>
+            <label for="company">Company</label>
+            <br>
+            <br>
+            <input type="number" name="phonenumber" id="phonenumber" placeholder="123 456 7890">
+            <label for="phonenumber">Phone Number</label>
+            <br>
+            <br>
+            <input type="email" name="email" id="email" placeholder="name@email.com" required>
+            <label for="email">Email</label>
+            <br>
+            <br>
+            <input type="text" name="country" id="country" placeholder="Country" required>
+            <label for="country">Country</label>
+            <br>
+            <br>
+            <p>Comments</p>
+            <br>
+            <textarea style="width: 300px; height: 100px;" name="comments" id="comments"
+                placeholder="Tell us your opinions"></textarea>
+            <br>
+            <br>
+            <div id="contactDays">
+                <select name="contactableDays" id="contactableDays" multiple size="7" required>
+                    <option value="sun">Sunday</option>
+                    <option value="mon">Monday</option>
+                    <option value="tues">Tuesday</option>
+                    <option value="wed">Wednesday</option>
+                    <option value="thurs">Thursday</option>
+                    <option value="fri">Friday</option>
+                    <option value="sat">Saturday</option>
+                </select>
+            </div>
+            <label id="contactMethod" for="contactMethod">When should we contact you?</label>
+            <div id="contactMethod">
+                <input style="width: auto;" type="checkbox" name="contactMethodMorning" id="contactMethodMorning">
+                <label for="contactMethodMorning">Morning</label>
+                <br>
+                <br>
+                <input style="width: auto;" type="checkbox" name="contactMethodAfternoon" id="contactMethodAfternoon">
+                <label for="contactMethodAfternoon">Afternoon</label>
+                <br>
+                <br>
+                <input style="width: auto;" type="checkbox" name="contactMethodEvening" id="contactMethodEvening">
+                <label for="contactMethodEvening">Evening</label>
+                <br>
+                <br>
+            </div>
+            <div style="margin: 0 auto; width: fit-content;">
+                <button style="width: 300px; height: 50px; font-size: larger;" type="submit">Submit</button>
+                <button style="width: 100px; height: 50px; font-size: larger;" type="reset">Reset</button>
+            </div>
+        </form>
+
+    </article>
+
+    <footer>
+
+        <div id="address">
+            <h4>uCorp</h4>
+            Sunshine House, Sunville. SUN12
+            <br />
+            019223 8092344
+            <br />
+            info@ucorp.com
+        </div>
+
+        <div id="follow">
+            <h4>Follow Us</h4>
+            <a href="https://twitter.com/uCorp4">Twitter</a> | <a
+                href="https://www.facebook.com/UCorp-441272686298550/">Facebook</a> | <a
+                href="https://www.linkedin.com/company/ucorporation/">LinkedIn</a> | <a
+                href="https://www.instagram.com/ucorp123/">Instagram</a>
+            <img src="contactus/footer_newsletter.jpg" alt="Enter your email here to subscribe to our newsletter." />
+        </div>
+
+        <div id="footerlinks">
+            <br />
+            Copyright &copy All rights reserved by uCorp. <a href="terms.html">Terms</a> | <a
+                href="privacy.html">Privacy</a> | <a href="contactus.html">Contact Us</a>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+#touchArea {
+    position: relative;
+    width: 600px;
+    height: 400px;
+    border: 2px solid black;
+    overflow: hidden;
+    touch-action: none;
+    user-select: none;
+}
+
+#player {
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    background: #ff0000;
+    left: initial;
+    top: initial;
+}

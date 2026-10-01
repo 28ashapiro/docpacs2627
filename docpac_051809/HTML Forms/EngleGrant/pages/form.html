@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unspecified HTML Form</title>
+</head>
+
+<body>
+    <h1>Form</h1>
+    <p>Fill out this form to get considered for something related.</p>
+    <form method="POST" action="/form">
+        <button type="reset">Reset Form</button>
+        <br>
+        <fieldset>
+            <legend>Contact Information</legend>
+            <input type="email" id="email" name="email" value="name@email.com" required>
+            <label for="email">Email</label>
+            <br>
+            <input type="number" name="teamSize" id="teamSize" min="1" max="4" value="1" required>
+            <label for="teamSize">TeamSize</label>
+            <br>
+            <input type="checkbox" name="ContactPermission" id="ContactPermission">
+            <label for="InterestedHTMLCSS">Send Me Emails</label>
+            <br>
+            <input type="number" name="phoneNumber" id="phoneNumber">
+            <label for="phoneNumber">Phone Number</label>
+            <br><br>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Project Preferences</legend>
+            <input type="radio" name="preferredProject" id="preferredProjectWebsite" value="Website" required>
+            <label for="preferredProjectWebsite">Website</label>
+
+            <input type="radio" name="preferredProject" id="preferredProjectGame" value="Game" required>
+            <label for="preferredProjectGame">Game</label>
+
+            <input type="radio" name="preferredProject" id="preferredProjectData" value="Data" required>
+            <label for="preferredProjectData">Data</label>
+
+            <input type="radio" name="preferredProject" id="preferredProjectAI" value="AI" required>
+            <label for="preferredProjectAI">AI</label>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Technology Interests</legend>
+            <input type="checkbox" name="InterestedHTMLCSS" id="InterestedHTMLCSS" value=true>
+            <label for="InterestedHTMLCSS">HTML/CSS</label>
+
+            <input type="checkbox" name="InterestedJavascript" id="InterestedJavascript" value=true>
+            <label for="InterestedJavascript">Javascript</label>
+
+            <input type="checkbox" name="InterestedNodeJS" id="InterestedNodeJS" value=true>
+            <label for="InterestedNodeJS">NodeJS</label>
+
+            <input type="checkbox" name="InterestedDatabase" id="InterestedDatabase" value=true>
+            <label for="InterestedDatabase">Database</label>
+
+            <input type="checkbox" name="InterestedCloud" id="InterestedCloud" value=true disabled>
+            <label for="InterestedDatabase">Cloud Engineer</label>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Experience Level</legend>
+            <label for="experienceLevel">Experience Level</label>
+            <select name="experienceLevel" id="experienceLevel" required>
+                <option value="beginner">Beginner</option>
+                <option value="intermediate">Intermediate</option>
+                <option value="advanced">Advanced</option>
+                <option value="expert">Expert</option>
+            </select>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Project Description</legend>
+
+            <label for="projectIdea">Give a brief summary of your project idea</label>
+            <br>
+            <textarea style="width: 300px; height: 120px; resize: none;" required minlength="20" maxlength="300"
+                name="projectIdea" id="projectIdea"></textarea>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Permission & Submission</legend>
+            <button type="submit">Submit</button>
+            <input type="hidden" name="formType" value="projectInterest">
+        </fieldset>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Touch Control Tester</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="touch.js" defer></script>
+</head>
+
+<body>
+    <h1>Touch Somewhere</h1>
+    <p>Do it. Just tap the cube. Maybe drag it around too. You are NOT allowed to use a cursor >:(</p>
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div id="touchArea">
+            <div id="movableObject"></div>
+        </div>
+        <div id="touchStatus" style="border-right: 3px solid black; height: fit-content;">
+            <p style="text-align: right; padding: 20px;" id="statusDisplay"></p>
+        </div>
+    </div>
+</body>
+
+</html>

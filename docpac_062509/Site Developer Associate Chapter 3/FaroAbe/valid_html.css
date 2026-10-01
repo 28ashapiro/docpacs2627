@@ -1,0 +1,12 @@
+body {
+    font-family: Arial;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: aqua;
+
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: bold;
+}

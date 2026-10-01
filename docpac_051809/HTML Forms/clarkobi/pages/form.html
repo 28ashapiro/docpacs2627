@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Forms</title>
+    </head>
+    <body>
+        <h1>Data Collecting</h1>
+        <p>placeholder</p>
+        <form id="projectInterestForm" method="POST" action="/form"></form>
+    <form action="/form" method="POST">
+        <fieldset>
+            <legend>Basic identifying information</legend>
+            <label for="studentName">Name</label>
+            <label for="studentEmail">Email</label>
+            <label for="studentNumber">Student number</label>
+            <input type="text" id="studentName" name="studentName">
+            <input type="email" id="studentEmail" name="studentEmail">
+            <input type="number" id="studentNumber" name="studentNumber" min="0" max="9999">
+        </fieldset>
+
+        <fieldset>
+            <legend>Perferred project type</legend>
+
+            <label for="website">Website</label>
+            <input type="radio" id="website" name="projectType" value="website">
+
+            <label for="game">Game</label>
+            <input type="radio" id="game" name="projectType" value="game">
+
+            <label for="data">Data app</label>
+            <input type="radio" id="data" name="projectType" value="data">
+        </fieldset>
+
+        <fieldset>
+            <legend>Technology interest</legend>
+            <label for="htmlcss">HTML and CSS</label>
+            <input type="checkbox" name="technologies" id="htmlcss" value="htmlcss">
+
+            <label for="javascript">Javascript</label>
+            <input type="checkbox" name="technologies" id="javascript" value="javascript">
+
+            <label for="node.js">Node.js</label>
+            <input type="checkbox" name="technologies" id="node.js" value="node.js">
+
+            <label for="databases">Databases</label>
+            <input type="checkbox" name="technologies" id="databases" value="databases">
+        </fieldset>
+
+        <fieldset>
+            <legend>Experience level</legend>
+            <select name="experienceLevel">
+                <option value="">Select a level</option>
+
+                <option value="beginner">Beginner</option>
+
+                <option value="intermediate">Intermediate</option>
+
+                <option value="advanced">Advanced</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>Project description</legend>
+            <label for="description">Put a description of your project here</label>
+            <textarea id="description" name="description" rows="4" required></textarea>
+        </fieldset>
+
+            <input type="hidden" name="formType" value="projectInterest">
+
+            <input type="text" name="disabled" value="disabled" disabled>
+
+        <fieldset>
+            <legend>Permission and submission controls</legend>
+            <button type="submit">Submit Interest Form</button>
+
+            <button type="reset">Reset Form</button>
+        </fieldset>
+
+    </form>
+    </body>
+</html>

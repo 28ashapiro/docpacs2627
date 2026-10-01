@@ -1,0 +1,22 @@
+{
+  "name": "emmett_nodejs1",
+  "version": "1.0.0",
+  "description": "\"First node.js project\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [
+    "Nodejs"
+  ],
+  "author": "EmmettJ",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^17.4.2"
+  },
+  "devDependencies": {
+    "nodemon": "3.1.14"
+  }
+}

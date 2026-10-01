@@ -1,0 +1,67 @@
+<html>
+
+<head>
+<meta name="Keywords" content="CIW, HTML5, uCorp"/>
+<meta name="Description" content="Simple XHTML page for uCorp site"/>
+<meta charset="utf-8"/>
+<link rel="stylesheet"  type="text/css" href="aboutus/aboutus.css"/>
+<title>Welcome to uCorp</title>
+</head>
+<body>
+
+<header>
+<div id="head"><img height="65" width="250" src="aboutus/uCorp_logo.png" /></div> 
+<div id="navbar"><img height="52" width="89" src="aboutus/header_button_about-us.jpg" alt="Link goes back to current page." id="aboutus" /><img height="52" width="104" src="aboutus/header_button_contact-us.jpg" alt="Click here to contact us and let us know what you think." id="contactus" /><img height="52" width="91" src="aboutus/header_button_products.jpg" alt="Click here to explore the catalog of products we offer." id="products" /><img height="52" width="204" src="aboutus/header_button_manufacturing-process.jpg" alt="Click here to learn about the high-quality manufacturing process that uCorp employs." id="manufacturingprocess" /><img height="52" width="112" src="aboutus/header_button_technology.jpg" alt="Click here to discover the advanced technology that goes into each one of our speakers." id="technology"/></div>
+</header>
+
+<nav>
+<img height="50" width="163" src="aboutus/nav_button_about-us.jpg" alt="Click here to read about the philosophy of our company." id="subnav_aboutus" />
+<br />
+<img height="50" width="163" src="aboutus/nav_button_the-team.png" alt="Click here to read about the people that make our mission possible." id="subnav_theteam" />
+<div id="catalog">
+<img src="aboutus/catalog.jpg" alt="Click to download a PDF containing our full product catalog." />
+Product Catalog
+</div>
+</nav>
+
+<article>
+<img src="aboutus/banner.jpg" width="430" height="148"  alt="Subwoofers from uCorp blow away the competition!" />
+<br/>
+<h2>What Makes us Tick!</h2> 
+<p>
+At uCorp, we believe world-class audio experiences should be within everyone’s reach. Our speakers, subwoofers and SoundPath audio accessories refute the notion that exceptional sound quality has to be ridiculously expensive. The uCorp design approach involves a fusion of leading edge technology, precision engineering, exhaustive lab and real-world testing, as well as, a deep personal passion for audio excellence, all brought to life by our acoustic engineers. With every new product, we strive to redefine audio performance for the price.
+</p>
+<p>
+But that’s only part of the uCorp Experience. We also stand behind our products with the uCorp Customer Bill of Rights, a benefits package that includes a 45-Day Risk-Free In-Home Trial, Fast and Free Shipping and Returns, our industry-leading 5-Year Unconditional Warranty, and more. We’re so confident you’ll love our audio gear that we made it completely painless to audition for yourself in the best place possible, your home.
+</p>
+<p>
+From the coherent soundstage, pinpoint imaging, superb detail and sonic transparency of our reference-grade loudspeakers, to the subterranean extension, chest-thumping slam, and unerring accuracy of our acclaimed subwoofers – our award-winning uCorp product line-up guarantees you a thrilling audio experience.
+</p>
+<p>
+And since you’re supported by uCorp Sound Experts support for the life of your product, you can rest easy knowing the best technical and customer service team on the planet is standing by to help you though research, set-up, troubleshooting and calibration for every part of your home theater or audio system.
+</p>
+</article>
+
+<footer>
+<div id="address">
+<h4>uCorp</h4>
+Sunshine House, Sunville. SUN12
+<br />
+019223 8092344 
+<br/>
+info@ucorp.com
+</div>
+<div id="follow">
+<h4>Follow Us</h4>
+Twitter | Facebook | LinkedIn | Instagram
+<img src="aboutus/footer_newsletter.jpg"  alt="Enter your email here to subscribe to our newsletter." />
+</div>
+<div id="footerlinks">
+<br />
+Copyright &copy All rights reserved by uCorp. Terms | Privacy | Contact Us
+</div>
+</footer>
+
+</body>
+
+</html>

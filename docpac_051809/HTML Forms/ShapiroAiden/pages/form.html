@@ -1,0 +1,115 @@
+<!-- shapiro -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Project Interest Form</title>
+    <style>
+        * {
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        h4,
+        h3 {
+            margin: 10px;
+        }
+
+        fieldset {
+            padding: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Student Project Interest Form</h3>
+    <h4>Simple Student Project-Interest Survey</h4>
+    <p>Please complete the survey below to share your project interests.</p>
+    <br>
+    <form id="projectInterestForm" method="POST" action="/form">
+        <!-- Basic Information -->
+        <label for="studentName">Name</label><br>
+        <input type="text" id="studentName" name="studentName" placeholder="First and Last Name" required>
+        <br><br>
+        <label for="email">Email</label><br>
+        <input type="email" id="email" name="email" placeholder="johndoe1@email.com" required autocomplete="email">
+        <br><br>
+        <label for="number">Team Size</label><br>
+        <input type="number" name="number" id="number" min="1" max="4" placeholder="1-4" required>
+        <br><br>
+        <!-- Project Type Radio! -->
+        <fieldset>
+            <legend>Preferred Project Type</legend>
+            <p style="margin: 0%; font-weight: bold;">
+                Select one option:
+            </p>
+            <br>
+            <label for="website">Website</label>
+            <input type="radio" id="website" name="projectType" value="Website" required>
+            <br>
+            <label for="game">Game</label>
+            <input type="radio" id="game" name="projectType" value="Game">
+            <br>
+            <label for="data">Data Application</label>
+            <input type="radio" id="data" name="projectType" value="Data">
+            <br>
+        </fieldset>
+        <br><br>
+        <!-- Tech Interests Checkboxes -->
+        <fieldset>
+            <legend>Technologies</legend>
+            <p style="margin: 0%; font-weight: bold;">
+                Select any options:
+            </p>
+            <br>
+            <label for="htmlCss">HTML and CSS</label>
+            <input type="checkbox" id="htmlCss" name="technologies" value="HTML&CSS">
+            <br>
+            <label for="javascript">JavaScript</label>
+            <input type="checkbox" id="javascript" name="technologies" value="JavaScript">
+            <br>
+            <label for="nodejs">Node.js</label>
+            <input type="checkbox" id="nodejs" name="technologies" value="NodeJS">
+            <br>
+            <label for="databases">Databases</label>
+            <input type="checkbox" id="databases" name="technologies" value="Databases">
+            <br><br>
+        </fieldset>
+        <br><br>
+        <!-- Experience Menu -->
+        <fieldset>
+            <legend>Experience Level</legend>
+            <p style="margin: 0%; font-weight: bold;">
+                Select one option from the dropdown menu:
+            </p>
+            <br>
+            <select name="experienceLevel" id="experienceLevel" required>
+                <option value="">Select a Level</option>
+                <option value="beginner">Beginner</option>
+                <option value="intermediate">Intermediate</option>
+                <option value="advanced">Advanced</option>
+            </select>
+        </fieldset>
+        <br>
+        <label for="contactPermission">Permission to contact you?</label>
+        <input type="checkbox" id="contactPermission" name="contactPermission" value="yes">
+        <br><br>
+        <!-- Text Area -->
+        <label for="ideas">Project Ideas or Descriptions</label><br>
+        <textarea name="ideas" id="ideas" maxlength="1000" placeholder="Add any project ideas or descriptions here..."
+            cols="32" rows="6"></textarea>
+        <br><br>
+        <!-- Hidden and Disabled Controls -->
+        <input type="hidden" name="formType" value="projectInterest">
+        <input type="text" name="disabledInput" value="disabled input" disabled>
+        <br><br>
+        <!-- Submit or Reset -->
+        <button type="reset">Reset Form</button>
+        <br><br>
+        <button type="submit">Submit Interest Form</button>
+    </form>
+</body>
+
+</html>

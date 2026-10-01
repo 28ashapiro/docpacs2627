@@ -1,0 +1,4 @@
+W3: green, dark gray, and white, easy to read
+Amazon: orange, white, gray, easy to read
+Microsoft: gray, extremely light purple, white, easy to read
+UCorp: black, red, orange, easy to read

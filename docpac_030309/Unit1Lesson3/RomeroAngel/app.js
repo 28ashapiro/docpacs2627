@@ -1,9 +1,10 @@
 require('dotenv').config();
 console.log(process.env.PORT);
 console.log(process.env.APP_NAME)
+const express = require('express')
+const app = express();
 const port = process.env.PORT;
 const apiKey = process.env.API_KEY;
-
 const http = require('http');
 const fs = require('fs');
 

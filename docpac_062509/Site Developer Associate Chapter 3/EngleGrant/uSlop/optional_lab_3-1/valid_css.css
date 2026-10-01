@@ -1,0 +1,13 @@
+body {
+    background-color: lightgray;
+    color: rebeccapurple;
+    font-family: Arial;
+}
+
+h1 {
+    color: goldenrod;
+}
+
+h2 {
+    margin-top: -10px;
+}

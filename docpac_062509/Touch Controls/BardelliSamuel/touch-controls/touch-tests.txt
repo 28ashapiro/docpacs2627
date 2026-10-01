@@ -1,0 +1,170 @@
+Test: 1
+Feature: Page and control area setup
+Expected: The bounding box has a black border and the player object is seen as cyan, as well as the text asking the player to touch the control area
+Actual: The bounding box has a black border and the player object is seen as cyan, as well as the text asking the player to touch the control area
+Result: pass
+
+Test: 2
+Feature: Developer tools device mode
+Expected: The clicks are intepreted as touch input and the event listeners fire
+Actual: The clicks are intepreted as touch input and the event listeners fire
+Result: pass
+
+Test: 3
+Feature: force touch when required
+Expected: The clicks are intepreted as touch input and the event listeners fire
+Actual: The clicks are intepreted as touch input and the event listeners fire
+Result: pass
+
+Test: 4
+Feature: touchstart
+Expected: no errors are fired and the result div updates when a touch fires
+Actual: no errors are fired and the result div updates when a touch fires
+Result: pass
+
+Test: 5
+Feature: Local touch coordinates
+Expected: Local x and y are both closer to zero than the viewport x and y
+Actual: local x and y are both closer to zero than the viewport x and y
+Result: pass
+
+Test: 6
+Feature: touchmove
+Expected: the player box follows the cursor as it holds down the touch
+Actual: the player box follows the cursor as it holds down the touch
+Result: pass
+
+Test: 7
+Feature: negative horizontal movement
+Expected: the box moves left when the player swipes left
+Actual: the box moves left when the player swipes left
+Result: pass
+
+Test: 8
+Feature: positive horizontal movement
+Expected: the moves moves right when the player swipes right
+Actual: the moves moves right when the player swipes right
+Result: pass
+
+Test: 9
+Feature: negative vertical movement
+Expected: the box moves up when the player swipes up
+Actual: the box moves up when the player swipes up
+Result: pass
+
+Test: 10
+Feature: Positive vertical movement
+Expected: the box moves down when the player swipes down
+Actual: the box moves down when the player swipes down
+Result: pass
+
+Test: 11
+Feature: distance calculation
+Expected: the distance is correctly positive after calculating the hypotenuse and the swipes are interpreted differently than taps 
+Actual: the distance is correctly positive after calculating the hypotenuse and the swipes are interpreted differently than taps 
+Result: pass
+
+Test: 12
+Feature: up direction
+Expected: the player moves up when it is swiped up
+Actual: the player moves up when it is swiped up
+Result: pass
+
+Test: 13
+Feature: down direction
+Expected: the player moves down when it is swiped down
+Actual: the player moves down when it is swiped down
+Result: pass
+
+Test: 14
+Feature: left direction
+Expected: the player moves left when it is swiped left
+Actual: the player moves left when it is swiped left
+Result: pass
+
+Test: 15
+Feature: right direction
+Expected: the player moves right when it is swiped right
+Actual: the player moves right when it is swiped right
+Result: pass
+
+Test: 16
+Feature: object movement
+Expected: the code correctly interprets drags, taps, and swipes and moves the player according to that
+Actual: the code correctly interprets drags, taps, and swipes and moves the player according to that
+Result: pass
+
+Test: 17
+Feature: left boundary
+Expected: the player cannot move outside of the left boundary
+Actual: the player cannot move outside of the left boundary
+Result: pass
+
+Test: 18
+Feature: right boundary
+Expected: the player cannot move outside the right side of the bounding box
+Actual: the player cannot move outside the right side of the bounding box
+Result: pass
+
+Test: 19
+Feature: top boundary
+Expected: the player cannot move outside the top side of the box
+Actual: the player cannot move outside the top side of the box
+Result: pass
+
+Test: 20
+Feature:buttom boundary
+Expected: the player cannot move outside of the bottom side of the box
+Actual: the player cannot move outside of the bottom side of the box
+Result: pass
+
+Test: 21
+Feature: tap detection
+Expected: the player goes to wherever the screen is tapped at
+Actual: the player goes to wherever the screen is tapped at
+Result: pass
+
+Test: 22
+Feature:  drag detection
+Expected: the player follows the cursor as it drags
+Actual: the player follows the cursor as it drags
+Result: pass
+
+
+
+/////////////////////////////////Finish later////////////////////////////////////////////
+Test: 23
+Feature: swipe left
+Expected: The user swipes left and the player box moves 150px left
+Actual: The user swipes left and the player box moves 150px left
+Result: pass
+
+Test: 24
+Feature: swipe right
+Expected: The user swipes right and the box moves 150px right
+Actual: The user swipes right and the box moves 150px right
+Result: pass
+
+Test: 25
+Feature: swipe up
+Expected: the user swipes up and the box moves 150px up
+Actual: the user swipes up and the box moves 150px up
+Result: pass
+
+Test: 26
+Feature: swipe down
+Expected: the user swipes down and the box moves 150px down
+Actual: the user swipes down and the box moves 150px down
+Result: pass
+
+Test: 27
+Feature: touchend
+Expected: The appropriate gesture (tap or swipe) is determined and the appropriate action (move to finger or move 150px in the direction) happens
+Actual: The appropriate gesture (tap or swipe) is determined and the appropriate action (move to finger or move 150px in the direction) happens
+Result: pass
+
+Test: 28
+Feature: touchcancel
+Expected: no tap or swipe happens and the display says the touch is canceled
+Actual: no tap or swipe happens and the display says the touch is canceled
+Result: pass

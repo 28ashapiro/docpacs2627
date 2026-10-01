@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta name="Keywords" content="CIW, Web Foundations Associate, Example"/>
+<meta name="Description" content="For the CIW Web Foundations Associate courses"/>
+<meta charset="utf-8"/>
+<!-- <link rel="stylesheet"  type="text/css" href="form.css"/> -->
+<title>Basic Form</title>
+</head>
+
+<body>
+
+<h1>Basic Form</h1>
+	
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

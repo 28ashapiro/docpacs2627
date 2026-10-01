@@ -1,0 +1,16 @@
+body {
+    background-color: teal;
+}
+
+h1 {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+p {
+    color: white;
+}
+
+input {
+    background-color: purple;
+    color: white;
+}

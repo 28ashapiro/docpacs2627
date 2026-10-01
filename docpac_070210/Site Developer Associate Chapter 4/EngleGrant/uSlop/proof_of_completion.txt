@@ -1,0 +1,65 @@
+uCertify is so poorly designed that it does not save or properly check your work to make sure it is completed correctly in Activity 4-1 (at least of the time of checking).
+
+Below will be the line(s) of code it requests in each activity as proof of completion in case it doesn't say I completed it. If it did, disregard the rest of this. :)
+
+1 OF 12:
+"
+<a href="https://www.ucertify.com">uCertify</a>
+"
+
+2 OF 12:
+"
+<a href="https://www.w3schools.com">w3schools</a>
+"
+
+3 OF 12:
+Very vague. Assumed by "uCorp website" as the directory it is stored in.
+"
+<a href="aboutus.html">aboutus</a>
+<a href="index.html">index</a>
+"
+
+4 OF 12:
+"
+<a href="Webfiles/aboutus.html">aboutus (in webfiles)</a>
+"
+
+5 OF 12:
+"
+<a href="../Files/aboutus.html">aboutus</a>
+"
+
+6 OF 12:
+"
+<a href="monkey.gif">monkey</a>
+"
+
+7 OF 12:
+"
+<a href="https://www.ucorp.biz">ucorp biz</a>
+"
+
+8 OF 12:
+"
+<a href="ftp://my_ftp_server.com">ftp</a>
+"
+
+9 OF 12:
+"
+<a href="mailto:info@ciwcertified.com">email</a>
+"
+
+10 OF 12:
+
+<a href="https://google.com">
+    <img src="image.jpg" alt="image">
+</a>
+
+11 OF 12:
+
+<a href="#logo">uCorp Logo</a>
+<img src="image.jpg" alt="image" id="logo">
+
+12 OF 12:
+
+<a href="https://www.ciwcertified.com/ciw-certifications#CIWAssociate">CIWAssociate</a>

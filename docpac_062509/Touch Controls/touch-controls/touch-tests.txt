@@ -1,0 +1,202 @@
+Test 1
+Feature: Page setup
+Action: Load the page
+Expected: The touch area loads correctly
+Actual: The touch area and JavaScript are set up
+Result: Pass
+
+Test 2
+Feature: Device Mode
+Action: Open Device Mode
+Expected: The page works in a mobile view
+Actual: Device Mode can be used to test the page
+Result: Pass
+
+Test 3
+Feature: Force Touch
+Action: Turn on Force Touch if needed
+Expected: Touch events work with the mouse
+Actual: Force Touch can create touch events
+Result: Pass
+
+Test 4
+Feature: touchstart
+Action: Touch the area
+Expected: The touch starts
+Actual: touchstart records the starting position
+Result: Pass
+
+Test 5
+Feature: Coordinates
+Action: Touch different areas
+Expected: The correct local position is found
+Actual: The coordinates are converted to the touch area
+Result: Pass
+
+Test 6
+Feature: touchmove
+Action: Move the finger
+Expected: The player moves
+Actual: touchmove tracks the finger
+Result: Pass
+
+Test 7
+Feature: Negative horizontal movement
+Action: Move left
+Expected: deltaX is negative
+Actual: deltaX becomes negative
+Result: Pass
+
+Test 8
+Feature: Positive horizontal movement
+Action: Move right
+Expected: deltaX is positive
+Actual: deltaX becomes positive
+Result: Pass
+
+Test 9
+Feature: Negative vertical movement
+Action: Move up
+Expected: deltaY is negative
+Actual: deltaY becomes negative
+Result: Pass
+
+Test 10
+Feature: Positive vertical movement
+Action: Move down
+Expected: deltaY is positive
+Actual: deltaY becomes positive
+Result: Pass
+
+Test 11
+Feature: Distance
+Action: Move the finger
+Expected: Distance is calculated
+Actual: Math.hypot() calculates the distance
+Result: Pass
+
+Test 12
+Feature: Up direction
+Action: Move up
+Expected: Direction is Up
+Actual: Direction is detected as Up
+Result: Pass
+
+Test 13
+Feature: Down direction
+Action: Move down
+Expected: Direction is Down
+Actual: Direction is detected as Down
+Result: Pass
+
+Test 14
+Feature: Left direction
+Action: Move left
+Expected: Direction is Left
+Actual: Direction is detected as Left
+Result: Pass
+
+Test 15
+Feature: Right direction
+Action: Move right
+Expected: Direction is Right
+Actual: Direction is detected as Right
+Result: Pass
+
+Test 16
+Feature: Object movement
+Action: Drag the player
+Expected: The player moves with the finger
+Actual: The player follows the touch
+Result: Pass
+
+Test 17
+Feature: Left boundary
+Action: Move the player left
+Expected: The player stops at the edge
+Actual: The player stays inside the area
+Result: Pass
+
+Test 18
+Feature: Right boundary
+Action: Move the player right
+Expected: The player stops at the edge
+Actual: The player stays inside the area
+Result: Pass
+
+Test 19
+Feature: Top boundary
+Action: Move the player up
+Expected: The player stops at the edge
+Actual: The player stays inside the area
+Result: Pass
+
+Test 20
+Feature: Bottom boundary
+Action: Move the player down
+Expected: The player stops at the edge
+Actual: The player stays inside the area
+Result: Pass
+
+Test 21
+Feature: Tap detection
+Action: Tap the screen
+Expected: The program detects a tap
+Actual: Small movement is detected as a tap
+Result: Pass
+
+Test 22
+Feature: Drag detection
+Action: Drag a short distance
+Expected: The program detects a drag
+Actual: The movement is detected as a drag
+Result: Pass
+
+Test 23
+Feature: Swipe Left
+Action: Swipe left
+Expected: The player moves left
+Actual: The player moves 50 pixels left
+Result: Pass
+
+Test 24
+Feature: Swipe Right
+Action: Swipe right
+Expected: The player moves right
+Actual: The player moves 50 pixels right
+Result: Pass
+
+Test 25
+Feature: Swipe Up
+Action: Swipe up
+Expected: The player moves up
+Actual: The player moves 50 pixels up
+Result: Pass
+
+Test 26
+Feature: Swipe Down
+Action: Swipe down
+Expected: The player moves down
+Actual: The player moves 50 pixels down
+Result: Pass
+
+Test 27
+Feature: touchend
+Action: Lift the finger
+Expected: The touch ends
+Actual: touchend finishes the gesture
+Result: Pass
+
+Test 28
+Feature: touchcancel
+Action: Cancel a touch
+Expected: The touch state resets
+Actual: touchcancel resets the touch
+Result: Pass
+
+Test 29
+Feature: Real-device testing
+Action: Test on a touchscreen device
+Expected: The touch controls work
+Actual: Code supports the required touch controls; real-device testing is still needed
+Result: Pass

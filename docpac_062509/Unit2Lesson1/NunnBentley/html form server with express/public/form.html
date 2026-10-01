@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cool form</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+ 
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: #f4f5f7;
+            margin: 0;
+            padding: 40px 16px;
+            line-height: 1.5;
+        }
+ 
+        form {
+            max-width: 640px;
+            margin: 0 auto;
+            background: #ffffff;
+            border: 1px solid #e2e4e8;
+            border-radius: 10px;
+            padding: 32px 36px;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+ 
+        label {
+            font-weight: 600;
+            font-size: 14px;
+            display: block;
+            margin-bottom: 6px;
+        }
+ 
+        input[type="text"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px 12px;
+            font-size: 14px;
+            border: 1px solid #d0d3d9;
+            border-radius: 6px;
+            background: #fbfbfc;
+            transition: border-color 0.15s ease, box-shadow 0.15s ease;
+        }
+ 
+        input[type="text"]:focus,
+        textarea:focus,
+        select:focus {
+            outline: none;
+            border-color: #4f7cff;
+            box-shadow: 0 0 0 3px rgba(79, 124, 255, 0.15);
+            background: #ffffff;
+        }
+ 
+        textarea {
+            resize: vertical;
+            width: 100%;
+            font-family: inherit;
+        }
+ 
+        fieldset {
+            border: 1px solid #e2e4e8;
+            border-radius: 8px;
+            padding: 16px 18px 18px;
+            margin: 0;
+        }
+ 
+        legend {
+            font-weight: 600;
+            font-size: 14px;
+            padding: 0 6px;
+        }
+ 
+        fieldset label {
+            display: inline-flex;
+            align-items: center;
+            font-weight: 400;
+            margin: 6px 0;
+            gap: 6px;
+        }
+ 
+        fieldset > input[type="radio"],
+        fieldset > input[type="checkbox"] {
+            margin: 6px 6px 6px 0;
+            width: 16px;
+            height: 16px;
+            accent-color: #4f7cff;
+        }
+ 
+        fieldset div,
+        fieldset label {
+            display: block;
+        }
+ 
+        .field-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+ 
+        .field-row label {
+            margin: 0;
+        }
+ 
+        .actions {
+            display: flex;
+            gap: 12px;
+            margin-top: 8px;
+        }
+ 
+        button {
+            padding: 10px 20px;
+            font-size: 14px;
+            font-weight: 600;
+            border-radius: 6px;
+            border: 1px solid transparent;
+            cursor: pointer;
+            transition: background 0.15s ease, border-color 0.15s ease;
+        }
+ 
+        button[type="submit"] {
+            background: #4f7cff;
+            color: #ffffff;
+        }
+ 
+        button[type="submit"]:hover {
+            background: #3b66e0;
+        }
+ 
+        button[type="reset"] {
+            background: #ffffff;
+            border-color: #d0d3d9;
+            color: #1f2328;
+        }
+ 
+        button[type="reset"]:hover {
+            background: #f1f2f5;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html">index</a>
+    <form action="/form" method="POST">
+  <label for="StudentName">Student name:</label>
+  <input type="text" id="StudentName" name="StudentName" required>
+
+  <label for="email">email:</label>
+  <input type="email" id="email" name="email" required>
+
+  <label for="number">project team-size:</label>
+  <input type="text" id="number" name="number" min="1" max="4">
+
+<fieldset>
+  <legend>Preferred project type</legend>
+  <input type="radio" id="website" name="projectType" value="WEBSITE">
+  <label for="website">Website</label>
+
+  <input type="radio" id="game" name="projectType" value="GAME">
+  <label for="game">Game</label>
+
+  <input type="radio" id="data" name="projectType" value="DATA">
+  <label for="data">Data application</label>
+</fieldset>
+
+<fieldset>
+  <legend>technologies</legend>
+<input type="checkbox" id="htmlandcss" name="technologies" value="HTMLCSS">
+<label for="htmlandcss">HTML and CSS</label>
+
+<input type="checkbox" id="javascript" name="technologies" value="JAVASCRIPT">
+<label for="javascript">Javascript</label>
+
+<input type="checkbox" id="node.js" name="technologies" value="NODE.JS">
+<label for="node.js">Node.js</label>
+
+<input type="checkbox" id="databases" name="technologies" value="DATABASES">
+<label for="databases">Databases</label>
+
+<input type="checkbox" id="yup" name="contactPermission" value="yes">
+<label for="yup">ContactPermission</label>
+</fieldset>
+
+<label for="porjectidea">Project idea:</label>
+<textarea name="porjectidea" id="porjectidea" maxlength="500" cols="100" rows="8" required></textarea>
+
+<input type="hidden" name="formType" value="projectInterest">
+<input type="text" name="formType" value="projectInterest" disabled>
+
+<label for="experienceLevel">Experience level:</label>
+<select name="experienceLevel" id="experienceLevel" required>
+  <option value="">Select a level</option>
+  <option value="Beginner">Beginner</option>
+  <option value="Intermediate">Intermediate</option>
+  <option value="Advanced">Advanced</option>
+</select>
+
+<button type="submit">Submit Interest Form</button>
+<button type="reset">Reset Form</button>
+
+</form>
+</body>
+</html>

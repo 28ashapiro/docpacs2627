@@ -1,0 +1,144 @@
+<html>
+
+<head>
+    <meta name="Keywords" content="CIW, HTML5, uCorp" />
+    <meta name="Description" content="Simple XHTML page for uCorp site" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="contactus/contactus.css" />
+    <title>Welcome to uCorp</title>
+</head>
+
+<body>
+
+
+
+    <!-- HEADER -->
+    <header>
+
+        <div id="head"><a href="index.html"><img height="65" width="250" src="contactus/uCorp_logo.png" /></a></div>
+
+        <div id="navbar"><a href="aboutus.html"><img height="52" width="89" src="contactus/header_button_about-us.jpg"
+                    alt="Link goes back to current page." id="aboutus" /></a><a href="contactus.html"><img height="52"
+                    width="104" src="contactus/header_button_contact-us.jpg"
+                    alt="Click here to contact us and let us know what you think." id="contactus" /></a><img height="52"
+                width="91" src="contactus/header_button_products.jpg"
+                alt="Click here to explore the catalog of products we offer." id="products" /><a
+                href="manufacturing.html"><img height="52" width="204"
+                    src="contactus/header_button_manufacturing-process.jpg"
+                    alt="Click here to learn about the high-quality manufacturing process that uCorp employs."
+                    id="manufacturingprocess" /></a><a href="technology.html"><img height="52" width="112"
+                    src="contactus/header_button_technology.jpg"
+                    alt="Click here to discover the advanced technology that goes into each one of our speakers."
+                    id="technology" /></a></div>
+
+    </header>
+
+    <!-- ARTICLE -->
+
+    <article>
+
+        <h2>Contact Us</h2>
+
+        <!-- PLACE YOUR FORM HERE -->
+        <form method="post" action="http://ss1.ciwcertified.com/cgi-bin/process.php">
+            First Name:
+            <br>
+            <input type="text" name="firstName" size="32" />
+            <br>
+            <br>
+            Last Name:
+            <br>
+            <input type="text" name="lastName" size="32" />
+            <br>
+            <br>
+            Contact:
+            <br>
+            <input type="text" name="company" size="32" />
+            <br>
+            <br>
+            Phone Number:
+            <br>
+            <input type="text" name="phoneNumber" size="32" />
+            <br>
+            <br>
+            Email Address:
+            <br>
+            <input type="text" name="email" size="32" />
+            <br>
+            <br>
+            Country:
+            <br>
+            <input type="text" name="country" size="32" />
+            <br>
+            <br>
+            Comments: <br>
+            <textarea name="comments" cols="32" rows="3"></textarea>
+            <br>
+            <br>
+            When should we we try to contact you?
+            <br>
+            <select name="time">
+                <option>Morning</option>
+                <option>Afternoon</option>
+                <option>Evening</option>
+            </select>
+            <br>
+            <br>
+            What days should we try to contact you?
+            <br>
+            <select name="day" multiple="multiple" size="7">
+                <option>Monday</option>
+                <option>Tuesday</option>
+                <option>Wednesday</option>
+                <option>Thursday</option>
+                <option>Friday</option>
+                <option>Saturday</option>
+                <option>Sunday</option>
+            </select>
+            <br>
+            <br>
+            Should we add you to our mailing list?
+            <br>
+            <input type="radio" name="AddToList" value="yes" checked="checked">Yes
+            <input type="radio" name="AddToList" value="no">No
+            <br>
+            <br>
+            <input type="submit">
+            <input type="reset">
+        </form>
+
+
+    </article>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div id="address">
+            <h4>uCorp</h4>
+            Sunshine House, Sunville. SUN12
+            <br />
+            019223 8092344
+            <br />
+            info@ucorp.com
+        </div>
+
+        <div id="follow">
+            <h4>Follow Us</h4>
+            <a href="https://twitter.com/uCorp4">Twitter</a> | <a
+                href="https://www.facebook.com/UCorp-441272686298550/">Facebook</a> | <a
+                href="https://www.linkedin.com/company/ucorporation/">LinkedIn</a> | <a
+                href="https://www.instagram.com/ucorp123/">Instagram</a>
+            <img src="contactus/footer_newsletter.jpg" alt="Enter your email here to subscribe to our newsletter." />
+        </div>
+
+        <div id="footerlinks">
+            <br />
+            Copyright &copy All rights reserved by uCorp. <a href="terms.html">Terms</a> | <a
+                href="privacy.html">Privacy</a> | <a href="contactus.html">Contact Us</a></div>
+
+    </footer>
+
+</body>
+
+</html>
