@@ -19,6 +19,7 @@ font-weight: bold;
 font-size: 120%;
 margin-bottom: 10px; 
 font-family: Arial, Helvetica, Geneva, Swiss, sans-serif;
+color: orange;
 }
 
 h3 
@@ -28,6 +29,7 @@ font-weight: bold;
 font-size: 100%;
 margin-bottom: 10px; 
 font-family: Arial, Helvetica, Geneva, Swiss, sans-serif;
+color: orange;
 }
 
 h4{
@@ -38,12 +40,10 @@ font-size: 120%;
 color:#fff;
 }
 
-/*
 a 
 {
 color: #093
 }
-*/
 
 img
 {
