@@ -1,0 +1,79 @@
+Test 1
+Required direction: up
+joystick input: up
+Action: 1 A press
+expected result: score increases by 1
+actual result: score increases by 1
+result: Pass
+Test 2
+Required direction: right
+joystick input: right
+Action: 1 A press
+expected result: score increases by 1
+actual result: score increases by 1
+result: Pass
+Test 3
+Required direction: left
+joystick input: left
+Action: 1 A press
+expected result: score increases by 1
+actual result: score increases by 1
+result: Pass
+Test 4
+Required direction: down
+joystick input: down
+Action: 1 A press
+expected result: score increases by 1
+actual result: score increases by 1
+result: Pass
+Test 5
+Required direction: down
+joystick input: up
+Action: 1 A press
+expected result: nothing
+actual result: nothing
+result: Pass
+Test 6
+Required direction: left
+joystick input: left
+Action: held A
+expected result: score increases by 1
+actual result: score increases by 1
+result: Pass
+Test 7
+Required direction: left
+joystick input: left
+Action: 9 A press
+expected result: score increases by 9
+actual result: score increases by 9
+result: Pass
+Test 8
+Action: 1 A press after game over
+expected result: nothing
+actual result: nothing
+result: Pass
+Test 9
+Action: start press after game over
+expected result: restart
+actual result: restart
+result: Pass
+Test 10
+Action: disconnecting controller
+expected result: page say "controller is disconnected"
+actual result: page say "controller is disconnected"
+result: Pass
+Test 11
+Action: reconnecting controller
+expected result: page say "controller is connected"
+actual result: page say "controller is connected"
+result: Pass
+Test 12
+Action: timer reaches 0
+expected result: timer stops
+actual result: timer stops
+result: Pass
+Test 13
+Action: direction values
+expected result: direction values stay within 0-3
+actual result: direction values stay within 0-3
+result: Pass
