@@ -7,12 +7,15 @@ const fs = require('fs');
 const server = http.createServer((req, res) => {
     console.log(req.url)
     console.log(req.method)
+    const url = new URL(req.url, `http://${req.headers.host}`);
+    const message = url.searchParams.get('message')
 
-    if (req.url === '/' & req.method === 'GET') {
+    if (req.url === '/' && req.method === 'GET') {
         res.writeHead(200, {'Content-Type': 'text/plain'});
         res.end(`Homepage of my first ${appName}`);
     }
-    else if (req.url === '/form' & req.method === 'GET') {
+
+    else if (req.url === '/form' && req.method === 'GET') {
         fs.readFile('./pages/form.html', (err, data) => {
             if (err) {
                 res.writeHead(500, {'Content-Type': 'text/plain'});
@@ -23,11 +26,44 @@ const server = http.createServer((req, res) => {
             res.end(data);
         })
     }
+
+    else if (req.url === '/form' && req.method === 'POST'){
+        let body = '';
+
+        req.on('data', (chunk) => {
+            body += chunk;
+        });
+
+        req.on('end', () => {
+            console.log('Form data submitted!');
+            console.log(body)
+            const parameters = new URLSearchParams(body);
+            const input = parameters.get('input');
+
+            if (!input || input.trim() === '') {
+                res.writeHead(400, {'Content-Type': 'text/plain'})
+                res.end('Please provide a valid input >:(')
+                return;
+            }
+
+            res.writeHead(200, {'Content-Type': 'text/plain'})
+            res.end(`You inputted: ${input.trim()}`)
+        });
+    }
+    else if (url.pathname === '/query' && req.method === 'GET') {
+        if (!message || message.trim() === '') {
+            res.end('Please provide a message using /query?message="YOURMESSAGE');
+            return;
+        }
+        res.writeHead(200, {'Content-Type': 'text/plain'}); 
+        res.end(`You said: ${message.trim()}`);
+    }
+
     else {
         res.writeHead(404, {'Content-Type': 'text/plain'});
         res.end('404 Error: Page not found :/')
     }
-}) 
+});
 
 server.listen(port, () => {
     console.log(`Server listening at port ${port}`)
