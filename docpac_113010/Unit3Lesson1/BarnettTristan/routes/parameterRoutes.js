@@ -1,4 +1,5 @@
 const express = require("express");
+const {insert, rows} =  require('../models/entryModel');
 const parameterRoute = express.Router()
 
 parameterRoute.get(`/urlparams/:isgreg`, (req, res) => {
@@ -8,18 +9,25 @@ parameterRoute.get(`/urlparams/:isgreg`, (req, res) => {
     }
 
     if (isgreg != "greg") {
-        if (isgreg != "Greg") {
-            res.render("it's a "+ isgreg +' not a greg')
-        }
+        date = new Date
+        date = String(date)
+        insert.run(isgreg, 'urlParams', date)
+        res.render("it's a "+ isgreg +' not a greg')
     }
 
     if (isgreg == "greg") {
-        res.render("it's a "+ isgreg)
+        date = new Date
+        date = String(date)
+        insert.run(isgreg, 'urlParams', date)
+        res.status(400).render("it's a "+ isgreg)
     }
 })
 
 parameterRoute.get("/query", (req, res) => {
     if (req.query.message != '') {
+        date = new Date
+        date = String(date)
+        insert.run(isgreg, 'urlParams', date)
         res.render(req.query.message)
     }
     if (req.query.message == '') {
