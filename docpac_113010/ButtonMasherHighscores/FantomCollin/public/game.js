@@ -24,37 +24,38 @@ console.log("textContent:", usernameElement.textContent);
 
 
 async function submitScore(username, score) {
-    if (username.trim() === '' || username.trim().length > 20 || !Number.isInteger(score) || score < 0){
+    if (username.trim() === '' || username.trim().length > 20 || !Number.isInteger(score) || score < 0) {
         console.log("Can't submit - invalid data");
         return;
     }
     submissionMessage.textContent = 'Saving score...';
-    try{
-    const response = await fetch('/api/scores', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-            name: username,
-            score: score
-        })
-    });
-const data = await response.json()
+    try {
+        const response = await fetch('/api/scores', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                name: username,
+                score: score
+            })
+        });
+        const data = await response.json();
 
-if (response.ok) {
-    submissionMessage.textContent = 'Score saved'
-    highScoreLink.style.display = 'block'
-} else if (response.status === 400){
-    submissionMessage.textContent = 'Invalid name or score'
-} else {
-    submissionMessage.textContent = 'Score could not be saved'
-}
+        if (response.ok) {
+            submissionMessage.textContent = 'Score saved'
+            highScoreLink.style.display = 'block'
+        } else if (response.status === 400) {
+            submissionMessage.textContent = 'Invalid name or score'
+        } else {
+            submissionMessage.textContent = 'Score could not be saved'
+        };
 
-} catch (error) {
-    console.log("Error: Couldn't save score", error)
-    submissionMessage.textContent = 'SCORE COULD NOT BE SAVED!'
-}}
+    } catch (error) {
+        console.log("Error: Couldn't save score", error)
+        submissionMessage.textContent = 'SCORE COULD NOT BE SAVED!'
+    }
+};
 
 function startGame() {
     console.log('GAME STARTINGGGGG!!!!!!!');
@@ -67,7 +68,7 @@ function startGame() {
 
         if (timer <= 0) {
             clearInterval(gameloopVar);
-            cancelAnimationFrame(controllerPollLoop)
+            cancelAnimationFrame(controllerPollLoop);
             gameOver = true;
             submitScore(username, score)
             directionBoxElement.textContent = "Press START to play again!";
@@ -84,7 +85,7 @@ function startGame() {
 function directInit() {
     randDirect = Math.floor(Math.random() * 4);
     if (timer > 0) {
-        directionBoxElement.textContent = directions[randDirect]
+        directionBoxElement.textContent = directions[randDirect];
     };
 };
 directInit();
@@ -111,7 +112,7 @@ function controllerPoll() {
         if (controller.buttons[9].pressed && !buttonStartPressed) {
             console.log("START button pressed!");
             username = usernameElement.value;
-            startGame()
+            startGame();
         };
 
         let yaxis = controller.axes[1];
@@ -131,33 +132,28 @@ function controllerPoll() {
         if (timer > 0 && !gameOver && funcyDirection(randDirect, xaxis, yaxis)) {
             if (controller.buttons[0].pressed && !buttonAPressed) {
                 ++score;
-                scoreBoxElement.textContent = score
-            }
-        }
-        buttonAPressed = controller.buttons[0].pressed
-        buttonStartPressed = controller.buttons[9].pressed
-        controllerPollLoop = requestAnimationFrame(controllerPoll)
+                scoreBoxElement.textContent = score;
+            };
+        };
+        buttonAPressed = controller.buttons[0].pressed;
+        buttonStartPressed = controller.buttons[9].pressed;
+        controllerPollLoop = requestAnimationFrame(controllerPoll);
     }
 }
 
 function funcyDirection(direction, xaxis, yaxis) {
     let stickDirection;
     if (yaxis === -1) {
-        stickDirection = 0
-    }
+        stickDirection = 0;
+    } else if (yaxis === 1) {
+        stickDirection = 2;
+    } else if (xaxis === 1) {
+        stickDirection = 1;
+    } else if (xaxis === -1) {
+        stickDirection = 3;
+    };
 
-    else if (yaxis === 1) {
-        stickDirection = 2
-    }
-
-    else if (xaxis === 1) {
-        stickDirection = 1
-    }
-
-    else if (xaxis === -1) {
-        stickDirection = 3
-    }
-    return direction === stickDirection
-}
+    return direction === stickDirection;
+};
 
 

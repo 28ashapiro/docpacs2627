@@ -17,14 +17,14 @@ db.exec(`
 );
 console.log('Database initialized!');
 
-app.post('/api/scores', (req, res) => {
-   /*/ const insert = db.prepare('INSERT INTO database (name, score) VALUES (?,?)')
-    insert.run(req.body.name, req.body.score)
-    console.log('Received score data:', req.body);
-    const allScores = db.prepare('SELECT * FROM database').all();
-    console.log('All scores:', allScores);
-    res.json({ message: "Score received!" }) /*/
-    
+app.get('/api/scores', (req,res) => {
+    const result = db.prepare(
+        'SELECT * FROM database ORDER BY score DESC, id ASC LIMIT 10'
+    ).all()
+    res.json(result)
+})
+
+app.post('/api/scores', (req, res) => {    
     const name = req.body.name
     const score = req.body.score
     if (typeof name.trim() !== 'string' || name.trim() === '' || name.trim().length > 20) {
@@ -33,7 +33,7 @@ app.post('/api/scores', (req, res) => {
     
     if(!Number.isInteger(score) || score < 0){
         return res.status(400).json({error: 'Invalid score'})
-    }
+    };
 
     try{
         const result = db.prepare(
@@ -43,14 +43,14 @@ app.post('/api/scores', (req, res) => {
         return res.status(201).json({
             message: 'Score saved successfully!',
             id: result.lastInsertRowid
-        })
+        });
     } catch (error) {
         console.log(error);
 
         return res.status(500).json({
             error: 'Could not save score!'
-        })
-    }
+        });
+    };
 });
 
 
