@@ -13,7 +13,6 @@ app.use(sessionConfig);
 
 app.use(requestLogger);
 
-
 app.use(express.static('public'));
 
 app.use(express.urlencoded({ extended: true }));
@@ -28,6 +27,7 @@ init()
 app.use(require('./routes/formRoutes.js'));
 app.use(require('./routes/pageRoutes.js'));
 app.use(require('./routes/parameterRoutes.js'));
+app.use(require('./routes/sessionRoutes'));
 
 app.all(('/*splat'), (req, res) => {
     res.status(404).render('error', { appName: process.env.APP_NAME, status: res.statusCode, statusInstr: 'PAGE NOT FOUND', currentPage: '' });

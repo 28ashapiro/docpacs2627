@@ -1,10 +1,10 @@
 const session = require('express-session')
 
-function sessionConfig(next) {
-    session({
+function sessionConfig(req, res, next) {
+    const sessionMiddleware = req.session({
         secret: process.env.SECRET_MESSAGE,
         resave: false,
-        saveUnititialized: false,
+        saveUninitialized: false,
         cookie: function (req) {
              var match = req.url.match(/^\/([^/]+)/);
              return {
@@ -15,8 +15,5 @@ function sessionConfig(next) {
              }
         }
     });
-
-    next();
+    module.exports = sessionConfig
 };
-
-module.exports = sessionConfig
