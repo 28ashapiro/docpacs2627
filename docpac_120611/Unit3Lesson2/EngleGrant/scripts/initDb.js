@@ -11,10 +11,10 @@ appDb.exec(`
 `)
 
 sessionsDb.exec(`
-    CREATE TABLE IF NOT EXISTS sessionize (
-      id INTEGER PRIMARY KEY AUTOINCREMENT,
-      data TEXT NOT NULL,
-      expires INTEGER NOT NULL
+    CREATE TABLE IF NOT EXISTS sessions (
+      sid INTEGER PRIMARY KEY AUTOINCREMENT,
+      sess TEXT NOT NULL,
+      expire INTEGER NOT NULL
     );
   `);
 

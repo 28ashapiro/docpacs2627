@@ -15,6 +15,7 @@ const PORT = process.env.PORT;
 
 app.set('view engine', "ejs");
 
+app.use(sessionConfig);
 app.use(requestLogger);
 
 app.use(express.static("public"));
