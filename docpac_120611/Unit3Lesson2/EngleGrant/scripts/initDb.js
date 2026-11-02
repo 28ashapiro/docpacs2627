@@ -1,6 +1,7 @@
-const database = require("../models/database");
+const appDb = require("../models/database");
+const sessionsDb = require("../models/sessions");
 
-database.exec(`
+appDb.exec(`
     CREATE TABLE IF NOT EXISTS entries (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         value TEXT NOT NULL,
@@ -9,5 +10,15 @@ database.exec(`
     );
 `)
 
-console.log("Database set up successfully.")
-database.close()
+sessionsDb.exec(`
+    CREATE TABLE IF NOT EXISTS sessionize (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      data TEXT NOT NULL,
+      expires INTEGER NOT NULL
+    );
+  `);
+
+appDb.close()
+sessionsDb.close()
+
+console.log("Databases set up successfully.")
