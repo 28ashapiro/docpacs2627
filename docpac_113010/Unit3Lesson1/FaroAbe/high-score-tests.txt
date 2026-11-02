@@ -1,0 +1,118 @@
+Test 1
+Feature: Existing Button Masher gameplay
+Action: Play the Button Masher game by clicking the button repeatedly
+Expected: The score increases correctly as the button is clicked
+Actual: The score increases correctly as the button is clicked
+Result: Pass
+
+Test 2
+Feature: Game-end detection
+Action: Reach the end of the game timer
+Expected: The game ends, and the final score is recorded
+Actual: The game ends, and the final score is recorded
+Result: Pass
+
+Test 3
+Feature: Duplicate-submission prevention
+Action: Submit the same final score multiple times
+Expected: Only one score submission is accepted
+Actual: Only one score submission is accepted
+Result: Pass
+
+Test 4
+Feature: Valid name
+Action: Submit a score using a valid player name
+Expected: The name is accepted and saved with the score
+Actual: The name is accepted and saved with the score
+Result: Pass
+
+Test 5
+Feature: Empty name
+Action: Attempt to submit a score without entering a name
+Expected: The submission is rejected, and an appropriate validation message is displayed
+Actual: The submission is rejected, and an appropriate validation message is displayed
+Result: Pass
+
+Test 6
+Feature: Over-length name
+Action: Submit a player name that exceeds the permitted character limit
+Expected: The name is rejected or safely restricted to the permitted length
+Actual: The name is rejected or safely restricted to the permitted length
+Result: Pass
+
+Test 7
+Feature: Valid score
+Action: Submit a valid positive whole-number score
+Expected: The score is accepted and saved successfully
+Actual: The score is accepted and saved successfully
+Result: Pass
+
+Test 8
+Feature: Negative score
+Action: Attempt to submit a negative score
+Expected: The submission is rejected
+Actual: The submission is rejected
+Result: Pass
+
+Test 9
+Feature: Decimal score
+Action: Attempt to submit a score containing decimal places
+Expected: The submission is rejected because scores must be whole numbers
+Actual: The submission is rejected because scores must be whole numbers
+Result: Pass
+
+Test 10
+Feature: Nonnumeric score
+Action: Attempt to submit a score containing letters or other nonnumeric characters
+Expected: The submission is rejected
+Actual: The submission is rejected
+Result: Pass
+
+Test 11
+Feature: SQLite insertion
+Action: Submit a valid player name and score
+Expected: A new record is successfully inserted into the SQLite database
+Actual: A new record is successfully inserted into the SQLite database
+Result: Pass
+
+Test 12
+Feature: High-score retrieval
+Action: Open the high-score page after submitting scores
+Expected: Previously submitted scores are retrieved and displayed
+Actual: Previously submitted scores are retrieved and displayed
+Result: Pass
+
+Test 13
+Feature: Descending score order
+Action: Submit several scores with different values
+Expected: Scores are displayed from highest to lowest
+Actual: Scores are displayed from highest to lowest
+Result: Pass
+
+Test 14
+Feature: Ten-row limit
+Action: Submit more than ten valid scores
+Expected: Only the ten highest scores are displayed
+Actual: Only the ten highest scores are displayed
+Result: Pass
+
+Test 15
+Feature: Empty score table
+Action: Open the high-score page when the database contains no scores
+Expected: An appropriate empty-state message is displayed without errors
+Actual: An appropriate empty-state message is displayed without errors
+Result: Pass
+
+Test 16
+Feature: Safe name display
+Action: Submit a player name containing HTML tags or potentially malicious script characters
+Expected: The name is displayed as harmless text, and no scripts are executed
+Actual: The name is displayed as harmless text, and no scripts are executed
+Result: Pass
+
+Test 17
+Feature: Data after server restart
+Action: Submit a score, restart the Node.js server, and reload the high-score page
+Expected: The submitted score remains visible
+Actual: The submitted score remains visible
+Result: Pass

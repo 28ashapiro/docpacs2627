@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>High Scores - Button Masher</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>High Scores</h1>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="game.html">Play Game</a>
+        </nav>
+
+        <div id="loading">Loading scores!!!111!!</div>
+        <div id="error" style="display: none;"></div>
+
+        <table id="scoresTable" style="display: none;">
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Player</th>
+                    <th>Score</th>
+                </tr>
+            </thead>
+            <tbody id="scoresBody">
+
+            </tbody>
+        </table>
+
+        <div id="noScores" style="display: none;">
+            <p>No scores have been submitted yet. Become the defacto world recorder holder boii.</p>
+            <a href="game.html" class="btn">Play Now</a>
+        </div>
+    </div>
+
+    <script src="highscores.js"></script>
+</body>
+
+</html>
