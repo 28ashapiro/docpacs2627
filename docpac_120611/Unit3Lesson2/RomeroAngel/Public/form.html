@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Information Form</h1>
+
+    <form method="POST" action="/form">
+
+        <label for="studentName">Your Name Please!!!</label>
+        <input type="text" id="userName" name="userName" required>
+        <br>
+        <label for="email">School Email Goes Here:</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+        <label for="number">Number Of The Group!:</label>
+        <input type="number" id="number" name="number" min="1" max="4" required>
+        <br>
+        <br>
+        <fieldset>
+            <legend>Choose preferred project type!!!!!!</legend>
+            <input type="radio" id="website" name="projectType" value="Website" required>
+            <label for="website">Let's Make A Website!</label>
+            <br>
+            <input type="radio" id="game" name="projectType" value="Game">
+            <label for="game">I Wanna Make A Game!</label>
+            <br>
+            <input type="radio" id="dataApplication" name="projectType" value="dataApplication">
+            <label for="dataApplication">Make a Data Application!!</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Technologies YOU are interested in!!!!</legend>
+            <input type="checkbox" id="HTML&CSS" name="technologies" value="htmlcss">
+            <label for="HTML&CSS">HTML & CSS!</label>
+            <br>
+
+            <input type="checkbox" id="javascript" name="technologies" value="javascript">
+            <label for="javascript">It's Time TO Javascript!!!!</label>
+            <br>
+
+            <input type="checkbox" id="Node.js" name="technologies" value="nodejs">
+            <label for="Node.js">I'll do the Node.js!!!!</label>
+            <br>
+
+            <input type="checkbox" id="databases" name="technologies" value="database">
+            <label for="databases">Let Me Handle The Database!</label>
+            <br>
+        </fieldset>
+        <br>
+
+
+        <label for="experienceLevel">Choose Your Experience Level!!!!:</label>
+        <select id="experienceLevel" name="experienceLevel">
+            <option value="Beginner">Beginner</option>
+            <option value="Intermediate">Intermediate</option>
+            <option value="Advanced">Advanced</option>
+        </select>
+        <br>
+        <br>
+        <label for="textArea">Write About Your Idea's Here! :D :</label>
+        <br>
+        <textarea id="textArea" name="yourwackuideashere!!!" maxlength="1000" rows="6" cols="50" required></textarea>
+        <br>
+
+        <br>
+        <input type="checkbox" id="contactPermission" name="contactPermission" value="yes">
+        <label for="contactPermission">I give consent in terms of contact permission.</label>
+        <br>
+        <br>
+
+
+        <input type="hidden" name="formtype" value="projectInterest">
+        <button type="submit">Submit</button>
+
+        <br>
+        <button type="reset">Clear EVERYTHING!!!!</button>
+
+        <p>Here you the need fields to have your name, email and a number between 1-4 for your team! And you prefered
+            technologies you want to do. Add an explanation for your idea as well!</p>
+
+        <p>Short Explanation: We are making this in order to send user request on our server :D</p>
+
+
+    </form>
+</body>
+
+</html>
