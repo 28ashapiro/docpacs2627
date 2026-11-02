@@ -13,24 +13,44 @@ parameterRoute.get(`/urlparams/:isgreg`, (req, res) => {
         date = String(date)
         insert.run(isgreg, 'urlParams', date)
         res.render("it's a "+ isgreg +' not a greg')
+        res.render('paramRes', {
+            title: `it not a greg it's a ${isgreg}`,
+            navs: [{ 'href': '/', 'text': "home" },
+            { "href": '/form', "text": 'form' }]
+        })
     }
-
     if (isgreg == "greg") {
         date = new Date
         date = String(date)
         insert.run(isgreg, 'urlParams', date)
-        res.status(400).render("it's a "+ isgreg)
+        res.render('paramRes', {
+            title: `it is a ${isgreg}`,
+            navs: [{ 'href': '/', 'text': "home" },
+            { "href": '/form', "text": 'form' }]
+        })
     }
 })
 
-parameterRoute.get("/query", (req, res) => {
-    if (req.query.message != '') {
-        date = new Date
-        date = String(date)
-        insert.run(isgreg, 'urlParams', date)
-        res.render(req.query.message)
+parameterRoute.get("/query", async (req, res) => {
+    queryMes = req.query.message
+    rowNum = req.query.rowNum
+    if (queryMes != '') {
+        if (queryMes == 'rows') { 
+            Array(rows)
+            res.render('rowsRes', {
+                title: `here's that row db`,
+                rows:rows,
+                navs: [{ 'href': '/', 'text': "home" },
+                { "href": '/form', "text": 'form' }]
+            })}
+            if (queryMes != 'rows') {
+                res.render('queryRes', {
+                    title: `${queryMes}`,
+                    navs: [{ 'href': '/', 'text': "home" },
+                    { "href": '/form', "text": 'form' }]
+                })}
     }
-    if (req.query.message == '') {
+    if (queryMes == '') {
         res.status(400).render("no word after message query")
     }
 })
