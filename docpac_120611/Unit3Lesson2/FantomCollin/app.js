@@ -7,8 +7,12 @@ const app = express();
 const path = require('path');
 const requestLogger = require('./utils/requestLogger.js');
 const init = require('./scripts/initDb.js');
+const sessionConfig = require('./utils/sessionConfig.js')
+
+app.use(sessionConfig);
 
 app.use(requestLogger);
+
 
 app.use(express.static('public'));
 

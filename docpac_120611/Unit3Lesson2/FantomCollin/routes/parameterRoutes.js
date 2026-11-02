@@ -1,6 +1,5 @@
 const express = require('express');
 const entryModel = require('../models/entryModel')
-
 const parama = express.Router();
 
 parama.get('/query', (req, res) => {
