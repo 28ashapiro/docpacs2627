@@ -4,8 +4,6 @@ const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
 });
-
-
 const dotenv = require('dotenv');
 dotenv.config();
 const fs = require('fs');
