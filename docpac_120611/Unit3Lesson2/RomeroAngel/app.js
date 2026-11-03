@@ -1,16 +1,17 @@
 const express = require('express');
+const sessions = require('express-session');
 const db = require('./models/database');
-const requestLogger = require('./utils/requestLogger.js');
+const sessionMiddleware = require('./utils/sessionsConfig.js');
 //Hi! So from here to...
 const formRouter = require('./routes/formRoutes');
 const parameterRouter = require('./routes/parametersRoutes');
 const pageRouter = require('./routes/pageRoutes');
+const requestLogger = require('./utils/requestLogger.js');
 //... here we can see that these other js files can be seen as our controllers in terms of MVC as they handle the GET and POST 
 // and are what we use to handle submitted forms and the if else these forms need in order to send valid responses
 const path = require('path');
 const { title } = require('process');
 const { DEFAULT_CIPHERS } = require('tls');
-
 const app = express();
 app.set("views", path.join(__dirname, "views"));
 // Set EJS as view engine
@@ -24,6 +25,7 @@ const apiKey = process.env.API_KEY;
 app.use(express.urlencoded({ extended: true }));
 app.use(requestLogger);
 app.use(express.static('public'));
+app.use(sessionMiddleware);
 app.use(formRouter);
 app.use(parameterRouter);
 app.use(pageRouter);
