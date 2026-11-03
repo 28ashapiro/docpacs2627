@@ -7,9 +7,10 @@ const app = express();
 const path = require('path');
 const requestLogger = require('./utils/requestLogger.js');
 const init = require('./scripts/initDb.js');
-const sessionConfig = require('./utils/sessionConfig.js')
+const sessionConfig = require('./utils/sessionConfig.js');
+const sessionMiddleware = require('./utils/sessionConfig.js');
 
-app.use(sessionConfig);
+app.use(sessionMiddleware);
 
 app.use(requestLogger);
 
@@ -27,7 +28,7 @@ init()
 app.use(require('./routes/formRoutes.js'));
 app.use(require('./routes/pageRoutes.js'));
 app.use(require('./routes/parameterRoutes.js'));
-app.use(require('./routes/sessionRoutes'));
+app.use(require('./routes/sessionRoutes.js'));
 
 app.all(('/*splat'), (req, res) => {
     res.status(404).render('error', { appName: process.env.APP_NAME, status: res.statusCode, statusInstr: 'PAGE NOT FOUND', currentPage: '' });
