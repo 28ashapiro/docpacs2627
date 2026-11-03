@@ -1,0 +1,24 @@
+<%- include('partials/header') %>
+<h1> <%= title %> </h1>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Value</th>
+            <th>Source</th>
+            <th>Time</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% for (const row of rows) { %>
+            <tr>
+                <td><%=row.id%></td>
+                <td><%=row.value%></td>
+                <td><%=row.soruce%></td>
+                <td><%=row.time%></td>
+            </tr>
+        <% };%>
+    </tbody>
+</table>
+<a href="/">Back to home</a>
+<%- include('partials/footer') %>
