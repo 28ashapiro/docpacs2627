@@ -3,10 +3,6 @@ const path = require("path");
 
 const router = express.Router()
 
-const options = {
-    root: path.join(__dirname)
-}
-
 router.get("/",(req, res) => {
     res.render('index', {pageTitle: "Links"})
     // res.sendFile("public/index.html", options, (err) => {})

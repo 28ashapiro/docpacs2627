@@ -5,7 +5,7 @@ function requestLogger(req, res, next) {
 
     cookie = JSON.stringify(req.session)
     
-    console.log(time,method,url,"| Cookie:", cookie)
+    console.log(time,method,url)
 
     next();
 }
