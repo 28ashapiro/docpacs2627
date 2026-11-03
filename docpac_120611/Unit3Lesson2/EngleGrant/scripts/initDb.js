@@ -14,7 +14,7 @@ sessionsDb.exec(`
     CREATE TABLE IF NOT EXISTS sessions (
       sid INTEGER PRIMARY KEY AUTOINCREMENT,
       sess TEXT NOT NULL,
-      expire INTEGER NOT NULL
+      expire DATETIME NOT NULL
     );
   `);
 
