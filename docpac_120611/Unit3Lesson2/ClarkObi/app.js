@@ -9,6 +9,7 @@ dotenv.config();
 const fs = require('fs');
 const path = require('path');
 const express = require('express');
+const session=require('./utils/sessionConfig')
 const { time } = require('console');
 const requestLogger=require('./utils/requestLogger');
 const routesForm=require('./routes/formRoutes');
@@ -22,6 +23,7 @@ app.use(requestLogger);
 app.use(routesForm);
 app.use(routesPage);
 app.use(routesParam);
+app.use(session)
 
 app.listen(PORT, () => {
     console.log(process.env.APP)
