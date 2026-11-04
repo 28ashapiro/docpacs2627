@@ -7,17 +7,21 @@ const path = require('path')
 const {pageRoute} = require("./routes/pageRoutes.js")
 const {formRoute} = require("./routes/formRoutes.js")
 const {parameterRoute} = require("./routes/parameterRoutes.js")
+const {sessionRoute} = require("./routes/sessionRoutes.js")
+const {sessionSave} = require("./utils/sessionConfig.js")
 
 const app = express();
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 app.use(express.static('public'));
 app.use(logger);
+app.use(sessionSave)
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'ejs')
 app.use(pageRoute);
 app.use(formRoute);
 app.use(parameterRoute);
+app.use(sessionRoute)
 
 app.all(`*path`, (req, res) => {
     res.status(404).render('error', {

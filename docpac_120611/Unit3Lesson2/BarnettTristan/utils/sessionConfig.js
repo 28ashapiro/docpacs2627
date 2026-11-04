@@ -4,8 +4,7 @@ const app = express();
 const SqliteStore = require("better-sqlite3-session-store")(session)
 const {db2} = require('../models/database.js');
 
-sessionSave = app.use(
-    session({
+sessionSave =session({
       secret: process.env.SHH,
       store: new SqliteStore({
         client: db2, 
@@ -21,6 +20,5 @@ sessionSave = app.use(
       }),
       resave: false,
     })
-  )
 
   module.exports = {sessionSave}

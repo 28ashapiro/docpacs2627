@@ -1,0 +1,9 @@
+<%- include('partials/header') %>
+<h1> <%= title %> </h1>
+<p>session data of how much you've looked at this one page yes yes</p>
+<% if (lookedAt >= 200) { %>
+    <img src="https://i.ytimg.com/vi/CtmtEgSADgs/sddefault.jpg" alt="Please stop">
+<% };%>
+<br>
+<a href="/">Back to home</a>
+<%- include('partials/footer') %>
