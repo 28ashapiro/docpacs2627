@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Button Masher!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <H1>Button Masher Game</H1>
+    <div id="activeGame">
+        <div id="scoreBox">Score: 0</div>
+        <div id="timeBox">Time: 20</div>
+        <div id="directionBox"><img id="arrowBox" src="./arrows/up.png"></div>
+        <div id="gamepadBox">Please connect a controller</div>
+    </div>
+    <div id="nameBox">
+       <label for="playerName">Input Name:</label><input type="text" id="playerName" maxlength="3">
+    </div>
+    <div id="nameBox">
+        <p id="text">Go For A New Highscore!</p>
+    </div>
+    <div id="naviBox">
+        <button id="naviButton" onclick='location.replace("/")'>Home</button>
+        <button id="naviButton" onclick='location.replace("/scores")'>Highscores</button>
+    </div>
+</body>
+<script src="game.js"></script>
+</html>
