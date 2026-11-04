@@ -1,0 +1,9 @@
+<%- include('partials/header') %>
+
+<h1><%= pageTitle %></h1>
+<h2><%= errorHeading %></h2>
+<p><%- message %>
+<% if (linkURL) { %>
+    <a href="<%= linkURL %>"><%= linkText %></a>
+<% } %></p>
+<%- include('partials/footer') %>
