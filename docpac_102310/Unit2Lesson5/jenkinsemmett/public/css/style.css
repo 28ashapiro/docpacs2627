@@ -1,0 +1,39 @@
+body {
+    background-color: antiquewhite;
+}
+
+#centered {
+    margin-left: 40%;
+}
+
+footer{
+    position: absolute; 
+    bottom: 0; 
+    border-radius: 20px;
+    height:5%; 
+    width: 99%; 
+    background-color: grey;
+}
+
+#footButton {
+    margin-top: 15px;
+    margin-left: 10px;
+}
+
+header {
+    background-color: grey;
+    height:5%; 
+    width: 99%; 
+    border-radius: 20px;
+}
+
+#headIcon {
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+#headText {
+    align-items: center;
+    size: 20px;
+    color: white;
+}
