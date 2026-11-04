@@ -20,7 +20,7 @@ parama.get('/urlparams/:paramname', (req, res) => {
         const cleanParam = param.trim();
         entryModel.createEntry(cleanParam, 'urlparams')
         const entries = entryModel.getAllEntries()
-        res.render('parameterResponse', { appName: process.env.APP_NAME, parame: param, currentPage: 'query', input: cleanParam, entries });
+        return res.render('parameterResponse', { appName: process.env.APP_NAME, parame: param, currentPage: 'query', input: cleanParam, entries });
     };
 
 });

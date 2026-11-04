@@ -4,7 +4,7 @@ const Sqlitestore = require('better-sqlite3-session-store')(session);
 const path = require('path')
 
 const dbPath = path.join(__dirname, '..', 'data', 'sessions.db')
-const db = new Database(dbPath, { verbose: console.log })
+const db = new Database(dbPath)
 
 const sessionMiddleware = session({
     store: new Sqlitestore({
