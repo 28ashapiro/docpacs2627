@@ -1,0 +1,29 @@
+<%- include('partials/header') %>
+
+    <h1>
+        <%= heading %>
+    </h1>
+    <p>
+        <%= message %>
+    </p>
+
+    <h2>Navigation Examples:</h2>
+    <ul>
+        <li><a href="/form">Go to Form</a></li>
+        <li><a href="/query?message=Hello">Query Example</a></li>
+        <li><a href="/urlparams/TestValue">URL Param Example</a></li>
+    </ul>
+
+    <h2>Features We've Learned:</h2>
+    <ul>
+        <% features.forEach(function(feature) { %>
+            <li>
+                <strong>
+                    <%= feature.name %>:
+                </strong>
+                <%= feature.description %>
+            </li>
+            <% }); %>
+    </ul>
+
+    <%- include('partials/footer') %>

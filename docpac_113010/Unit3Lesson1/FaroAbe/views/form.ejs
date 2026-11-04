@@ -1,0 +1,13 @@
+<%- include('partials/header') %>
+
+    <h1>Student Project Interest Form</h1>
+    <p>Please fill out the form below to submit your project interests.</p>
+
+    <form method="POST" action="/form">
+        <label for="studentName">Name:</label>
+        <input type="text" id="studentName" name="studentName" required>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <%- include('partials/footer') %>
