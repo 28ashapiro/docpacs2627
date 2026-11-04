@@ -1,0 +1,10 @@
+<%- include('partials/header', { title: title }) %>
+<h1>Form</h1>
+<p><%= message %></p>
+
+<form action="/form" method="post">
+    <label for="input">Say hi:</label>
+    <input type="text" name="text" id="input">
+    <input type="submit" value="Say hi">
+</form>
+<%- include('partials/footer') %>
