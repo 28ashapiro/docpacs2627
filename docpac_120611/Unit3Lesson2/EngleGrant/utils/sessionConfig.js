@@ -12,7 +12,7 @@ const session = expressSession({
     saveUninitialized: true,
     cookie: {
         httpOnly: true,
-        maxAge: 5000
+        maxAge: 120000
     }
 });
 
