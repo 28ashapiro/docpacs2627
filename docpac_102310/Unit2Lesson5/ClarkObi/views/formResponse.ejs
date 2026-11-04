@@ -1,0 +1,11 @@
+<%-include('partials/header')%>
+<%if(username==='rock'){%>
+    <p>Username:paper u lose</p>
+<%}else{%>
+    <p>Username:<%=username%></p>
+<%}%>
+
+<%urls.forEach(item=>{%>
+    <ul><a href="<%=item.url%>"><%=item.text%></a></ul>
+<%})%>
+<%-include('partials/footer')%>
