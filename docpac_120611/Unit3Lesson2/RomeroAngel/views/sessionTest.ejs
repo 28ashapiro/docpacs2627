@@ -1,0 +1,23 @@
+<%- include('partials/header') %>
+
+    <h1>Hey! Welcome To Test Sessions! This means the route worked!</h1>
+
+
+    <p>YOU SEE THAT NUMBER!?!? <%= visits %>
+            <br>
+            That's how many time you visit this page! Specifically the /session-testpage route!
+            The Button below can help with the this too!</p>
+    <br>
+    <p>Hi! So everytime you visit the little count will go up! Yippe! Where is this stored? These are stored in our
+        Session.db file</p>
+
+    <br>
+    <button id="RefreshRefresh&Refreshing!">
+        <a href="/session-testpage">This Link Takes You To The Same Page!</a>
+    </button>
+    <br>
+    <button id="IGottaGetOuttaHere!">
+        <a href="/ejs-demo">This Link Takes You Back To The HomePage!!!</a>
+    </button>
+
+    <%- include('partials/footer') %>

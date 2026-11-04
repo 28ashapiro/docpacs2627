@@ -1,5 +1,7 @@
 const express = require('express');
 const sessions = require('express-session');
+const sessionRouter = require('./routes/sessionRoutes');
+require('dotenv').config();
 const db = require('./models/database');
 const sessionMiddleware = require('./utils/sessionsConfig.js');
 //Hi! So from here to...
@@ -16,9 +18,8 @@ const app = express();
 app.set("views", path.join(__dirname, "views"));
 // Set EJS as view engine
 app.set('view engine', 'ejs');
-require('dotenv').config();
 console.log(process.env.PORT);
-console.log(process.env.APP_NAME)
+console.log(process.env.APP_NAME);
 const port = process.env.PORT;
 const apiKey = process.env.API_KEY;
 
@@ -26,6 +27,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(requestLogger);
 app.use(express.static('public'));
 app.use(sessionMiddleware);
+app.use(sessionRouter);
 app.use(formRouter);
 app.use(parameterRouter);
 app.use(pageRouter);
