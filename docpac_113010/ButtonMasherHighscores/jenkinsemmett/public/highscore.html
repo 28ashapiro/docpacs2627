@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Button Masher!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <H1>Button Masher Home</H1>
+    <div id="activeGame">
+        <table id="tabel"></table>
+    </div>
+    <div id="naviBox">
+        <button id="naviButton" onclick='location.replace("/")'>Home</button>
+        <button id="naviButton" onclick='location.replace("/game")'>Game</button>
+    </div>
+</body>
+<script>
+    //Gets Data From The Server
+    async function getData() {
+        const response = await fetch("/api/scores")
+        .then(function (response) {
+            return response.text();
+        })
+        .then(function (text) {
+            scores = text;
+        })
+        .catch(() => {
+            scores = false;
+        });
+        writeData();
+    }
+
+    //Write Highscores To Page
+    function writeData(){
+        const table = document.getElementById('tabel');
+        if (scores){
+            //Create Header
+            const headers = document.createElement('thead');
+            const headerRow = document.createElement('tr');
+            headers.appendChild(headerRow);
+
+            for (i = 0; i < 3; i++){
+                const th = document.createElement('th');
+                th.textContent = ["Rank", "Name", "Score"][i];
+                headerRow.appendChild(th);
+            }
+
+            table.appendChild(headers);
+
+            //Parse The String, It Was Sent As A String, I Hate Strings
+            const newscores = JSON.parse(scores)
+
+            //Loop To Create Ranking
+            const data = document.createElement('tbody');
+
+            console.log();
+
+            for (o = 0; o < newscores.length; o++){
+                const item = document.createElement('tr');
+
+                const rank = document.createElement('td');
+                const name = document.createElement('td');
+                const score = document.createElement('td');
+
+                rank.textContent = newscores[o].rank;
+                name.textContent = newscores[o].name;
+                score.textContent = newscores[o].score;
+
+                item.appendChild(rank);
+                item.appendChild(name);
+                item.appendChild(score);
+
+                data.appendChild(item);
+            }
+
+            table.appendChild(data);
+
+        } else {
+            table.appendChild('No scores were submitted');
+        }
+    }
+
+    //Initate Code On Reload
+    let scores = false;
+    getData();
+</script>
+</html>

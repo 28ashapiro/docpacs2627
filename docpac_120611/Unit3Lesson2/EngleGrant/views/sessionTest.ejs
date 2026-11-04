@@ -1,0 +1,11 @@
+<%- include("partials/header") %>
+
+<body>
+    <h1>Session Tests</h1>
+    <p> Page Visits: <%= visits %> </p>
+    <form action="/session-test/reset" method="post">
+        <button>Reset Session</button>
+    </form>
+</body>
+
+<%- include("partials/footer") %>

@@ -1,0 +1,24 @@
+<%- include('partials/header', { title: title }) %>
+
+<h1>Parameters</h1>
+<p>param message: <%= paramname %></p>
+<p>came from the URL path using req.params.paramname!!</p>
+<p><a href="/urlparams/Hello">Try another URL parameter</a></p>
+
+<h2>All Saved Entries</h2>
+
+<% if (entries.length > 0) { %>
+    <ul>
+        <% entries.forEach(function(entry) { %>
+            <li>
+                <strong>Value:</strong> <%= entry.value %> |
+                <strong>Source:</strong> <%= entry.source %> |
+                <strong>Created:</strong> <%= entry.created_at %>
+            </li>
+        <% }); %>
+    </ul>
+<% } else { %>
+    <p>No entries have been saved yet.</p>
+<% } %>
+
+<%- include('partials/footer') %>

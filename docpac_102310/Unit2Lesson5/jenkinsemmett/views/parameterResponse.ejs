@@ -1,0 +1,12 @@
+<%- include ('partials/header') %>
+
+<% if(param){ %>
+    <h1 id="centered">Successful Parameter Submission</h1>
+    <p id="centered">You Submitted: <%-param %></p>
+<% } else{ %>
+    <h1 id="centered">Unsuccessful Parameter Submission</h1>
+    <p id="centered">Correct Syntax: website/queryParams/YOUR PARAMETER</p>
+<% } %>
+<button id="centered" onclick="returnHome()">Return Home</button>
+
+<%- include ('partials/footer') %>

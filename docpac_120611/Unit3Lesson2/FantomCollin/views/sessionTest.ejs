@@ -1,0 +1,9 @@
+<%- include('partials/header') %>
+    
+    <h1 class="element"><%- welcome %></h1>s
+    <h2 class="element">Views:<%- viewcount %></h2>
+    <form method="POST" action="/session-test/reset">
+        <button class="element">CLICK HERE TO DELETE YOUR CURRENT SESSION</button>
+    </form>
+
+<%- include('partials/footer') %>

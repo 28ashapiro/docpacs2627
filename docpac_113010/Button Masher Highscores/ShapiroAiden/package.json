@@ -1,0 +1,13 @@
+{
+  "name": "button-masher-highscores",
+  "version": "1.0.0",
+  "description": "Button Masher game with SQLite high scores",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "sqlite3": "^5.1.7"
+  }
+}

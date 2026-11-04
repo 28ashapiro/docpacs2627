@@ -1,0 +1,11 @@
+<%- include('partials/header') %>
+
+<h1><%= pageTitle %></h1>
+<% if(studentName) {%>
+    <p>Submitted Name: <%= studentName %></p>
+<% } else if(!studentName){%>
+    <p>Please input a valid name! The submitted name is either missing or blank!</p>
+    <% } %>
+<a href="/form">Return to Form</a><br>
+<a href="/">Return to Homepage</a>
+<%- include('partials/footer') %>

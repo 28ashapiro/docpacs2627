@@ -1,0 +1,48 @@
+<%- include('partials/header') %>
+
+    <h1>URL Parameter Received</h1>
+    <p><strong>Value:</strong>
+        <%= paramValue %>
+    </p>
+    <p>This value came from the URL path: <code>/urlparams/<%= paramValue %></code></p>
+
+    <p><a href="/">Return to Homepage</a></p>
+
+
+    <hr>
+    <h2>All Stored Entries</h2>
+
+    <% if (entries && entries.length> 0) { %>
+        <table border="1" cellpadding="10">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Value</th>
+                    <th>Source</th>
+                    <th>Created At</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% entries.forEach(function(entry) { %>
+                    <tr>
+                        <td>
+                            <%= entry.id %>
+                        </td>
+                        <td>
+                            <%= entry.value %>
+                        </td>
+                        <td>
+                            <%= entry.source %>
+                        </td>
+                        <td>
+                            <%= entry.created_at %>
+                        </td>
+                    </tr>
+                    <% }); %>
+            </tbody>
+        </table>
+        <% } else { %>
+            <p>No entries found.</p>
+            <% } %>
+
+                <%- include('partials/footer') %>

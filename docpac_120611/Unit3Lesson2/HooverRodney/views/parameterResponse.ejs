@@ -1,0 +1,36 @@
+<%- include('partials/header') %>
+
+<h1><%= pageTitle %></h1>
+<p><%= parameterResponse %></p>
+
+<h2>All Stored Entries</h2>
+
+                <% if (entries.length> 0) { %>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Value</th>
+                                <th>Source</th>
+                                <th>Created At</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% entries.forEach(entry=> { %>
+                                <tr>
+                                    <td>
+                                        <%= entry.value %>
+                                    </td>
+                                    <td>
+                                        <%= entry.source%>
+                                    </td>
+                                    <td>
+                                        <%= entry.created_at%>
+                                    </td>
+                                </tr>
+                                <% }); %>
+                        </tbody>
+                    </table>
+                    <% } else { %>
+                        <p>No entries stored yet.</p>
+                        <% } %>
+<%- include('partials/footer') %>

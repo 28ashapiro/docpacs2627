@@ -1,0 +1,6 @@
+<%- include('partials/header', { title: title }) %>
+<h1>Query</h1>
+<p>query message: <%= message %></p>
+<p>came from the URL query string using req.query.message!!</p>
+<p><a href="/query?message=Hello">Try another query</a></p>
+<%- include('partials/footer') %>

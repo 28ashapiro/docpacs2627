@@ -1,0 +1,14 @@
+<% include("partials/header") %>
+
+<body>
+    <% entries.forEach(element => { %>
+        <div class="dataEntry">
+            <fieldset>
+                <p>ID: <%= element.id %></p>
+                <p>Data: <%= element.value %></p>
+            </fieldset>
+        </div>
+    <%}); %>
+</body>
+
+<% include("partials/footer") %>
