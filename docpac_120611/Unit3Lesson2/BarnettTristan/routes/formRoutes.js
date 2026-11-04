@@ -9,7 +9,6 @@ formRoute.get('/form', (req, res) => {
 })
 
 formRoute.post("/form", (req, res) => {
-    console.log(req.body);
     if (req.body != '') {
         date = new Date
         date = String(date)

@@ -21,4 +21,14 @@ sessionRoute.get('/session-test', (req,res) => {
             })
         }
 })
+
+sessionRoute.post('/session-test/reset', (req,res) => {
+    if (req.session.views){
+        delete req.session.views
+        res.redirect('/session-test')
+    }
+    else {
+        res.redirect('/session-test')
+    }
+})
 module.exports = {sessionRoute}
