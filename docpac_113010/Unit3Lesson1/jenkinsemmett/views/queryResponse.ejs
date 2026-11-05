@@ -1,0 +1,20 @@
+<%- include ('partials/header') %>
+
+<% if(param){ %>
+    <h1 id="centered">Successful Query Submission</h1>
+    <p id="centered">You Submitted: <%-param %></p>
+    <p id="centered">All Submissions:</p>
+    <ul id="centered">
+    <% all.forEach(item=> { %>
+        <li>
+            <%= item.value %>
+        </li>
+    <% }); %>
+    </ul>
+<% } else{ %>
+    <h1 id="centered">Unsuccessful Query Submission</h1>
+    <p id="centered">Correct Syntax: website/queryParams?message=YOURSUBMISSION</p>
+<% } %>
+<button id="centered" onclick="returnHome()">Return Home</button>
+
+<%- include ('partials/footer') %>

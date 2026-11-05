@@ -1,0 +1,99 @@
+High Score Tests
+
+Test 1
+Feature: Homepage
+Action: Open http://localhost:3000/
+Expected: Homepage loads and links to the game and high scores.
+Actual: Not tested in this environment.
+Result: Pending manual test
+
+Test 2
+Feature: Game page
+Action: Open http://localhost:3000/game.html and connect a gamepad.
+Expected: Game displays controller status, direction, score, and a 20-second timer.
+Actual: Not tested in this environment.
+Result: Pending manual test
+
+Test 3
+Feature: Valid score submission
+Action: Finish a game with a valid player name.
+Expected: One POST /api/scores request succeeds and displays “Score saved!”.
+Actual: Not tested in this environment.
+Result: Pending manual test
+
+Test 4
+Feature: Empty name
+Action: Finish a game with the name field empty.
+Expected: Browser displays a validation message and does not send a score request.
+Actual: Not tested in this environment.
+Result: Pending manual test
+
+Test 5
+Feature: Server rejects empty name
+Action: Send POST /api/scores with {"name":"   ","score":5}.
+Expected: Server returns HTTP 400.
+Actual: Not tested in this environment.
+Result: Pending manual test
+
+Test 6
+Feature: Server rejects over-length name
+Action: Send a name longer than 20 characters.
+Expected: Server returns HTTP 400.
+Actual: Not tested in this environment.
+Result: Pending manual test
+
+Test 7
+Feature: Server rejects negative score
+Action: Send POST /api/scores with {"name":"Test","score":-1}.
+Expected: Server returns HTTP 400.
+Actual: Not tested in this environment.
+Result: Pending manual test
+
+Test 8
+Feature: Server rejects decimal score
+Action: Send POST /api/scores with {"name":"Test","score":1.5}.
+Expected: Server returns HTTP 400.
+Actual: Not tested in this environment.
+Result: Pending manual test
+
+Test 9
+Feature: Server rejects text score
+Action: Send POST /api/scores with {"name":"Test","score":"five"}.
+Expected: Server returns HTTP 400.
+Actual: Not tested in this environment.
+Result: Pending manual test
+
+Test 10
+Feature: High-score retrieval
+Action: Open http://localhost:3000/api/scores.
+Expected: Server returns a JSON array sorted from highest to lowest, with no more than ten rows.
+Actual: Not tested in this environment.
+Result: Pending manual test
+
+Test 11
+Feature: Empty score table
+Action: Open the high-score page before any scores have been saved.
+Expected: Page displays “No scores have been submitted.”
+Actual: Not tested in this environment.
+Result: Pending manual test
+
+Test 12
+Feature: Safe name display
+Action: Submit a name containing characters such as < and >.
+Expected: The name displays as text, not as HTML.
+Actual: Not tested in this environment.
+Result: Pending manual test
+
+Test 13
+Feature: Persistent score
+Action: Submit a score, stop and restart Node.js, then reload the high-score page.
+Expected: The score remains visible.
+Actual: Not tested in this environment.
+Result: Pending manual test
+
+Test 14
+Feature: Duplicate-submission prevention
+Action: Finish one game and inspect the database/high-score list.
+Expected: One game creates only one database row.
+Actual: Not tested in this environment.
+Result: Pending manual test

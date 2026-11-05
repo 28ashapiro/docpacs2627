@@ -1,0 +1,14 @@
+<%-include('partials/header')%>
+<p>Username:<%=username%></p>
+<h2>Stored Entries</h2>
+<% entries.forEach(entry=>{ %>
+    <ul>
+        Username:<%=entry.username%>
+        Source<%=entry.source%>
+        Created<%=entry.created_at%>
+    </ul>
+<%})%>
+<a href="/">Homepage</a>
+<br>
+<a href="/form">Submition form</a>
+<%-include('partials/footer')%>

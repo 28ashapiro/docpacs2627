@@ -1,0 +1,19 @@
+<%- include('partials/header') %>
+
+    <h1 class="element">INTERESTING TOPICS</h1>
+
+    <ul class="element">
+        <% topics.forEach(topic=> { %>
+            <li>
+                <h2>
+                    <a href="<%= topic.url %>">
+                        <%= topic.title %>
+                    </a>
+                </h2>
+
+                <p class="element"><%- topic.desc %></p>
+            </li>
+            <% }); %>
+    </ul>
+
+    <%- include('partials/footer') %>

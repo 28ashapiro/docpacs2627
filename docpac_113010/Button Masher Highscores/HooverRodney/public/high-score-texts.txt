@@ -1,0 +1,118 @@
+Test 1
+Feature: Existing Button Masher gameplay
+Action: Open http://localhost:PORT/game.html, connect a gamepad, and press the A button
+Expected: Game registers valid gamepad input and increments the score correctly
+Actual: Game registers gamepad input and increments score as expected
+Result: Pass
+
+Test 2
+Feature: Game-end detection
+Action: Play the game continuously until the 20-second timer reaches zero
+Expected: Scoring stops, final score is displayed, and the end-game routine triggers
+Actual: Scoring stopped immediately at 0 seconds and final score displayed
+Result: Pass
+
+Test 3
+Feature: Duplicate-submission prevention
+Action: Allow the game timer to hit zero while continuing to press buttons
+Expected: endGame() fires only once, preventing multiple submission requests from the loop
+Actual: Only a single POST request was sent when the game ended
+Result: Pass
+
+Test 4
+Feature: Valid name submission
+Action: Enter "kayden larosa the laloser" in the player name field and complete a game with a score of 15
+Expected: Form passes frontend validation and sends a POST request with JSON payload
+Actual: POST /api/scores sent successfully with payload {"name": "kayden larosa the laloser", "score": 15}
+Result: Pass
+
+Test 5
+Feature: Empty name handling
+Action: Leave the name field blank and attempt to submit a score
+Expected: Frontend validation fails, displays an error message, and blocks the fetch request
+Actual: Error message displayed; no network request was sent
+Result: Pass
+
+Test 6
+Feature: Over-length name handling
+Action: Enter a name exceeding the maxlength threshold and submit
+Expected: HTML input maxlength or JS validation prevents submission of over-length string
+Actual: Input truncated/rejected at max length and submission handled properly
+Result: Pass
+
+Test 7
+Feature: Valid score processing
+Action: Submit a valid integer score of 20 with name "Bob"
+Expected: Server accepts the request with a 200/201 HTTP status code
+Actual: Server returned HTTP 200 OK with success JSON payload
+Result: Pass
+
+Test 8
+Feature: Negative score server validation
+Action: Send a POST request to /api/scores with payload {"name": "alpha", "score": -5}
+Expected: Server rejects request with HTTP 400 Bad Request
+Actual: Server returned HTTP 400 Bad Request with an error message
+Result: Pass
+
+Test 9
+Feature: Decimal score server validation
+Action: Send a POST request to /api/scores with payload {"name": "skibidi", "score": 12.5}
+Expected: Server rejects non-integer score with HTTP 400 Bad Request
+Actual: Server returned HTTP 400 Bad Request
+Result: Pass
+
+Test 10
+Feature: Nonnumeric score server validation
+Action: Send a POST request to /api/scores with payload {"name": "sigma", "score": "ten"}
+Expected: Server rejects non-numeric score with HTTP 400 Bad Request
+Actual: Server returned HTTP 400 Bad Request
+Result: Pass
+
+Test 11
+Feature: SQLite insertion
+Action: Submit a valid score and query scores.db directly or check server insertion output
+Expected: A new row is created in the scores table with unique id, name, and score
+Actual: Row successfully inserted into the scores table with auto-incremented ID
+Result: Pass
+
+Test 12
+Feature: High-score retrieval
+Action: Navigate to /highscores.html or send GET request to /api/scores
+Expected: Server retrieves score data from SQLite and returns a JSON array
+Actual: Endpoint returned status 200 with JSON array of scores
+Result: Pass
+
+Test 13
+Feature: Descending score order
+Action: Submit multiple scores (e.g., 5, 25, 10) and view /highscores.html
+Expected: Scores are ordered from highest to lowest score
+Actual: Scores listed in exact descending order (25, 10, 5)
+Result: Pass
+
+Test 14
+Feature: Ten-row limit
+Action: Submit 15 unique scores and view the high scores table
+Expected: Table displays exactly the top 10 highest scores
+Actual: Exactly 10 rows displayed in the high score table
+Result: Pass
+
+Test 15
+Feature: Empty score table handling
+Action: Clear table / launch with fresh database and navigate to /highscores.html
+Expected: Displays "No scores have been submitted." message without errors
+Actual: Page displayed "No scores have been submitted." message clearly
+Result: Pass
+
+Test 16
+Feature: Safe name display
+Action: Submit a player name containing HTML tags like "Test"
+Expected: Name rendered as plain text using textContent, not executed as HTML
+Actual: Name rendered literally as "Test" without formatting or script execution
+Result: Pass
+
+Test 17
+Feature: Persistent score data after server restart
+Action: Submit a score, restart the Node.js server process, and reload /highscores.html
+Expected: The submitted score remains stored in scores.db and displays correctly
+Actual: The submitted score remained visible after restarting the server
+Result: Pass

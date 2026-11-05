@@ -1,0 +1,9 @@
+<%- include('partials/header', { title: title }) %>
+<h1>Form Response</h1>
+<% if (text) { %>
+    <p>Submitted text: <%= text %></p>
+<% } else { %>
+    <p>No text was submitted.</p>
+<% } %>
+<p><a href="/form">Submit another response</a></p>
+<%- include('partials/footer') %>

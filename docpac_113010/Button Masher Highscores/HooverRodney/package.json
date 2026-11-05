@@ -1,0 +1,20 @@
+{
+  "name": "buttonmasherhighscore",
+  "version": "1.0.0",
+  "description": "Button Masher, but with high-score support",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "author": "Rodney Hoover",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.3.0",
+    "sqlite3": "^6.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
