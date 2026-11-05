@@ -1,0 +1,12 @@
+body {
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXXOIW6bXhk16CE1Tsrhj9lElaPJTfM-Lf3K-DYCQ4Cw&s=10);
+}
+
+* {
+    flex: auto;
+    text-align: center;
+}
+
+.element{
+    background-color: antiquewhite;
+}

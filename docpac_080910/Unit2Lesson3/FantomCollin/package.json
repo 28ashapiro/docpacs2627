@@ -1,0 +1,21 @@
+{
+  "name": "fantomcollin",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "Collin Fantom",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "dependencies": {
+    "dotenv": "^18.0.6",
+    "express": "^5.2.1",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}

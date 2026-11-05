@@ -1,9 +1,11 @@
-app.use((req, res, next) => {
+function requestLogger(req, res, next) {
+    const currentDate = new Date();
+    console.log(currentDate.toString(), req.originalUrl, req.method);
 
-    const currentTime = Date.now();
-    console.log(currentTime);
+    res.on('finish', function () {
+        console.log(res.statusCode);
+    });
 
-    console.log(req.originalUrl);
-    res.send();
     next();
-});
+}
+module.exports = requestLogger;

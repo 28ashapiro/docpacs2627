@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/client.js"></script>
+</head>
+<body>
+    <h1>Links</h1>
+        <p>
+        <a href="/">home</a>
+    </p>
+    <p>
+        <a href="/form">form</a>
+    </p>
+    <p>
+        <a href="/urlparams/test">params</a>
+    </p>
+    <h1>Form</h1>
+    <form action="/form" method="post">
+        <input type="text" name="username" id="username">
+        <label for="username">Username</label>
+        <br>
+        <input type="password" name="password" id="password">
+        <label for="username">Password</label>
+        <br>
+        <button>Submit POST</button>
+    </form>
+    <br>
+    <form action="/query" method="get">
+        <input type="text" name="message" id="message">
+        <label for="message">Message</label>
+        <br>
+        <button>Submit GET</button>
+    </form>
+</body>
+</html>

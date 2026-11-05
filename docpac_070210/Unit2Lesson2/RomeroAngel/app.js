@@ -1,4 +1,5 @@
 const express = require('express');
+const requestLogger = require('./utils/requestLogger.js');
 const { get } = require('http');
 const app = express();
 const path = require('path');
@@ -8,8 +9,10 @@ console.log(process.env.APP_NAME)
 const port = process.env.PORT;
 const apiKey = process.env.API_KEY;
 
-app.use(express.static('public'));
+
 app.use(express.urlencoded({ extended: true }));
+app.use(requestLogger);
+app.use(express.static('public'));
 
 app.get('/', (req, res) => {
     res.send(`<h1>Go to the form and fill it out</h1><p>The form is where you put you interest at and answer questions</p><a href="/form.html">Fill out the form</a>`);

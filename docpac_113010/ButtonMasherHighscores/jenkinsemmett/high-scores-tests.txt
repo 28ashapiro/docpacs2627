@@ -1,0 +1,139 @@
+Test 1
+Feature: Homepage Loads
+Action: Went To The Homepage
+Expected: Homepage Loads
+Actual: Homepage Loads
+Result: Pass
+
+Test 2
+Feature: Game Loads
+Action: Went To The Game Page
+Expected: Game Loads
+Actual: Game Loads
+Result: Pass
+
+Test 3
+Feature: Controller + Scoring Works
+Action: Play Game
+Expected: Get Score From Proper Input
+Actual: Get Score From Proper Input
+Result: Pass
+
+Test 4
+Feature: Game Ends On Time
+Action: Play Game, Wait 20 Seconds
+Expected: Game Ends
+Actual: Game Ends
+Result: Pass
+
+Test 5
+Feature: One Score Is Submitted
+Action: Submit Score
+Expected: Score Submitted Log Seen In Console
+Actual: Score Submitted Log Seen In Console
+Result: Pass
+
+Test 6
+Feature: The Score Is Passed To SQLite
+Action: Submit Score
+Expected: Score Is Seen When DB Is Logged
+Actual: Score Is Seen When DB Is Logged
+Result: Pass
+
+Test 7
+Feature: Empty Name Is Rejected (Browser)
+Action: Finish Game With No Name
+Expected: Error Message Appears
+Actual: Error Message Appears
+Result: Pass
+
+Test 8
+Feature: Empty Name Is Rejected (Server)
+Action: Send An Empty Name To The Server
+Expected: Error Log Appears
+Actual: Error Log Appears
+Result: Pass
+
+Test 9
+Feature: Negative Score Is Rejected
+Action: Send A Negative Score
+Expected: Error Log Appears
+Actual: Error Log Appears
+Result: Pass
+
+Test 10
+Feature: Decimal Score Is Rejected
+Action: Send A Decimal Score
+Expected: Error Log Appears
+Actual: Error Log Appears
+Result: Pass
+
+Test 11
+Feature: Text Score Is Rejected
+Action: Send A Text Score
+Expected: Error Log Appears
+Actual: Error Log Appears
+Result: Pass
+
+Test 12
+Feature: Valid Highscore Recieves Response
+Action: Play Game, Send Valid Score
+Expected: Response Appears
+Actual: Response Appears
+Result: Pass
+
+Test 13
+Feature: Highscore Endpoint Returns JSON
+Action: Go To Highscore Endpoint
+Expected: ????
+Actual: There Are Scores There Alright
+Result: Pass?
+
+Test 14
+Feature: High Score Page Displays Rows
+Action: Go To High Score Page
+Expected: There Be Scores
+Actual: There Be Scores, Matey
+Result: Pass
+
+Test 15
+Feature: Scores Appear Highest To Lowest
+Action: Go To High Scores Page
+Expected: Scores Sorted High To Low
+Actual: Scores Sorted High To Low
+Result: Pass
+
+Test 16
+Feature: 10 Scores Displayed, Max
+Action: Have 11 Scores, Go To High Scores Page
+Expected: Top 10 Scores Displayed
+Actual: Top 10 Scores Displayed
+Result: Pass
+
+Test 17
+Feature: Player Names Displayed As Text Not HTML
+Action: Send An HTML Tag As A Name
+Expected: Displayed As Text
+Actual: Displayed As Text
+Result: Pass
+
+Test 18
+Feature: Restarting Code Saves Scores
+Action: Restart Server, Go To High Score Page
+Expected: Scores Still There
+Actual: Scores Still There
+Result: Pass
+
+Test 19
+Feature: Reloading High Scores Page Retrieves Data Again
+Action: Open 2 Pages, Scores And Game, Win Game With New Highscore And Reload Scores Page
+Expected: Score Appears
+Actual: Score Appears
+Result: Pass
+
+Test 20
+Feature: Finished Game Create Only One Database Row
+Action: Check Database Before And After Playing Game
+Expected: Length Increased By One
+Actual: Length Increased By One
+Result: Pass

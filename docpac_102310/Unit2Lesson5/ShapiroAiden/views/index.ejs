@@ -1,0 +1,19 @@
+<%- include('partials/header', { title: title }) %>
+<h1><%= appName %></h1>
+<p><%= message %></p>
+
+<h2>Pages:</h2>
+<% if (pages.length > 0) { %>
+    <ul>
+        <% pages.forEach(function(page) { %>
+            <li>
+                <a href="<%= page.url %>"><%= page.name %></a>
+                <p><%= page.description %></p>
+            </li>
+        <% }); %>
+    </ul>
+<% } else { %>
+    <p>No pages are available. </p>
+<% } %>
+
+<%- include('partials/footer') %>

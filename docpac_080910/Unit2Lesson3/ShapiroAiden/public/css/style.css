@@ -1,0 +1,19 @@
+* {
+    font-family: comic sans ms, cursive;
+    color: white;
+    background-color: black;
+    text-align: center; 
+    padding: 2px;
+    margin: 8px;
+}
+
+a {
+    box-sizing: border-box;
+    text-align: center;
+    padding-block: 1px;
+    padding-inline: 6px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonborder;
+    text-decoration: none;
+}
