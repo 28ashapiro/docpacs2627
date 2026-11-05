@@ -15,4 +15,15 @@ router.get('/session-testpage', (req, res) => {
     });
 });
 
+router.post('/session-testpage/reset', (req, res) => {
+    req.session.destroy((err) => {
+        if (err) {
+            console.error(err);
+            res.status(500).send('Error logging out');
+        } else {
+            res.redirect('/session-testpage');
+        }
+    });
+});
+
 module.exports = router;

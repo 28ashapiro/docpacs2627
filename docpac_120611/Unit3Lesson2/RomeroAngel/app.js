@@ -83,6 +83,11 @@ app.use((req, res) => {
                 text: "This Goes To The A Query String Example",
                 url: "/query?message=Example",
                 description: "Here is a valid use of UrlParams"
+            },
+            {
+                text: "This Goes To The Sessions Page",
+                url: "/session-testpage",
+                description: "Session Page Here"
             }
         ]
     });
