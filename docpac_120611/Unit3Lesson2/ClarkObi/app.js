@@ -15,15 +15,17 @@ const requestLogger=require('./utils/requestLogger');
 const routesForm=require('./routes/formRoutes');
 const routesPage=require('./routes/pageRoutes');
 const routesParam=require('./routes/parameterRoutes');
+const routesSession=require('./routes/sessionRoutes')
 const app = express();
 app.set('view engine','ejs')
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 app.use(requestLogger);
+app.use(session);
 app.use(routesForm);
 app.use(routesPage);
 app.use(routesParam);
-app.use(session)
+app.use(routesSession);
 
 app.listen(PORT, () => {
     console.log(process.env.APP)
