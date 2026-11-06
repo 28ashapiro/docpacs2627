@@ -1,0 +1,22 @@
+
+<%- include('partials/header', { title: title }) %>
+
+<h2>Saved Entries:</h2>
+<% if (entries && entries.length > 0) { %>
+    <ul>
+        <% entries.forEach(function(entry) { %>
+            <li>
+                <strong>Value:</strong> <%= entry.value %>
+                <br>
+                <strong>Source:</strong> <%= entry.source %> 
+                <br>
+                <strong>Created:</strong> <%= entry.created_at %>
+                <p>--------------------------</p>
+            </li>
+        <% }); %>
+    </ul>
+<% } else { %>
+    <p>No cool and awesome entries have been saved yet!</p>
+<% } %>
+
+<%- include('partials/footer') %>
