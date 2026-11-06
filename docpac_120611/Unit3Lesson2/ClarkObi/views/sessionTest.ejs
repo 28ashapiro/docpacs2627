@@ -2,5 +2,8 @@
 <title>Vists</title>
 <div id="vistCount">Number of vists:<%=vistCount%></div>
 <p>the value is stored in the sever- side session</p>
+<form action="/session-test-reset" method="post">
+    <button type="submit">Reset</button>
+</form>
 <a href="index.html">Homepage</a>
 <%-include('partials/footer')%>
