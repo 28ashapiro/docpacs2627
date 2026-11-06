@@ -1,0 +1,99 @@
+*the client has the exact same checks as the client does
+
+Test 1
+Feature: Button Masher Gameplay
+Action: Pressing buttons and moving joystick for direction
+Expected: Pressing buttons does things in the game
+Actual: Pressing buttons did things in the game
+Result: Pass
+
+Test 2
+Feature: Game-end detection
+Action: Playing through the game until the end
+Expected: The game ends and gives you the option to restart
+Actual: The game ended and revealed the start button again
+Result: Pass
+
+Test 3
+Feature: Duplicate-submission prevention
+Action: endgame doesn't trigger twice
+Expected: endgame only triggers once
+Actual: endgame triggered once
+Result: Pass
+
+Test 4
+Feature: Valid name
+Action: Submitted a name a normal user would input with the correct length and characters
+Expected: It goes through
+Actual: It went through
+Result: Pass
+
+Test 5
+Feature: Empty name
+Action: Submitted a blank entry for the name
+Expected: Browser & server denies it
+Actual: Browser & server denied it
+Result: Pass
+
+Test 6
+Feature: Over-length name
+Action: Submitted a name over 20 characters 
+Expected: Browser & server denies it
+Actual: Browser denied it before it got to the server
+Result: Pass
+
+Test 7
+Feature: Negative score
+Action: Tried to input a negative score
+Expected: Browser & server denies it
+Actual: Browser denied it before it got to the server
+Result: Pass
+
+Test 8
+Feature: Nonnumeric score
+Action: Tried to input a string
+Expected: Browser & server denies it
+Actual: Browser denied it via typeof before it got to the server
+Result: Pass
+
+Test 9
+Feature: SQLite insertion
+Action: The data is inputted into the database
+Expected: A console log showing what was put into the database appears
+Actual: It appeared, confirming the entry
+Result: Pass
+
+Test 10
+Feature: High-score retrieval
+Action: Fetches the API
+Expected: Fetches the API successfully
+Actual: Fetched the API successfully
+Result: Pass
+
+Test 11
+Feature: Ten-row limit and descending order
+Action: Provides at most 10 rows in descending order by score
+Expected: Provides 10 rows in descending order by score
+Actual: Provided 10 rows in descending order by score
+Result: Pass
+
+Test 12
+Feature: Empty score tells you no scores were submitted
+Action: If scores is empty don't show a table
+Expected: If scores is empty it shows a paragraph instead of a table
+Actual: Shows a paragraph when emptied
+Result: Pass
+
+Test 13
+Feature: Safe name display
+Action: Displays names without errors in the high scores table
+Expected: Displays names without errors
+Actual: Displayed names without error
+Result: Pass
+
+Test 14
+Feature: Database after server restart remains unchanged
+Action: Data stays the same when server is restarted
+Expected: See the same data after restarting the node server
+Actual: Saw the same data after restarting the node server
+Result: Pass

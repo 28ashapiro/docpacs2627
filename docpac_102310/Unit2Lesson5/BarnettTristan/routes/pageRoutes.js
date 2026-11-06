@@ -1,9 +1,15 @@
 const express = require("express");
 const pageRoute = express.Router();
-const path = require('path')
 
 pageRoute.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../public/index.html'));
+    res.render('index', {
+        title: 'home',
+        desc: 'example thing',
+        appname: 'greff',
+        subtitle: 'dhgfsahjjhfdjksjsjakdjs',
+        navs: [{ 'href': '/', 'text': "home" },
+        { "href": '/form', "text": 'form' }]
+    });
 });
 
-module.exports = {pageRoute}
+module.exports = { pageRoute }

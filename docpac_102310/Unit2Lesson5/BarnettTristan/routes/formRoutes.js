@@ -1,20 +1,33 @@
 const express = require("express");
-const path = require('path')
 const formRoute = express.Router()
 
 formRoute.get('/form', (req, res) => {
-    res.sendFile(path.join(__dirname, '../public/form.html'));
+    res.render('form', {
+        title: "stupid form thing",
+        navs: [{ 'href': '/', 'text': "home" }, { "href": '/form', "text": 'form' }]
+    });
 })
 
 formRoute.post("/form", (req, res) => {
     console.log(req.body);
-    if (req.body == '') {
-        res.status(400).send({
-            status: 400,
-            message: "missing answers"
+    if (req.body != '') {
+        res.render('formRes', {
+            title: `your name is ${req.body.studentName}`,
+            navs: [{ 'href': '/', 'text': "home" },
+            { "href": '/form', "text": 'form' }]
         })
     }
-    res.send();
+    else {
+        res.status(400).render({
+            title: 'error',
+            message: "missing answers",
+            code: res.statusCode,
+            href: '/form',
+            navs: [{ 'href': '/', 'text': "home" },
+                { "href": '/form', "text": 'form' }]
+        })
+    }
+
 })
 
-module.exports = {formRoute}
+module.exports = { formRoute }

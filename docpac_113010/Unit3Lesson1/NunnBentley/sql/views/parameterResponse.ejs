@@ -1,0 +1,28 @@
+<%- include('partials/header') %>
+<h1> <%= title %> </h1>
+
+<h2>all stored entries</h2>
+
+<% if (entries && entries.length > 0) { %>
+    <table border="2" cellpadding="5">
+        <tr>
+            <th>PersonID</th>
+            <th>Age</th>
+            <th>Time</th>
+            <th>Source</th>
+        </tr>
+
+        <% entries.forEach(entry => { %>
+            <tr>
+                <td><%= entry.PersonID %></td>
+                <td><%= entry.Age %></td>
+                <td><%= entry.Time %></td>
+                <td><%= entry.source %></td>
+            </tr>
+        <% }) %>
+    </table>
+<% } else { %>
+    <p>no entries found</p>
+<% } %>
+
+<%- include('partials/footer') %>

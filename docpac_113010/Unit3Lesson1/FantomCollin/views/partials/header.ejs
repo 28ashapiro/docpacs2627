@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title class="element"><%- appName %></title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="element">
+            <ol>
+                <li><a href="/" class="<% if (currentPage === 'home') {%>active<% } %>">HOME</a></li>
+                <li><a href="/form" class="<% if (currentPage === 'form') {%>active<% } %>">FORM</a></li>
+                <li><a href="/query" class="<% if (currentPage === 'query') {%>active<% } %>">QUERY</a></li>
+                <li><a href="/topics" class="<% if (currentPage === 'topics') {%>active<% } %>">INTERESTING TOPICS</a>
+                </li>
+                <li><a href="/instructions" class="<% if (currentPage === 'instructions') {%>active<% } %>">INSTRUCTIONS
+                        PAGE</a></li>
+            </ol>
+        </nav>
+        <h1 class="element"><%- appName %></h1>
+    </header>
