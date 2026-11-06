@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button smasher game</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="game.js" defer></script>
+</head>
+<body>
+    <h1 id="ControllerStatus"></h1>
+
+    <div>
+        <p id="SCORE">Score: 0</p>
+    </div>
+    <div>
+        <p id="TIMER">Time: 20</p>
+    </div>
+    <div>
+        <p id="directionbox"></p>
+    </div>
+
+    <p id="restartMessage"></p>
+
+    <form id="scoreForm" hidden>
+        <p id="finalScore"></p>
+        <label for="playerName">Your name:</label>
+        <input id="playerName" type="text" maxlength="20" autocomplete="off">
+        <button id="submitScore" type="submit">Save score</button>
+    </form>
+    <p id="scoreMessage"></p>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="/highscores.html">View high scores</a>
+    </nav>
+</body>
+</html>
