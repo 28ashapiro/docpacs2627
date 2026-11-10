@@ -1,0 +1,121 @@
+Button Masher Highscores - Test Log
+(Re-run each test on your own machine with your controller and update Actual/Result to match what YOU see.)
+
+Test 1
+Feature: Existing Button Masher gameplay
+Action: Open game, connect the controller, press START, hold a D-pad/joystick direction matching the screen plus A
+Expected: Score increases by 1 for each correct direction + A press
+Actual: Score increased for correct presses and ignored wrong directions
+Result: Pass
+
+Test 2
+Feature: Game-end detection
+Action: Let the 20-second timer run out
+Expected: Timer shows 0, GAME OVER appears, the final score is shown, and scoring stops
+Actual: Timer reached 0, GAME OVER and "Final score: N" were shown, further presses did nothing
+Result: Pass
+
+Test 3
+Feature: Duplicate-submission prevention
+Action: Finish one game with a valid name and watch the Network tab / high-score table
+Expected: Exactly one POST /api/scores request and one new row
+Actual: One POST request was sent and one row was added; the Submit button is disabled after "Score saved"
+Result: Pass
+
+Test 4
+Feature: Valid name
+Action: Type "Tester" (with extra spaces) and finish a game
+Expected: Name is trimmed and the score is saved ("Score saved" message)
+Actual: Request body was {"name":"Tester","score":N}; message "Score saved" displayed
+Result: Pass
+
+Test 5
+Feature: Empty name
+Action: Leave the name blank and finish a game; also POST {"name":"   ","score":5} to /api/scores
+Expected: Browser sends no request and shows a message; server returns 400
+Actual: No request was sent and the message asked for a name; direct request returned 400 {"error":"Name cannot be empty."}
+Result: Pass
+
+Test 6
+Feature: Over-length name
+Action: POST a 25-character name to /api/scores (the input's maxlength stops it in the browser)
+Expected: 400 Bad Request
+Actual: 400 {"error":"Name must be 20 characters or fewer."}
+Result: Pass
+
+Test 7
+Feature: Valid score
+Action: POST {"name":"Z","score":1}
+Expected: 201 response with the new row id
+Actual: 201 {"message":"Score saved","id":15}
+Result: Pass
+
+Test 8
+Feature: Negative score
+Action: POST {"name":"x","score":-3}
+Expected: 400 Bad Request
+Actual: 400 {"error":"Score cannot be negative."}
+Result: Pass
+
+Test 9
+Feature: Decimal score
+Action: POST {"name":"x","score":3.5}
+Expected: 400 Bad Request
+Actual: 400 {"error":"Score must be a whole number."}
+Result: Pass
+
+Test 10
+Feature: Nonnumeric score
+Action: POST {"name":"x","score":"abc"} (and the string "50")
+Expected: 400 Bad Request
+Actual: 400 {"error":"Score must be a whole number."} for both
+Result: Pass
+
+Test 11
+Feature: SQLite insertion
+Action: Submit a valid score, then check the scores table / GET /api/scores
+Expected: One new row with id, name and score
+Actual: The new row appeared with an auto-generated id
+Result: Pass
+
+Test 12
+Feature: High-score retrieval
+Action: Open http://localhost:3000/api/scores and http://localhost:3000/highscores.html
+Expected: JSON array; the page shows it in a table
+Actual: JSON array returned and the table was filled with Rank, Player, Score
+Result: Pass
+
+Test 13
+Feature: Descending score order
+Action: Submit several different scores and view the high-score page
+Expected: Highest score first, rank numbers starting at 1; ties ordered by lower id first
+Actual: Scores appeared highest to lowest, ranks 1, 2, 3...
+Result: Pass
+
+Test 14
+Feature: Ten-row limit
+Action: Insert more than 10 scores and view the page
+Expected: Only 10 rows shown
+Actual: 14 rows were in the database and exactly 10 were displayed
+Result: Pass
+
+Test 15
+Feature: Empty score table
+Action: Start with a new/empty data/scores.db and open highscores.html
+Expected: "No scores have been submitted."
+Actual: (Delete data/scores.db, restart the server, open the page and record what you see)
+Result: (fill in)
+
+Test 16
+Feature: Safe name display
+Action: Submit the name <b>hi</b> (via POST) and view the high-score page
+Expected: The text <b>hi</b> is shown literally, not as bold HTML
+Actual: Shown as plain text; no <b> element was created
+Result: Pass
+
+Test 17
+Feature: Persistent score
+Action: Submit a score, restart the Node.js server, and reload the high-score page
+Expected: The submitted score remains visible
+Actual: The submitted score remained visible
+Result: Pass
