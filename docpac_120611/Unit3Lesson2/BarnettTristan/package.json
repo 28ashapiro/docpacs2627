@@ -1,0 +1,23 @@
+{
+  "name": "barnetttristan",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "init-db": "node ./scripts/initDb.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "better-sqlite3": "^11.10.0",
+    "better-sqlite3-session-store": "^0.1.0",
+    "body-parser": "^2.3.0",
+    "dotenv": "^17.4.2",
+    "ejs": "^7.0.2",
+    "env": "^0.0.2",
+    "express": "^5.2.1",
+    "express-session": "^1.19.0",
+    "path": "^0.12.7"
+  }
+}
