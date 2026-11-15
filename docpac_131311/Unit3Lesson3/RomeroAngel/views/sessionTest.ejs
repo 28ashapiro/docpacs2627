@@ -1,0 +1,36 @@
+<%- include('partials/header') %>
+
+    <h1>Hey! Welcome To Test Sessions! This means the route worked!</h1>
+
+
+    <p>YOU SEE THAT NUMBER!?!? <%= visits %>
+            <br>
+            The visit count from /session-testpage is saved within our Session.db file, this file
+            tracks and stores user session when visting this page, each visit and/or refresh makes the counter go up by
+            one! Very helpful in knowing how many sessions happen to this page, and helps keep track of sessions
+            happening at the moment. Meaning if you or I visit this session it will track my visits on this page.
+    </p>
+    <br>
+    <p>Hi! So everytime you visit the little count will go up! Yippe! Where is this stored? These are stored in our
+        Session.db file</p>
+    <br>
+
+    <form action="/session-testpage/reset" method="POST">
+        <button id="ResetSession">
+            Reset Your Session!
+        </button>
+    </form>
+
+    <br>
+    <button id="RefreshRefresh&Refreshing!">
+        <a href="/session-testpage">This Link Takes You To The Same Page!</a>
+    </button>
+    <br>
+    <button id="IGottaGetOuttaHere!">
+        <a href="/ejs-demo">This Link Takes You Back To The HomePage!!!</a>
+    </button>
+    <br>
+    <button><a href="//urlparams/Example">This Goes To The UrlParams Example</a></button>
+    <br>
+    <button><a href="/This Goes To The A Query String Example">This Goes To The A Query String Example</a></button>
+    <%- include('partials/footer') %>
