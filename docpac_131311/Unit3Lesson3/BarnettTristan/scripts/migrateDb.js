@@ -1,5 +1,5 @@
 const Database = require('better-sqlite3');
-const {db, db3} =  require('../models/database.js');
+const {db} =  require('../models/database.js');
 const {user} = require('../migrations/001_create_users_table.js')
 const {fieldAddtion} = require('../migrations/002_add_user_profile_fields.js')
 
