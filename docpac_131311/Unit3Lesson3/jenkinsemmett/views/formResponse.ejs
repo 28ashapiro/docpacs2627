@@ -1,0 +1,11 @@
+<%- include ('partials/header') %>
+
+<% if(name){ %>
+    <h1 id="centered">Thank you, <%- name %></h1>
+<% } else{ %>
+    <h1 id="centered">There Is Missing Required Data From The Form, All Areas Must Have At Least One Selection, And Text Boxes Cannot Be Blank</h1>
+<% } %>
+<button id="centered" onclick="moveToForm()">Resubmit Form</button><br>
+<button id="centered" onclick="returnHome()">Return Home</button>
+
+<%- include ('partials/footer') %>

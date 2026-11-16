@@ -1,0 +1,13 @@
+<%- include('partials/header') %>
+
+<h1><%= pageTitle %></h1>
+<p>This is <%= appName %></p>
+<p><%= description %></p>
+
+<h1>Lessons</h1>
+<h3>Each lesson and what they brought to this website!</h3>
+<% lessons.forEach(function(lesson) { %>
+    <h2><a target="_blank" href=<%= lesson.url %>><%= lesson.linkText %></a></h2>
+    <p><%= lesson.description %></p>
+<% }) %>
+<%- include('partials/footer') %>

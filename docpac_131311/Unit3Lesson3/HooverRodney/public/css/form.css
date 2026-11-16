@@ -1,0 +1,19 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form * {
+    margin: 0.5em 0em 0.5em 0;
+}
+
+#container {
+    display: flex;
+    max-width: 60em;
+    flex-direction: column;
+}

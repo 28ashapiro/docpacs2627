@@ -1,0 +1,17 @@
+nav {
+    text-align: center;
+}
+
+footer {
+    display: flex;
+    align-items: first baseline;
+}
+
+footer p {
+    color: black;
+    text-shadow: 0.1em 0.1em darkgrey;
+}
+
+p {
+    max-width: 50%;
+}

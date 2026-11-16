@@ -1,0 +1,21 @@
+<%- include('partials/header') %>
+
+    <h1>Session Test</h1>
+
+    <form method="POST" action="/session-test/reset">
+        <button type="submit">Reset Counter</button>
+    </form>
+
+
+    <p>You have visited this page <strong>
+            <%= visitCount %>
+        </strong> time(s) during this session.</p>
+
+    <p>Your session ID: <code><%= sessionID %></code></p>
+
+    <p><a href="/session-test">Refresh this page</a> to increment the counter.</p>
+
+    <p><a href="/">Back to home</a></p>
+
+
+    <%- include('partials/footer') %>

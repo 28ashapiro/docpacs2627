@@ -1,0 +1,15 @@
+<%- include('partials/header') %>
+
+    <h1>Visits: <%= visits %>
+    </h1>
+    <br><br>
+    <p>The above view count is stored in the server-side session through Node.JS</p>
+
+    <form action="/session-test/reset" method="POST">
+        <button type="submit">Reset Counter</button>
+    </form>
+    <a href="/session-test">Refresh this page!</a>
+    <br>
+    <a href="/">Return to homepage</a>
+
+    <%- include('partials/footer') %>

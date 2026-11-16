@@ -1,0 +1,15 @@
+<%- include('partials/header') %>
+<body>
+    <div style="border: 10px solid rgb(255, 66, 66); background-color: rgb(255, 88, 88); border-radius: 25px;">
+        <% if (error) { %>
+            <h1 style="color: black;">Error</h1>
+        <% } else { %>
+            <h1 style="color: black;">Unexpected Error</h1>
+        <% } %>
+        <% if (error) { %>
+            <p style="color: black;"><%= error %></p>
+        <% } %>
+        <a href="/"><p style="color: rgb(128,0,128); text-decoration: none;">Go back to safety</p></a>
+    </div>
+</body>
+<%- include('partials/footer') %>

@@ -1,0 +1,5 @@
+.env
+node_modules
+data/app.db
+data/sessions.db
+data/schema_migrations.db

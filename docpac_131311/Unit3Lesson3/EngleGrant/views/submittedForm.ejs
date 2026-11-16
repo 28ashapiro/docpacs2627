@@ -1,0 +1,10 @@
+<%- include('partials/header') -%>
+<body>
+    <h1>You submitted your credentials secretly~!</h1>
+    <p>Great job. Here's what you gave us:</p>
+
+    <% for( let element = 0; element < formData.length; element++ ) { %>
+        <p><%= formData[element][0] %>: <%= formData[element][1] %></p>
+    <% } %>
+</body>
+<%- include('partials/footer') -%>

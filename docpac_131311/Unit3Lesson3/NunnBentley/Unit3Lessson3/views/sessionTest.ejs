@@ -1,0 +1,13 @@
+<%- include('partials/header') %>
+
+<h1>Session Test</h1>
+<p>Visits: <strong><%= views %></strong></p>
+
+<a href="/sessionTest">Refresh</a>
+<a href="/">Homepage</a>
+
+<form method="POST" action="/sessionTest/reset">
+    <button type="submit">Reset number of visits</button>
+</form>
+
+<%- include('partials/footer') %>

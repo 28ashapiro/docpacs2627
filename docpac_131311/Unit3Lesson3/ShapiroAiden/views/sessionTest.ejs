@@ -1,0 +1,12 @@
+<%- include('partials/header', { title: title }) %>
+<h1>Cool and Awesome Session Test!</h1>
+<p>You have visited this page <%= visits %> times!</p>
+<p>This visit count is stored in your server-side session! Isn't that cool?</p>
+<a href="/session-test">Refresh</a>
+<br>
+<form action="/session-test/reset" method="POST">
+    <button type="submit">Reset Counter</button>
+</form>
+<br>
+<a href="/">Return Home</a>
+<%- include('partials/footer') %>

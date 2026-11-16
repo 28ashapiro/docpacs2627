@@ -1,0 +1,14 @@
+Error: <!DOCTYPE html> missing
+Fix: add <!DOCTYPE html>
+
+Warning: lang attribute missing from <html> element
+Fix: Add lang attribute as "en" to <html> element
+
+Warning: Obsolete attribute "border" on the table element
+Fix: Convert to CSS
+
+Warning: Obsolete attribute "cellpadding" on the table element
+Fix: Convert to CSS via "padding" element
+
+Warning: Obsolete attribute "cellspacing" on the table element
+Fix: Convert to CSS via "border-spacing" element

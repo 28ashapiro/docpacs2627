@@ -1,0 +1,13 @@
+<%- include ('partials/header') %>
+
+<h1 id="centered">The Following Projects I Have/Will Worked On</h1>
+
+<ul id="centered">
+    <% list.forEach(item=> { %>
+        <li>
+            <%= item %>
+        </li>
+    <% }); %>
+</ul>
+
+<%- include ('partials/footer') %>

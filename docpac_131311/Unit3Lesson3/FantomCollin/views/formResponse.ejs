@@ -1,0 +1,34 @@
+<%- include('partials/header') %>
+
+
+    <h1 class='element'> You answered: <%- userInput %></h1>
+    <a href="/" class="element"><button class="element">Return to Homepage</button></a>
+
+    <% if (entries && entries.length > 0) { %>
+        <table class="element">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Submission</th>
+                    <th>Method</th>
+                    <th>Timestamp</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <% entries.forEach(function(entry) { %>
+                    <tr>
+                        <td><%= entry.id %></td>
+                        <td><%= entry.input %></td>
+                        <td><%= entry.method %></td>
+                        <td><%= entry.timestamp %></td>
+                    </tr>
+                    <% }); %>
+            </tbody>
+        </table>
+        <% } else { %>
+            <h2>NO ENTRIES STORED</h2>
+            <% } %>
+
+
+    <%- include('partials/footer') %>

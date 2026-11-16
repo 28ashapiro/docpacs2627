@@ -1,0 +1,42 @@
+<%- include('partials/header') %>
+    <h1>
+        <%= pageTitle %>
+    </h1>
+    <% if(studentName) {%>
+        <p>Submitted Name: <%= studentName %>
+        </p>
+        <% } else if(!studentName){%>
+            <% } %>
+                <h2>All Stored Entries</h2>
+
+                <% if (entries.length> 0) { %>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Value</th>
+                                <th>Source</th>
+                                <th>Created At</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% entries.forEach(entry=> { %>
+                                <tr>
+                                    <td>
+                                        <%= entry.value %>
+                                    </td>
+                                    <td>
+                                        <%= entry.source%>
+                                    </td>
+                                    <td>
+                                        <%= entry.created_at%>
+                                    </td>
+                                </tr>
+                                <% }); %>
+                        </tbody>
+                    </table>
+                    <% } else { %>
+                        <p>No entries stored yet.</p>
+                        <% } %>
+                            <a href="/form">Return to Form</a><br>
+                            <a href="/">Return to Homepage</a>
+                            <%- include('partials/footer') %>
