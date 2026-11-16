@@ -1,8 +1,9 @@
-const Database = require('better-sqlite3');
-const {db} =  require('../models/database.js');
-const {user} = require('../migrations/001_create_users_table.js')
-const {fieldAddtion} = require('../migrations/002_add_user_profile_fields.js')
 
+const {db} =  require('../models/database.js');
+const fs = require('fs')
+const path = require('path')
+
+const migrationsDir = path.join(__dirname, '../migrations')
 db3.pragma('journal_mode=WAL')
 
     db3.exec(`CREATE TABLE IF NOT EXISTS migrations (
