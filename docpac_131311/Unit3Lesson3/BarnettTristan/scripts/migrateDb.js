@@ -27,7 +27,7 @@ const applyMigration = db.transaction((migration) => {
 });
 
 function migrate() {
-    const version = getAppliedFiles();
+    const version = getAppliedNames();
     let ran = 0;
 
     for (const file of getMigrationFiles()) {
@@ -44,7 +44,7 @@ function migrate() {
 }
 
 try {
-
+    migrate();
 } catch (error) {
     console.error('Migration failed:', error.message);
     process.exitCode = 1
