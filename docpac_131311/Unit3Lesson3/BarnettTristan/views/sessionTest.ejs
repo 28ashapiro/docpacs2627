@@ -1,0 +1,13 @@
+<%- include('partials/header') %>
+<h1> <%= title %> </h1>
+<form id="veiwsPage" action="/session-test/reset" method="post">
+<p>session data of how much you've looked at this one page yes yes</p>
+<%if (typeof lookedAt !== 'undefined') {%>
+    <% if (lookedAt >= 200) { %>
+        <img src="https://i.ytimg.com/vi/CtmtEgSADgs/sddefault.jpg" alt="Please stop">
+    <% };%>
+<% };%>
+<br>
+<button type="submit">reset views</button>
+</form>
+<%- include('partials/footer') %>
