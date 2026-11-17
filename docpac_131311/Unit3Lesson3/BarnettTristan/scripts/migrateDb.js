@@ -18,7 +18,7 @@ function getMigrationFiles() {
 }
 
 function getAppliedNames() {
-    return new Set(db.prepare('SELECT name FROM migrations').all().map(row => row.name))
+    return new Set(db3.prepare('SELECT name FROM migrations').all().map(row => row.name))
 }
 const applyMigration = db.transaction((migration) => {
     migration.up(db);
