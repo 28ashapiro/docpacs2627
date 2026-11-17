@@ -7,5 +7,3 @@ const user = `CREATE TABLE IF NOT EXISTS users (
     time DATETIME DEFAULT CURRENT_TIMESTAMP);`
 
 db.exec(user);
-
-module.exports = {user}
