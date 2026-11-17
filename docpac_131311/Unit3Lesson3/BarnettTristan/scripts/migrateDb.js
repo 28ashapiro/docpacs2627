@@ -1,4 +1,3 @@
-
 const {db} =  require('../models/database.js');
 const fs = require('fs')
 const path = require('path')
@@ -22,7 +21,7 @@ function getAppliedNames() {
     return new Set(db.prepare('SELECT name FROM migrations').all().map(row => row.name))
 }
 const applyMigration = db.transaction((migration) => {
-    migration.up(db);
+    db.exec(migration);
     db.prepare('INSERT INTO migrations (name) VALUES (?)').run(migration.name)
 });
 
@@ -49,5 +48,5 @@ try {
     console.error('Migration failed:', error.message);
     process.exitCode = 1
 } finally {
-db.close();
+    db.close();
 }
