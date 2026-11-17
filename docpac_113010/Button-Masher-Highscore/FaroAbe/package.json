@@ -1,0 +1,25 @@
+{
+  "name": "ibrahim-farooq",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "init-db": "node scripts/initDb.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.10.0",
+    "dotenv": "^17.4.2",
+    "ejs": "^7.0.2",
+    "express": "^5.2.1",
+    "sqlite3": "^6.0.1"
+  },
+  "description": ""
+}
