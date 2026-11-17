@@ -1,29 +1,24 @@
 const Database = require('better-sqlite3');
 const path = require('path');
-const fs = require('fs');
 
 
-const dataDir = path.join(__dirname, '..', 'data');
-if (!fs.existsSync(dataDir)) {
-    fs.mkdirSync(dataDir);
-    console.log('Folder');
-}
+const dbPath = path.join(__dirname, '..', 'data', 'app.db');
 
-const dbPath = path.join(dataDir, 'scores.db');
+
 const db = new Database(dbPath);
 
 const createTableSQL = `
-    CREATE TABLE IF NOT EXISTS scores (
+    CREATE TABLE IF NOT EXISTS entries (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
-        name TEXT NOT NULL,
-        score INTEGER NOT NULL,
-        created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+        value TEXT NOT NULL,
+        source TEXT NOT NULL,
+        created_at TEXT DEFAULT CURRENT_TIMESTAMP
     )
 `;
 
 db.exec(createTableSQL);
 
-console.log('Data:', dbPath);
-console.log('Score');
+console.log('Db Init');
+console.log('Table Is Ready');
 
 db.close();
