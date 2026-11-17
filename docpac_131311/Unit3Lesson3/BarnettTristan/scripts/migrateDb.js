@@ -1,10 +1,10 @@
-const {db} =  require('../models/database.js');
+const {db, db3} =  require('../models/database.js');
 const fs = require('fs')
 const path = require('path')
 
 const migrationsDir = path.join(__dirname, '../migrations')
 
-db.exec(`
+db3.exec(`
     CREATE TABLE IF NOT EXISTS migrations (
         name TEXT NOT NULL UNIQUE,
         preformedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP
@@ -21,8 +21,8 @@ function getAppliedNames() {
     return new Set(db.prepare('SELECT name FROM migrations').all().map(row => row.name))
 }
 const applyMigration = db.transaction((migration) => {
-    db.exec(migration);
-    db.prepare('INSERT INTO migrations (name) VALUES (?)').run(migration.name)
+    migration.up(db);
+    db3.prepare('INSERT INTO migrations (name) VALUES (?)').run(migration.name);
 });
 
 function migrate() {
