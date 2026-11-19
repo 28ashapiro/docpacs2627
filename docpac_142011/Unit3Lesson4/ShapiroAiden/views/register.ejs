@@ -1,0 +1,24 @@
+<%- include('partials/header', {title: title }) %>
+    <h1>Register</h1>
+    <p><%= message %></p>
+    <form action="/register" method="post">
+        <label for="display_name">Display Name</label>
+        <input type="text" name="display_name" id="display_name" placeholder="John Doe">
+
+        <label for="username">Username</label>
+        <input type="text" name="username" id="username" required minlength="3" maxlength="30" placeholder="johndoe1">
+
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" required placeholder="johndoe@gmail.com">
+
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" required minlength="8" placeholder="Minimum 8 characters long.">
+
+        <label for="repeatPassword">Repeat Password</label>
+        <input type="password" name="repeatPassword" id="repeatPassword" required>
+
+        <input type="submit" value="Register">
+    </form>
+    <a href="/login">Already have an account? Login!</a>
+
+    <%- include('partials/footer') %>

@@ -1,0 +1,14 @@
+<%- include('partials/header', {title: title }) %>
+    <h1>My Account</h1>
+    <p>Welcome, <%= user.display_name %>!</p>
+    <h2>Account Information</h2>
+
+    <p><strong>Username:</strong> <%= user.username %></p>
+    <p><strong>Email:</strong> <%= user.email %></p>
+
+    <p><strong>Account Created:</strong> <%= user.created_at %></p>
+
+    <form action="/logout" method="post">
+        <input type="submit" value="Logout">
+    </form>
+    <%- include('partials/footer') %>

@@ -1,0 +1,10 @@
+<%- include('partials/header', { title: title }) %>
+
+<h1>Parameters</h1>
+<p>param message: <%= paramname %></p>
+<p>came from the URL path using req.params.paramname!!</p>
+<p><a href="/query?message=Hello">Try another!</a></p>
+<br>
+<a href="/entries">view all entries!</a>
+
+<%- include('partials/footer') %>
