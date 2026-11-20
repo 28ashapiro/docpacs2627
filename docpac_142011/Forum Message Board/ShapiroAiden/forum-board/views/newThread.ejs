@@ -1,0 +1,15 @@
+<%- include('partials/header') %>
+
+    <h2>Create a Thread</h2>
+    <p class="error-message">
+        <%= message %>
+    </p>
+    <form action="/threads" method="POST">
+        <input type="text" name="title" placeholder="Thread title">
+
+        <textarea name="body" placeholder="Write your thread..."></textarea>
+
+        <button type="submit">Create Thread</button>
+    </form>
+
+    <%- include('partials/footer') %>

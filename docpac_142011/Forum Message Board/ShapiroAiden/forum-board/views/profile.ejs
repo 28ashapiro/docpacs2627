@@ -1,0 +1,21 @@
+<%- include('partials/header') %>
+
+<h2><%= user.username %>'s Profile</h2>
+<p>Member since: <%= user.created_at %></p>
+<h3>Posting History</h3>
+<% if (activity.length === 0) { %>
+    <p>This user has not posted yet.</p>
+<% } %>
+<% activity.forEach((post) => { %>
+    <section class="post">
+        <% if (post.post_type === 'thread') { %>
+            <h4>Thread: <a href="/threads/<%= post.thread_id %>"><%= post.title %></a></h4>
+        <% } else { %>
+            <h4>Reply in <a href="/threads/<%= post.thread_id %>">this thread</a></h4>
+        <% } %>
+        <p><%= post.body %></p>
+        <small><%= post.created_at %></small>
+    </section>
+<% }); %>
+
+<%- include('partials/footer') %>

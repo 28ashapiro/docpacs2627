@@ -1,0 +1,51 @@
+<%- include('partials/header') %>
+
+<div class="thread-heading">
+    <div>
+        <p class="eyebrow">FORUM DISCUSSION</p>
+        <h2><span class="heading-hash">#</span> <%= thread.title %></h2>
+        <p class="thread-byline">Started by <a href="/users/<%= thread.user_id %>"><%= thread.username %></a> · <%= thread.created_at %></p>
+    </div>
+</div>
+
+<section class="message-card original-post">
+    <!-- <div class="message-avatar"><%= thread.username.charAt(0).toUpperCase() %></div> -->
+    <div class="message-content">
+        <div class="message-meta"><a href="/users/<%= thread.user_id %>"><strong><%= thread.username %></strong></a><br><span><%= thread.created_at %></span><br><span class="post-label">THREAD</span></div>
+        <p class="message-text"><%= thread.body %></p>
+    </div>
+</section>
+
+<div class="replies-heading">
+    <h3>Replies</h3>
+    <span><%= replies.length %></span>
+</div>
+
+<% if (replies.length === 0) { %>
+    <div class="empty-replies">No replies yet. Be the first to join the conversation.</div>
+<% } %>
+
+<% replies.forEach((reply) => { %>
+    <section class="message-card reply-card">
+        <!-- <div class="message-avatar"><%= reply.username.charAt(0).toUpperCase() %></div> -->
+        <div class="message-content">
+            <div class="message-meta"><a href="/users/<%= reply.user_id %>"><strong><%= reply.username %></strong></a><br><span><%= reply.created_at %></span></div>
+            <p class="message-text"><%= reply.body %></p>
+        </div>
+    </section>
+<% }); %>
+
+<div class="reply-composer">
+    <% if (currentUser) { %>
+        <p class="error-message"><%= message %></p>
+        <form action="/threads/<%= thread.id %>/replies" method="post">
+            <label for="body">Message <span>as <%= currentUser.username %></span></label>
+            <textarea id="body" name="body" rows="3" placeholder="Write a reply..." required></textarea>
+            <div class="composer-actions"><small>Keep it friendly and on topic.</small><button class="primary-button" type="submit">Send Reply</button></div>
+        </form>
+    <% } else { %>
+        <p><a href="/login">Log in</a> to join this conversation.</p>
+    <% } %>
+</div>
+
+<%- include('partials/footer') %>

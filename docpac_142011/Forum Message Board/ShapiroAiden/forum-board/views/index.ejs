@@ -1,0 +1,18 @@
+<%- include('partials/header') %>
+
+<h2>Recent Threads</h2>
+
+<% if (threads.length === 0) { %>
+    <p>No threads have been posted yet.</p>
+<% } %>
+
+<% threads.forEach((thread) => { %>
+    <section class="post">
+        <h3><a href="/threads/<%= thread.id %>"><%= thread.title %></a></h3>
+        <p><%= thread.body %></p>
+        <p>Posted by <a href="/users/<%= thread.user_id %>"><%= thread.username %></a></p>
+        <small><%= thread.created_at %></small>
+    </section>
+<% }); %>
+
+<%- include('partials/footer') %>

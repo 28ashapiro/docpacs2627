@@ -1,0 +1,167 @@
+Test 1
+Feature: Registration
+Action: Submit a new username and password using the registration form.
+Expected: The account is created and the user is redirected to the login page.
+Actual: The account is created and the user is redirected to the login page.
+Result: Pass
+
+Test 2
+Feature: Duplicate registration
+Action: Register again using a username that already exists.
+Expected: The application rejects the duplicate username and displays a clear error.
+Actual: The application rejects the duplicate username and displays a clear error.
+Result: Pass
+
+Test 3
+Feature: Correct login
+Action: Log in using a registered username and its correct password.
+Expected: The login succeeds and the user is redirected to the homepage with their username shown in navigation.
+Actual: The login succeeds and the user is redirected to the homepage with their username shown in navigation.
+Result: Pass
+
+Test 4
+Feature: Incorrect login
+Action: Attempt to log in using an incorrect password.
+Expected: The login is rejected and a general invalid-credentials message is displayed.
+Actual: The login is rejected and a general invalid-credentials message is displayed.
+Result: Pass
+
+Test 5
+Feature: Logout
+Action: Log in, then submit the logout form.
+Expected: The session is destroyed and the visitor is returned to the homepage as logged out.
+Actual: The session is destroyed and the visitor is returned to the homepage as logged out.
+Result: Pass
+
+Test 6
+Feature: Protected new-thread route
+Action: Log out and visit /threads/new directly.
+Expected: The visitor is redirected to the login page and cannot access the new-thread form.
+Actual: The visitor is redirected to the login page and cannot access the new-thread form.
+Result: Pass
+
+Test 7
+Feature: Protected reply route
+Action: Log out and submit a POST request to a thread's reply route.
+Expected: The reply is not created and the visitor is redirected to the login page.
+Actual: The reply is not created and the visitor is redirected to the login page.
+Result: Pass
+
+Test 8
+Feature: Valid thread creation
+Action: Log in and submit a nonempty thread title and opening post.
+Expected: The thread is saved and the browser is redirected to its individual thread page.
+Actual: The thread is saved and the browser is redirected to its individual thread page.
+Result: Pass
+
+Test 9
+Feature: Blank thread title
+Action: Log in and submit a thread with a blank or whitespace-only title.
+Expected: The thread is rejected and an appropriate validation error is displayed.
+Actual: The thread is rejected and an appropriate validation error is displayed.
+Result: Pass
+
+Test 10
+Feature: Blank thread body
+Action: Log in and submit a thread with a valid title but a blank or whitespace-only body.
+Expected: The thread is rejected and an appropriate validation error is displayed.
+Actual: The thread is rejected and an appropriate validation error is displayed.
+Result: Pass
+
+Test 11
+Feature: Valid reply
+Action: Open a thread while logged in, submit a nonempty reply, and reload the page.
+Expected: The reply appears under the correct thread with the logged-in user's username.
+Actual: The reply appears under the correct thread with the logged-in user's username.
+Result: Pass
+
+Test 12
+Feature: Blank reply
+Action: While logged in, submit a reply containing only spaces or no text.
+Expected: The reply is rejected and is not added to the thread.
+Actual: The reply is rejected and is not added to the thread.
+Result: Pass
+
+Test 13
+Feature: Homepage thread order
+Action: Create at least three threads at different times and reload the homepage.
+Expected: Threads appear in chronological order, oldest first and newest last.
+Actual: Threads appear in chronological order, oldest first and newest last.
+Result: Pass
+
+Test 14
+Feature: Thread detail page
+Action: Click a thread title from the homepage.
+Expected: The correct thread page displays its title, opening post, creator username, and posting time.
+Actual: The correct thread page displays its title, opening post, creator username, and posting time.
+Result: Pass
+
+Test 15
+Feature: Reply order
+Action: Submit two replies in sequence and reload the thread.
+Expected: The first reply appears before the second reply.
+Actual: The first reply appears before the second reply.
+Result: Pass
+
+Test 16
+Feature: Thread username profile link
+Action: Click the username of the person who created a thread.
+Expected: The correct user's profile page opens.
+Actual: The correct user's profile page opens.
+Result: Pass
+
+Test 17
+Feature: Reply username profile link
+Action: Click the username of a reply author.
+Expected: The correct reply author's profile page opens.
+Actual: The correct reply author's profile page opens.
+Result: Pass
+
+Test 18
+Feature: Profile thread listing
+Action: Open a profile belonging to a user who has created at least one thread.
+Expected: The profile lists that user's threads and links each item to its related thread.
+Actual: The profile lists that user's threads and links each item to its related thread.
+Result: Pass
+
+Test 19
+Feature: Profile reply listing
+Action: Open a profile belonging to a user who has written at least one reply.
+Expected: The profile lists that user's replies and links each item to the related thread.
+Actual: The profile lists that user's replies and links each item to the related thread.
+Result: Pass
+
+Test 20
+Feature: Profile chronological order
+Action: Create a thread and replies from the same account at different times, then open that account's profile.
+Expected: The profile combines threads and replies in chronological order, oldest first.
+Actual: The profile combines threads and replies in chronological order, oldest first.
+Result: Pass
+
+Test 21
+Feature: Missing thread
+Action: Visit /threads/999999 (or another thread ID that does not exist).
+Expected: The application returns a 404 response or displays its error page.
+Actual: The application returns a 404 response or displays its error page.
+Result: Pass
+
+Test 22
+Feature: Missing user
+Action: Visit /users/999999 (or another user ID that does not exist).
+Expected: The application returns a 404 response or displays its error page.
+Actual: The application returns a 404 response or displays its error page.
+Result: Pass
+
+Test 23
+Feature: Authorship from session
+Action: Log in as one user and create a thread or reply; do not submit another user's ID.
+Expected: The saved post is associated with the logged-in user's account, based on the session.
+Actual: The saved post is associated with the logged-in user's account, based on the session.
+Result: Pass
+
+Test 24
+Feature: Password hash stored instead of plaintext
+Action: Register an account, then inspect that user's password_hash value in the SQLite users table.
+Expected: The database contains a bcrypt hash, not the original plaintext password.
+Actual: The database contains a bcrypt hash, not the original plaintext password.
+Result: Pass

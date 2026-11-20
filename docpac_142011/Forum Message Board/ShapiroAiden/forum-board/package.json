@@ -1,0 +1,25 @@
+{
+  "name": "forum-message-board",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon -q app.js",
+    "init-db": "node -e \"require('./database'); console.log('Database ready')\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "better-sqlite3": "^12.11.1",
+    "better-sqlite3-session-store": "^0.1.0",
+    "dotenv": "^17.4.2",
+    "ejs": "^7.0.2",
+    "express": "^5.3.0",
+    "express-session": "^1.19.0",
+    "multer": "^2.5.0",
+    "nodemon": "^3.1.14"
+  }
+}

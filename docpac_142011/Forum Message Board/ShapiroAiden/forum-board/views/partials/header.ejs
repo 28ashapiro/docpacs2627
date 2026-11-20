@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title><%= title || 'Forum Board' %></title>
+</head>
+<body>
+    <header>
+        <h1><a href="/">Forum Board</a></h1>
+        <nav>
+            <a href="/">Home</a>
+            <% if (currentUser) { %>
+                <a href="/threads/new">New Thread</a>
+                <a href="/users/<%= currentUser.id %>">My Profile</a>
+                <br>
+                <span>Logged in as <%= currentUser.username %></span>
+                <form action="/logout" method="post" class="inline-form">
+                    <button type="submit">Log Out</button>
+                </form>
+            <% } else { %>
+                <a href="/register">Register</a>
+                <a href="/login">Log In</a>
+            <% } %>
+        </nav>
+    </header>
+    <main>

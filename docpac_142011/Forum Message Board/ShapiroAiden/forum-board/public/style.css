@@ -1,0 +1,63 @@
+* {
+    box-sizing: border-box;
+    font-family: Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    background-color: rgb(44, 44, 44);
+    color: rgb(167, 167, 167);
+}
+
+a {
+    color: white;
+}
+
+header,
+main,
+footer {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.inline-form {
+    display: inline;
+    margin: 0;
+}
+
+input,
+textarea,
+button {
+    display: block;
+    margin: 8px 0 16px;
+    padding: 8px;
+}
+
+.post,
+.reply {
+    border: 1px solid lightgray;
+    border-radius: 6px;
+    padding: 12px;
+    margin: 12px 0;
+}
+
+.error-message {
+    color: red;
+}
+
+.message-content {
+    border: 1px solid lightgray;
+    border-radius: 6px;
+    padding: 12px;
+    margin: 12px 0;
+    width: fit-content;
+}
